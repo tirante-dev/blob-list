@@ -1,0 +1,33 @@
+schema_version: 1
+id: base-sepolia
+name: Base Sepolia Testnet
+category: rollup
+status: active
+description: "Sepolia testnet for Base."
+website: "https://base.org"
+chain_refs:
+  - caip2: eip155-84532
+    relationship: canonical_chain
+  - caip2: eip155-11155111
+    relationship: settlement_chain
+icon:
+  mode: chainlist
+  chain_ref: eip155-84532
+addresses:
+  - submission_chain: eip155-11155111
+    address: "0xfc56E7272EEBBBA5bC6c544e159483C4a38f8bA3"
+    role: batcher
+    label: "Base Sepolia batch sender"
+    status: active
+    confidence: probable
+    valid_from:
+      block: 10914440
+    valid_to: null
+    evidence:
+      - type: dashboard
+        url: "https://sepolia.blobscan.com/tx/0x8493993807a2f1ae13670bcc2219a76fa1af00fab8c3064777895ec91990ef49"
+      - type: analysis
+        url: "https://sepolia.etherscan.io/address/0xfc56e7272eebbba5bc6c544e159483c4a38f8ba3"
+      - type: transaction
+        submission_chain: eip155-11155111
+        tx_hash: "0x8493993807a2f1ae13670bcc2219a76fa1af00fab8c3064777895ec91990ef49"
