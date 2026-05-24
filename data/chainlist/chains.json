@@ -417,6 +417,38 @@
       ],
       "shortName": "blastmainnet",
       "status": "active"
+    },
+    "eip155-130": {
+      "chain": "ETH",
+      "chainId": 130,
+      "explorers": [
+        {
+          "name": "Unichain Mainnet Explorer",
+          "standard": "EIP3091",
+          "url": "https://uniscan.xyz"
+        },
+        {
+          "name": "Unichain Mainnet Explorer",
+          "standard": "EIP3091",
+          "url": "https://unichain.blockscout.com"
+        }
+      ],
+      "faucets": [],
+      "icon": "unichain",
+      "infoURL": "https://unichain.org",
+      "name": "Unichain",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "Ether",
+        "symbol": "ETH"
+      },
+      "networkId": 130,
+      "rpc": [
+        "https://mainnet.unichain.org",
+        "https://unichain-rpc.publicnode.com",
+        "wss://unichain-rpc.publicnode.com"
+      ],
+      "shortName": "unichain"
     }
   },
   "icons": {
@@ -450,6 +482,14 @@
         "height": 400,
         "url": "ipfs://bafybeifc2h3x7jgy4x4nmg2m54ghbvmkfu6oweujambwefzqzew5vujhsi",
         "width": 400
+      }
+    ],
+    "unichain": [
+      {
+        "format": "png",
+        "height": 512,
+        "url": "ipfs://QmWtu564n5T9KhhzKGMEcNWXXume5RzyUu7bARUX6ppHpW",
+        "width": 513
       }
     ]
   },
