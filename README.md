@@ -12,13 +12,6 @@ The registry is intended for blob explorers, dashboards, wallets, researchers, a
 - Chain references using CAIP-2 IDs such as `eip155-1`.
 - Entities that are not necessarily chains, including infrastructure providers, bridges, exchanges, research users, and individuals.
 
-## What Is Out Of Scope
-
-- Chain metadata already handled by Chainlist.
-- RPC, explorer, currency, icon, or parent-chain definitions for chains.
-- SQL artifacts.
-- Claims without evidence.
-
 ## Layout
 
 ```text
