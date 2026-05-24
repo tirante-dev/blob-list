@@ -39,18 +39,23 @@ jobs:
       - name: Lint Markdown
         run: npm run lint:md
 
-      - name: Reject committed artifact changes
+      - name: Reject committed generated-data changes
         if: github.event_name == 'pull_request'
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: |
-          if git diff --quiet "$BASE_SHA" -- artifacts; then
+          if git diff --quiet "$BASE_SHA" -- artifacts data/chainlist/chains.json; then
             exit 0
           fi
 
-          echo "::error::Generated artifacts are produced by CI. Remove committed artifacts/ changes from this PR and use the projected artifact diff comment for review."
-          git diff --name-only "$BASE_SHA" -- artifacts
+          echo "::error::Generated Chainlist snapshot data and artifacts are produced by CI. Remove committed data/chainlist/chains.json and artifacts/ changes from this PR and use the projected generated-data diff comment for review."
+          git diff --name-only "$BASE_SHA" -- artifacts data/chainlist/chains.json
           exit 1
+
+      - name: Fetch projected Chainlist snapshot
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: npm run fetch-chainlist
 
       - name: Generate projected artifacts
         run: npm run generate
@@ -68,21 +73,30 @@ jobs:
         run: |
           git diff --no-ext-diff --unified=3 "$BASE_SHA" -- artifacts > artifact.diff
 
-      - name: Build artifact diff comment
+      - name: Capture projected Chainlist snapshot diff
+        if: github.event_name == 'pull_request'
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          git diff --no-ext-diff --unified=3 "$BASE_SHA" -- data/chainlist/chains.json > chainlist.diff
+
+      - name: Build generated-data diff comment
         if: github.event_name == 'pull_request'
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
-        run: node .github/scripts/build-artifact-diff-comment.js artifact.diff artifact-comment.md
+        run: node .github/scripts/build-artifact-diff-comment.js artifact.diff generated-data-comment.md chainlist.diff
 
-      - name: Upload projected artifact diff
+      - name: Upload projected generated-data diffs
         if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4
         with:
-          name: projected-artifact-diff
-          path: artifact.diff
+          name: projected-generated-diffs
+          path: |
+            artifact.diff
+            chainlist.diff
 
-      - name: Comment projected artifact diff
+      - name: Comment projected generated-data diff
         if: github.event_name == 'pull_request'
         uses: actions/github-script@v7
         continue-on-error: true
@@ -90,7 +104,7 @@ jobs:
           script: |
             const fs = require("node:fs");
             const marker = "<!-- blob-list-artifact-diff -->";
-            const body = fs.readFileSync("artifact-comment.md", "utf8");
+            const body = fs.readFileSync("generated-data-comment.md", "utf8");
             const { owner, repo } = context.repo;
             const issue_number = context.issue.number;
             const comments = await github.paginate(
@@ -116,8 +130,8 @@ jobs:
               });
             }
 
-  update-artifacts:
-    name: update artifacts
+  update-generated-data:
+    name: update generated data
     if: github.event_name == 'push' && github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, '[skip ci]')
     needs: validate
     runs-on: ubuntu-latest
@@ -142,7 +156,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Commit generated artifacts
+      - name: Commit generated data
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
 
@@ -153,16 +169,17 @@ jobs:
             git fetch origin main
             git checkout -B main origin/main
 
+            npm run fetch-chainlist
             npm run generate
             npm run validate
 
-            if git diff --quiet -- artifacts; then
-              echo "Generated artifacts already match source."
+            if git diff --quiet -- artifacts data/chainlist/chains.json; then
+              echo "Generated data already matches source."
               exit 0
             fi
 
-            git add artifacts
-            git commit -m "chore: update generated artifacts [skip ci]"
+            git add artifacts data/chainlist/chains.json
+            git commit -m "chore: update generated data [skip ci]"
 
             if git push origin HEAD:main; then
               exit 0
