@@ -253,6 +253,55 @@
       ],
       "shortName": "base",
       "status": "active"
+    },
+    "eip155-480": {
+      "chain": "ETH",
+      "chainId": 480,
+      "explorers": [
+        {
+          "name": "etherscan",
+          "standard": "EIP3091",
+          "url": "https://worldscan.org"
+        },
+        {
+          "icon": "blockscout",
+          "name": "blockscout",
+          "standard": "EIP3091",
+          "url": "https://worldchain-mainnet.explorer.alchemy.com"
+        }
+      ],
+      "faucets": [],
+      "infoURL": "https://world.org/world-chain",
+      "name": "World Chain",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "Ether",
+        "symbol": "ETH"
+      },
+      "networkId": 480,
+      "parent": {
+        "bridges": [
+          {
+            "url": "https://world-chain.superbridge.app"
+          },
+          {
+            "url": "https://app.across.to/bridge?destinationChainId=480"
+          },
+          {
+            "url": "https://worldchain-mainnet.bridge.alchemy.com"
+          }
+        ],
+        "chain": "eip155-1",
+        "type": "L2"
+      },
+      "rpc": [
+        "https://worldchain-mainnet.g.alchemy.com/public",
+        "https://480.rpc.thirdweb.com",
+        "https://worldchain-mainnet.gateway.tenderly.co",
+        "wss://worldchain-mainnet.gateway.tenderly.co"
+      ],
+      "shortName": "wc",
+      "slip44": 1
     }
   },
   "icons": {
@@ -276,7 +325,7 @@
   "schema_version": 1,
   "source": {
     "commit": "cdb07325333894f6fee154ce393649d47de2c09b",
-    "fetched_at": "2026-05-24T18:45:18.576Z",
+    "fetched_at": "2026-05-24T19:19:27.289Z",
     "ref": "master",
     "repository": "ethereum-lists/chains",
     "url": "https://github.com/ethereum-lists/chains/tree/cdb07325333894f6fee154ce393649d47de2c09b"
