@@ -1,0 +1,33 @@
+schema_version: 1
+id: abstract
+name: Abstract
+category: rollup
+status: active
+description: "Consumer-focused Ethereum L2 built with the ZK Stack."
+website: "https://abs.xyz"
+chain_refs:
+  - caip2: eip155-2741
+    relationship: canonical_chain
+  - caip2: eip155-1
+    relationship: settlement_chain
+icon:
+  mode: chainlist
+  chain_ref: eip155-2741
+addresses:
+  - submission_chain: eip155-1
+    address: "0x11805594be0229EF08429D775AF0c55f7c4535dE"
+    role: batcher
+    label: "Abstract blob submitter"
+    status: active
+    confidence: probable
+    valid_from:
+      block: 21044494
+    valid_to: null
+    evidence:
+      - type: dashboard
+        url: "https://blobscan.com/tx/0x1f6a908fb32e53a5cc6e1c5ee812d9371150bbf37ef51d74a062410dcf94894b"
+      - type: analysis
+        url: "https://etherscan.io/address/0x11805594be0229ef08429d775af0c55f7c4535de"
+      - type: transaction
+        submission_chain: eip155-1
+        tx_hash: "0x1f6a908fb32e53a5cc6e1c5ee812d9371150bbf37ef51d74a062410dcf94894b"
