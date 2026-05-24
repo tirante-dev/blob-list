@@ -1,0 +1,33 @@
+schema_version: 1
+id: shape
+name: Shape
+category: rollup
+status: active
+description: "OP Stack Ethereum L2 for creators and onchain culture."
+website: "https://shape.network"
+chain_refs:
+  - caip2: eip155-360
+    relationship: canonical_chain
+  - caip2: eip155-1
+    relationship: settlement_chain
+icon:
+  mode: chainlist
+  chain_ref: eip155-360
+addresses:
+  - submission_chain: eip155-1
+    address: "0xF7ca543d652E38692fD12f989eb55b5327eC9A20"
+    role: batcher
+    label: "Shape batcher"
+    status: active
+    confidence: confirmed
+    valid_from:
+      block: 20370545
+    valid_to: null
+    evidence:
+      - type: repository
+        url: "https://github.com/ethereum-optimism/superchain-registry/blob/main/superchain/configs/mainnet/shape.toml"
+      - type: dashboard
+        url: "https://blobscan.com/tx/0xbf18b969fae6b7efba3fa76e03ce8eaf20fe0bd5029cc5b72af7dc7f48797efa"
+      - type: transaction
+        submission_chain: eip155-1
+        tx_hash: "0xbf18b969fae6b7efba3fa76e03ce8eaf20fe0bd5029cc5b72af7dc7f48797efa"
