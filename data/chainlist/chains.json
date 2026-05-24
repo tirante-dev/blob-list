@@ -473,6 +473,42 @@
       "networkId": 1750,
       "rpc": ["https://rpc.metall2.com"],
       "shortName": "metall2"
+    },
+    "eip155-57073": {
+      "chain": "ETH",
+      "chainId": 57073,
+      "explorers": [
+        {
+          "name": "Ink Explorer",
+          "standard": "EIP3091",
+          "url": "https://explorer.inkonchain.com"
+        }
+      ],
+      "faucets": ["https://inkonchain.com/faucet"],
+      "features": [
+        {
+          "name": "EIP155"
+        },
+        {
+          "name": "EIP1559"
+        }
+      ],
+      "infoURL": "https://inkonchain.com",
+      "name": "Ink",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "Ether",
+        "symbol": "ETH"
+      },
+      "networkId": 57073,
+      "rpc": [
+        "https://rpc-gel.inkonchain.com",
+        "https://rpc-qnd.inkonchain.com",
+        "wss://rpc-gel.inkonchain.com",
+        "wss://rpc-qnd.inkonchain.com"
+      ],
+      "shortName": "ink",
+      "status": "active"
     }
   },
   "icons": {

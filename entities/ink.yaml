@@ -1,0 +1,33 @@
+schema_version: 1
+id: ink
+name: Ink
+category: rollup
+status: active
+description: "OP Stack Ethereum L2 developed by Kraken."
+website: "https://inkonchain.com"
+chain_refs:
+  - caip2: eip155-57073
+    relationship: canonical_chain
+  - caip2: eip155-1
+    relationship: settlement_chain
+icon:
+  mode: chainlist
+  chain_ref: eip155-57073
+addresses:
+  - submission_chain: eip155-1
+    address: "0x500d7Ea63CF2E501dadaA5feeC1FC19FE2Aa72Ac"
+    role: batcher
+    label: "Ink batcher"
+    status: active
+    confidence: confirmed
+    valid_from:
+      block: 21345811
+    valid_to: null
+    evidence:
+      - type: repository
+        url: "https://github.com/ethereum-optimism/superchain-registry/blob/main/superchain/configs/mainnet/ink.toml"
+      - type: dashboard
+        url: "https://blobscan.com/tx/0x407752a39ad5fe0a6b125f007d92034fe428c0e4773ba9ddc8e685faa4801b74"
+      - type: transaction
+        submission_chain: eip155-1
+        tx_hash: "0x407752a39ad5fe0a6b125f007d92034fe428c0e4773ba9ddc8e685faa4801b74"
