@@ -31,3 +31,20 @@ addresses:
       - type: transaction
         submission_chain: eip155-1
         tx_hash: "0x4d03b7e1950256de257ff95b52fac047faeb11600c5975abe7e0ccbc7be7ecfb"
+  - submission_chain: eip155-1
+    address: "0x46d2F319fd42165D4318F099E143dEA8124E9E3e"
+    role: batcher
+    label: Linea blob submitter
+    status: active
+    confidence: probable
+    valid_from:
+      block: 25166717
+    valid_to: null
+    evidence:
+      - type: dashboard
+        url: https://blobscan.com/tx/0x588e1cb840b2cd879e6175085f39a6764a69fbc6059834fff5cfcfd01294617a
+      - type: analysis
+        url: https://etherscan.io/address/0x46d2f319fd42165d4318f099e143dea8124e9e3e
+      - type: transaction
+        submission_chain: eip155-1
+        tx_hash: "0x588e1cb840b2cd879e6175085f39a6764a69fbc6059834fff5cfcfd01294617a"
