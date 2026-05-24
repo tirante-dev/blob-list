@@ -1,0 +1,32 @@
+schema_version: 1
+id: arbitrum-sepolia
+name: Arbitrum Sepolia
+category: rollup
+status: active
+description: "Sepolia testnet for Arbitrum."
+website: "https://arbitrum.io"
+chain_refs:
+  - caip2: eip155-421614
+    relationship: canonical_chain
+  - caip2: eip155-11155111
+    relationship: settlement_chain
+addresses:
+  - submission_chain: eip155-11155111
+    address: "0xb2248390842d3C4aCF1D8A893954Afc0EAc586e5"
+    role: batcher
+    label: "Arbitrum Sepolia batch poster"
+    status: active
+    confidence: probable
+    valid_from:
+      block: 5396950
+    valid_to: null
+    evidence:
+      - type: documentation
+        url: "https://docs.arbitrum.io/build-decentralized-apps/reference/contract-addresses"
+      - type: dashboard
+        url: "https://sepolia.blobscan.com/tx/0x2fc3c771559131e931bf275ef709973a8876a60bc63035206aab3df12158bc59"
+      - type: analysis
+        url: "https://sepolia.etherscan.io/address/0xb2248390842d3c4acf1d8a893954afc0eac586e5"
+      - type: transaction
+        submission_chain: eip155-11155111
+        tx_hash: "0x2fc3c771559131e931bf275ef709973a8876a60bc63035206aab3df12158bc59"
