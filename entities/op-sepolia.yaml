@@ -1,0 +1,30 @@
+schema_version: 1
+id: op-sepolia
+name: OP Sepolia Testnet
+category: rollup
+status: active
+description: "Sepolia testnet for OP Mainnet."
+website: "https://www.optimism.io"
+chain_refs:
+  - caip2: eip155-11155420
+    relationship: canonical_chain
+  - caip2: eip155-11155111
+    relationship: settlement_chain
+addresses:
+  - submission_chain: eip155-11155111
+    address: "0x8F23BB38F531600e5d8FDDaAEC41F13FaB46E98c"
+    role: batcher
+    label: "OP Sepolia batcher"
+    status: active
+    confidence: confirmed
+    valid_from:
+      block: 5335452
+    valid_to: null
+    evidence:
+      - type: repository
+        url: "https://github.com/ethereum-optimism/superchain-registry/blob/main/superchain/configs/sepolia/op.toml"
+      - type: dashboard
+        url: "https://sepolia.blobscan.com/tx/0x2049b02f580b7e4ba48a47ce0e7071cf7bbca362df876370a8c11409fe739b20"
+      - type: transaction
+        submission_chain: eip155-11155111
+        tx_hash: "0x2049b02f580b7e4ba48a47ce0e7071cf7bbca362df876370a8c11409fe739b20"
