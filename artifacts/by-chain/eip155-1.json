@@ -91,7 +91,7 @@
             "relationship": "settlement_chain"
           }
         ],
-        "confidence": "probable",
+        "confidence": "confirmed",
         "entity_id": "arbitrum",
         "icon": {
           "chain_ref": "eip155-42161",
