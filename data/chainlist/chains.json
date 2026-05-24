@@ -302,6 +302,34 @@
       ],
       "shortName": "wc",
       "slip44": 1
+    },
+    "eip155-167000": {
+      "chain": "ETH",
+      "chainId": 167000,
+      "explorers": [
+        {
+          "name": "etherscan",
+          "standard": "EIP3091",
+          "url": "https://taikoscan.io"
+        }
+      ],
+      "faucets": [],
+      "icon": "taiko",
+      "infoURL": "https://taiko.xyz",
+      "name": "Taiko",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "Ether",
+        "symbol": "ETH"
+      },
+      "networkId": 167000,
+      "rpc": [
+        "https://rpc.mainnet.taiko.xyz",
+        "https://taiko-rpc.publicnode.com",
+        "wss://taiko-rpc.publicnode.com"
+      ],
+      "shortName": "tko-mainnet",
+      "status": "active"
     }
   },
   "icons": {
@@ -319,6 +347,14 @@
         "height": 1628,
         "url": "ipfs://QmdwQDr6vmBtXmK2TmknkEuZNoaDqTasFdZdu3DRw8b2wt",
         "width": 1000
+      }
+    ],
+    "taiko": [
+      {
+        "format": "png",
+        "height": 258,
+        "url": "ipfs://QmcHdmVr5VRUJq13jnM6tgah5Ge7hn3Dm14eY6vwivJ5ui",
+        "width": 288
       }
     ]
   },

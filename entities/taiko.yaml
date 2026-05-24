@@ -1,0 +1,33 @@
+schema_version: 1
+id: taiko
+name: Taiko
+category: rollup
+status: active
+description: "Ethereum-equivalent based rollup."
+website: "https://taiko.xyz"
+chain_refs:
+  - caip2: eip155-167000
+    relationship: canonical_chain
+  - caip2: eip155-1
+    relationship: settlement_chain
+icon:
+  mode: chainlist
+  chain_ref: eip155-167000
+addresses:
+  - submission_chain: eip155-1
+    address: "0x000000633b68f5D8D3a86593ebB815b4663BCBe0"
+    role: proposer
+    label: "Taiko blob proposer"
+    status: active
+    confidence: probable
+    valid_from:
+      block: 19960128
+    valid_to: null
+    evidence:
+      - type: dashboard
+        url: "https://blobscan.com/tx/0x74f4dd0948ca1c933fbd8372532f16b5d9f8efaa779ce91a59b36e2fea95c936"
+      - type: analysis
+        url: "https://etherscan.io/address/0x000000633b68f5d8d3a86593ebb815b4663bcbe0"
+      - type: transaction
+        submission_chain: eip155-1
+        tx_hash: "0x74f4dd0948ca1c933fbd8372532f16b5d9f8efaa779ce91a59b36e2fea95c936"
