@@ -1,0 +1,28 @@
+schema_version: 1
+id: starknet
+name: Starknet
+category: rollup
+status: active
+description: "Validity rollup settling on Ethereum."
+website: "https://www.starknet.io"
+chain_refs:
+  - caip2: eip155-1
+    relationship: settlement_chain
+addresses:
+  - submission_chain: eip155-1
+    address: "0x2C169DFe5fBbA12957Bdd0Ba47d9CEDbFE260CA7"
+    role: operator
+    label: "Starknet blob submitter"
+    status: active
+    confidence: probable
+    valid_from:
+      block: 19427723
+    valid_to: null
+    evidence:
+      - type: dashboard
+        url: "https://blobscan.com/tx/0x94fab448d43c004abcb450afa6f268ca69ce52f03b622d2dbd4f283e6a4abfec"
+      - type: analysis
+        url: "https://etherscan.io/address/0x2c169dfe5fbba12957bdd0ba47d9cedbfe260ca7"
+      - type: transaction
+        submission_chain: eip155-1
+        tx_hash: "0x94fab448d43c004abcb450afa6f268ca69ce52f03b622d2dbd4f283e6a4abfec"
