@@ -17,13 +17,17 @@ addresses:
   - submission_chain: eip155-1
     address: "0xC1b634853Cb333D3aD8663715b08f41A3Aec47cc"
     role: batcher
-    label: "Arbitrum batch submitter"
+    label: "Arbitrum One batch poster"
     status: active
-    confidence: probable
+    confidence: confirmed
     valid_from:
       block: 19433943
     valid_to: null
     evidence:
+      - type: documentation
+        url: "https://docs.arbitrum.io/build-decentralized-apps/reference/contract-addresses"
+      - type: verified_contract
+        url: "https://etherscan.io/address/0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6#readProxyContract"
       - type: dashboard
         url: "https://blobscan.com/tx/0x5969e9d520e138e6eeb5c020a75635fd2fdc15803f707dce7909c1bf062b32d0"
       - type: analysis
