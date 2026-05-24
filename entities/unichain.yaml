@@ -1,0 +1,33 @@
+schema_version: 1
+id: unichain
+name: Unichain
+category: rollup
+status: active
+description: "OP Stack Ethereum L2 developed by Uniswap Labs."
+website: "https://unichain.org"
+chain_refs:
+  - caip2: eip155-130
+    relationship: canonical_chain
+  - caip2: eip155-1
+    relationship: settlement_chain
+icon:
+  mode: chainlist
+  chain_ref: eip155-130
+addresses:
+  - submission_chain: eip155-1
+    address: "0x2F60A5184c63ca94f82a27100643DbAbe4F3f7Fd"
+    role: batcher
+    label: "Unichain batcher"
+    status: active
+    confidence: confirmed
+    valid_from:
+      block: 21096458
+    valid_to: null
+    evidence:
+      - type: repository
+        url: "https://github.com/ethereum-optimism/superchain-registry/blob/main/superchain/configs/mainnet/unichain.toml"
+      - type: dashboard
+        url: "https://blobscan.com/tx/0xb3f3906f5b4374e50483061212f02b10c767ba667e188a412bfdc32753b6d2c6"
+      - type: transaction
+        submission_chain: eip155-1
+        tx_hash: "0xb3f3906f5b4374e50483061212f02b10c767ba667e188a412bfdc32753b6d2c6"
