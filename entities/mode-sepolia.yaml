@@ -1,0 +1,33 @@
+schema_version: 1
+id: mode-sepolia
+name: Mode Testnet
+category: rollup
+status: active
+description: "Sepolia testnet for Mode."
+website: "https://www.mode.network"
+chain_refs:
+  - caip2: eip155-919
+    relationship: canonical_chain
+  - caip2: eip155-11155111
+    relationship: settlement_chain
+icon:
+  mode: chainlist
+  chain_ref: eip155-919
+addresses:
+  - submission_chain: eip155-11155111
+    address: "0x4e6BD53883107B063c502dDd49F9600Dc51b3DDc"
+    role: batcher
+    label: "Mode Testnet batcher"
+    status: active
+    confidence: confirmed
+    valid_from:
+      block: 5480189
+    valid_to: null
+    evidence:
+      - type: repository
+        url: "https://github.com/ethereum-optimism/superchain-registry/blob/main/superchain/configs/sepolia/mode.toml"
+      - type: dashboard
+        url: "https://sepolia.blobscan.com/tx/0x730c680f71791c9c3c68e60b22502e344b367f407c6708a2e481eb2c3c0dfda9"
+      - type: transaction
+        submission_chain: eip155-11155111
+        tx_hash: "0x730c680f71791c9c3c68e60b22502e344b367f407c6708a2e481eb2c3c0dfda9"
