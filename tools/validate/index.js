@@ -231,7 +231,7 @@ function validateOverlaps(entities, errors) {
 function assertKnownChain(caip2, chainlist, errors, file) {
   if (!chainlist.chains[caip2]) {
     errors.push(
-      `${relative(file)}: ${caip2} is missing from data/chainlist/chains.json`,
+      `${relative(file)}: ${caip2} is missing from data/chainlist/snapshot.json`,
     );
   }
 }

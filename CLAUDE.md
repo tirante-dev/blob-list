@@ -24,11 +24,12 @@ npm run generate:check
 npm audit --audit-level=moderate
 ```
 
-Run `npm run fetch-chainlist` and `npm run generate` after changing `entities/`, schemas, Chainlist snapshot data, or generator logic. Attribution PRs should not commit `data/chainlist/chains.json` or `artifacts/` changes; CI projects those diffs and publishes an `at/generated-data` branch for a generated-data PR after merge.
+Run `npm run fetch-chainlist` and `npm run generate` after changing `entities/`, schemas, the vendored Chainlist snapshot lockfile, or generator logic. Attribution PRs should not commit `data/chainlist/snapshot.json` or `artifacts/` changes; CI projects those diffs and publishes an `at/generated-data` branch for a generated-data PR after merge.
 
 ## Data Model Notes
 
 - `submission_chain` and all chain references use CAIP-2 refs such as `eip155-1`.
+- `data/chainlist/snapshot.json` is a vendored Chainlist lockfile for deterministic validation and generation; it is not registry-owned chain metadata.
 - EVM addresses must be checksummed.
 - Every address claim needs at least one evidence item.
 - `valid_to: null` means the claim is open-ended.

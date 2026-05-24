@@ -12,7 +12,10 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export const rootDir = path.resolve(__dirname, "../..");
 export const entitiesDir = path.join(rootDir, "entities");
 export const artifactsDir = path.join(rootDir, "artifacts");
-export const chainlistFile = path.join(rootDir, "data/chainlist/chains.json");
+export const chainlistSnapshotFile = path.join(
+  rootDir,
+  "data/chainlist/snapshot.json",
+);
 
 export const STRONG_EVIDENCE_TYPES = new Set([
   "documentation",
@@ -76,7 +79,7 @@ export async function loadEntities() {
 }
 
 export async function loadChainlistSnapshot() {
-  return readJson(chainlistFile);
+  return readJson(chainlistSnapshotFile);
 }
 
 export async function loadSchemas() {

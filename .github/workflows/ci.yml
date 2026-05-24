@@ -46,13 +46,17 @@ jobs:
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: |
-          if git diff --quiet "$BASE_SHA" -- artifacts data/chainlist/chains.json; then
-            exit 0
+          if ! git diff --quiet "$BASE_SHA" -- artifacts; then
+            echo "::error::Generated artifacts are produced by CI. Remove committed artifacts/ changes from this PR and use the projected generated-data diff comment for review."
+            git diff --name-only "$BASE_SHA" -- artifacts
+            exit 1
           fi
 
-          echo "::error::Generated Chainlist snapshot data and artifacts are produced by CI. Remove committed data/chainlist/chains.json and artifacts/ changes from this PR and use the projected generated-data diff comment for review."
-          git diff --name-only "$BASE_SHA" -- artifacts data/chainlist/chains.json
-          exit 1
+          if ! git diff --quiet "$BASE_SHA" -- entities && ! git diff --quiet "$BASE_SHA" -- data/chainlist/snapshot.json; then
+            echo "::error::Do not commit data/chainlist/snapshot.json changes in attribution PRs. CI projects snapshot diffs for review and publishes an at/generated-data branch after merge."
+            git diff --name-only "$BASE_SHA" -- data/chainlist/snapshot.json
+            exit 1
+          fi
 
       - name: Fetch projected Chainlist snapshot
         env:
@@ -80,7 +84,7 @@ jobs:
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: |
-          git diff --no-ext-diff --unified=3 "$BASE_SHA" -- data/chainlist/chains.json > chainlist.diff
+          git diff --no-ext-diff --unified=3 "$BASE_SHA" -- data/chainlist/snapshot.json > chainlist.diff
 
       - name: Build generated-data diff comment
         if: github.event_name == 'pull_request' && github.head_ref != 'at/generated-data'
@@ -178,13 +182,13 @@ jobs:
           npm run validate
           npx prettier --write data/chainlist/chains.json
 
-          if git diff --quiet -- artifacts data/chainlist/chains.json; then
+          if git diff --quiet -- artifacts data/chainlist/snapshot.json; then
             echo "Generated data already matches source."
             exit 0
           fi
 
           git switch -c "$branch"
-          git add artifacts data/chainlist/chains.json
+          git add artifacts data/chainlist/snapshot.json
           git commit -m "chore: update generated data"
           git fetch origin "$branch":"refs/remotes/origin/$branch" || true
           git push --force-with-lease origin HEAD:"$branch"

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import {
   canonicalJson,
-  chainlistFile,
+  chainlistSnapshotFile,
   collectReferencedChains,
   loadEntities,
   readJson,
@@ -61,7 +61,7 @@ try {
       `Chainlist snapshot unchanged; kept ${previousSnapshot.source.repository}@${previousSnapshot.source.commit}`,
     );
   } else {
-    await writeJson(chainlistFile, snapshot);
+    await writeJson(chainlistSnapshotFile, snapshot);
     console.log(
       `Fetched ${Object.keys(chains).length} Chainlist refs from ${repository}@${commit.sha}`,
     );
@@ -73,7 +73,7 @@ try {
 
 async function readExistingSnapshot() {
   try {
-    return await readJson(chainlistFile);
+    return await readJson(chainlistSnapshotFile);
   } catch (error) {
     if (error.code === "ENOENT") {
       return null;
