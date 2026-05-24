@@ -1,0 +1,33 @@
+schema_version: 1
+id: linea-sepolia
+name: Linea Sepolia
+category: rollup
+status: active
+description: "Sepolia testnet for Linea."
+website: "https://linea.build"
+chain_refs:
+  - caip2: eip155-59141
+    relationship: canonical_chain
+  - caip2: eip155-11155111
+    relationship: settlement_chain
+icon:
+  mode: chainlist
+  chain_ref: eip155-59141
+addresses:
+  - submission_chain: eip155-11155111
+    address: "0x47C63d1E391FcB3dCdC40C4d7fA58ADb172f8c38"
+    role: batcher
+    label: "Linea Sepolia blob submitter"
+    status: active
+    confidence: probable
+    valid_from:
+      block: 5523599
+    valid_to: null
+    evidence:
+      - type: dashboard
+        url: "https://sepolia.blobscan.com/tx/0x36ee9868be857b505d5d9602dd3eae4e6757913ce11ccf483f4d405d33adb1bf"
+      - type: analysis
+        url: "https://sepolia.etherscan.io/address/0x47c63d1e391fcb3dcdc40c4d7fa58adb172f8c38"
+      - type: transaction
+        submission_chain: eip155-11155111
+        tx_hash: "0x36ee9868be857b505d5d9602dd3eae4e6757913ce11ccf483f4d405d33adb1bf"
