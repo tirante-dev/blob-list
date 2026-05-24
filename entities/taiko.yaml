@@ -3,8 +3,8 @@ id: taiko
 name: Taiko
 category: rollup
 status: active
-description: "Ethereum-equivalent based rollup."
-website: "https://taiko.xyz"
+description: Ethereum-equivalent based rollup.
+website: https://taiko.xyz
 chain_refs:
   - caip2: eip155-167000
     relationship: canonical_chain
@@ -17,7 +17,7 @@ addresses:
   - submission_chain: eip155-1
     address: "0x000000633b68f5D8D3a86593ebB815b4663BCBe0"
     role: proposer
-    label: "Taiko blob proposer"
+    label: Taiko blob proposer
     status: active
     confidence: probable
     valid_from:
@@ -25,9 +25,26 @@ addresses:
     valid_to: null
     evidence:
       - type: dashboard
-        url: "https://blobscan.com/tx/0x74f4dd0948ca1c933fbd8372532f16b5d9f8efaa779ce91a59b36e2fea95c936"
+        url: https://blobscan.com/tx/0x74f4dd0948ca1c933fbd8372532f16b5d9f8efaa779ce91a59b36e2fea95c936
       - type: analysis
-        url: "https://etherscan.io/address/0x000000633b68f5d8d3a86593ebb815b4663bcbe0"
+        url: https://etherscan.io/address/0x000000633b68f5d8d3a86593ebb815b4663bcbe0
       - type: transaction
         submission_chain: eip155-1
         tx_hash: "0x74f4dd0948ca1c933fbd8372532f16b5d9f8efaa779ce91a59b36e2fea95c936"
+  - submission_chain: eip155-1
+    address: "0x5F62d006C10C009ff50C878Cd6157aC861C99990"
+    role: proposer
+    label: Taiko blob proposer
+    status: active
+    confidence: probable
+    valid_from:
+      block: 25167138
+    valid_to: null
+    evidence:
+      - type: dashboard
+        url: https://blobscan.com/tx/0x2236661334e6178447cd82019a955e1971187698289af4cca79ce2a2e23c6951
+      - type: analysis
+        url: https://etherscan.io/address/0x5f62d006c10c009ff50c878cd6157ac861c99990
+      - type: transaction
+        submission_chain: eip155-1
+        tx_hash: "0x2236661334e6178447cd82019a955e1971187698289af4cca79ce2a2e23c6951"
