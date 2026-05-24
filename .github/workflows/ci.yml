@@ -176,6 +176,7 @@ jobs:
           npm run fetch-chainlist
           npm run generate
           npm run validate
+          npx prettier --write data/chainlist/chains.json
 
           if git diff --quiet -- artifacts data/chainlist/chains.json; then
             echo "Generated data already matches source."
