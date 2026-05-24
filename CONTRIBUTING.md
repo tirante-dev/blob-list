@@ -9,6 +9,7 @@ Thanks for helping make blob attribution less hand-wavy.
 3. Add at least one evidence item for every address claim.
 4. Use `confidence: confirmed` only when the evidence is official documentation, an official announcement, a verified contract, an official repository, or similarly strong public evidence.
 5. Close historical ranges with `valid_to.block` instead of rewriting past claims.
+6. Do not include generated `artifacts/` changes in attribution PRs; CI posts the projected artifact diff on the pull request and updates generated artifacts after merge.
 
 ## Address Rules
 

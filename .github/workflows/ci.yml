@@ -8,6 +8,8 @@ on:
 
 permissions:
   contents: read
+  issues: write
+  pull-requests: write
 
 jobs:
   validate:
@@ -16,6 +18,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
@@ -35,8 +39,138 @@ jobs:
       - name: Lint Markdown
         run: npm run lint:md
 
+      - name: Reject committed artifact changes
+        if: github.event_name == 'pull_request'
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          if git diff --quiet "$BASE_SHA" -- artifacts; then
+            exit 0
+          fi
+
+          echo "::error::Generated artifacts are produced by CI. Remove committed artifacts/ changes from this PR and use the projected artifact diff comment for review."
+          git diff --name-only "$BASE_SHA" -- artifacts
+          exit 1
+
+      - name: Generate projected artifacts
+        run: npm run generate
+
       - name: Validate registry
         run: npm run validate
 
       - name: Check generated artifacts
         run: npm run generate:check
+
+      - name: Capture projected artifact diff
+        if: github.event_name == 'pull_request'
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          git diff --no-ext-diff --unified=3 "$BASE_SHA" -- artifacts > artifact.diff
+
+      - name: Build artifact diff comment
+        if: github.event_name == 'pull_request'
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: node .github/scripts/build-artifact-diff-comment.js artifact.diff artifact-comment.md
+
+      - name: Upload projected artifact diff
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: projected-artifact-diff
+          path: artifact.diff
+
+      - name: Comment projected artifact diff
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        continue-on-error: true
+        with:
+          script: |
+            const fs = require("node:fs");
+            const marker = "<!-- blob-list-artifact-diff -->";
+            const body = fs.readFileSync("artifact-comment.md", "utf8");
+            const { owner, repo } = context.repo;
+            const issue_number = context.issue.number;
+            const comments = await github.paginate(
+              github.rest.issues.listComments,
+              { owner, repo, issue_number, per_page: 100 },
+            );
+            const previous = comments.find((comment) =>
+              comment.user?.type === "Bot" && comment.body?.includes(marker),
+            );
+            if (previous) {
+              await github.rest.issues.updateComment({
+                owner,
+                repo,
+                comment_id: previous.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number,
+                body,
+              });
+            }
+
+  update-artifacts:
+    name: update artifacts
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, '[skip ci]')
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: generated-artifacts-main
+      cancel-in-progress: false
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 26
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Commit generated artifacts
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -B main origin/main
+
+            npm run generate
+            npm run validate
+
+            if git diff --quiet -- artifacts; then
+              echo "Generated artifacts already match source."
+              exit 0
+            fi
+
+            git add artifacts
+            git commit -m "chore: update generated artifacts [skip ci]"
+
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+
+            echo "Push raced with a newer main update; retrying..."
+            sleep 5
+          done
+
+          echo "Failed to push generated artifacts after retries." >&2
+          exit 1
