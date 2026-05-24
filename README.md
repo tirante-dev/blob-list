@@ -59,7 +59,10 @@ an `at/generated-data` branch for a generated-data PR after merge.
 
 ## Releases
 
-Dataset releases use semver-style tags.
+Dataset releases use semver-style tags. Merges to `main` that add one or
+more address attribution claims automatically publish the next minor release.
+Manual tag pushes matching `v*.*.*` can still publish explicit releases for
+schema changes or patch fixes.
 
 - Major: schema changes.
 - Minor: new entities, chains, or attribution claims.
