@@ -449,6 +449,30 @@
         "wss://unichain-rpc.publicnode.com"
       ],
       "shortName": "unichain"
+    },
+    "eip155-1750": {
+      "chain": "Metal L2",
+      "chainId": 1750,
+      "explorers": [
+        {
+          "icon": "blockscout",
+          "name": "blockscout",
+          "standard": "EIP3091",
+          "url": "https://explorer.metall2.com"
+        }
+      ],
+      "faucets": [],
+      "icon": "metal",
+      "infoURL": "https://metall2.com",
+      "name": "Metal L2",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "ETH",
+        "symbol": "ETH"
+      },
+      "networkId": 1750,
+      "rpc": ["https://rpc.metall2.com"],
+      "shortName": "metall2"
     }
   },
   "icons": {
@@ -490,6 +514,14 @@
         "height": 512,
         "url": "ipfs://QmWtu564n5T9KhhzKGMEcNWXXume5RzyUu7bARUX6ppHpW",
         "width": 513
+      }
+    ],
+    "metal": [
+      {
+        "format": "svg",
+        "height": 250,
+        "url": "ipfs://Qmesm61n8vVVDEeZU7npz39aQYofes9vMfXYwWM4JehLFS",
+        "width": 250
       }
     ]
   },
