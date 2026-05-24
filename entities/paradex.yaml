@@ -1,0 +1,28 @@
+schema_version: 1
+id: paradex
+name: Paradex
+category: rollup
+status: active
+description: "Starknet-based derivatives application chain settling on Ethereum."
+website: "https://www.paradex.trade"
+chain_refs:
+  - caip2: eip155-1
+    relationship: settlement_chain
+addresses:
+  - submission_chain: eip155-1
+    address: "0xC70ae19B5FeAA5c19f576e621d2bad9771864fe2"
+    role: operator
+    label: "Paradex blob submitter"
+    status: active
+    confidence: probable
+    valid_from:
+      block: 19434013
+    valid_to: null
+    evidence:
+      - type: dashboard
+        url: "https://blobscan.com/tx/0x5f4aa8ad0668797d5ecf2034a050a227dde6a851f90e8acda6cdc72ef756a98f"
+      - type: analysis
+        url: "https://etherscan.io/address/0xc70ae19b5feaa5c19f576e621d2bad9771864fe2"
+      - type: transaction
+        submission_chain: eip155-1
+        tx_hash: "0x5f4aa8ad0668797d5ecf2034a050a227dde6a851f90e8acda6cdc72ef756a98f"

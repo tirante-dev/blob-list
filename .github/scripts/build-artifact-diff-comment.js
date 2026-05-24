@@ -4,26 +4,27 @@ import fs from "node:fs";
 const MARKER = "<!-- blob-list-artifact-diff -->";
 const MAX_DIFF_CHARS = 58000;
 
-const [, , diffPath, outputPath] = process.argv;
+const [, , artifactDiffPath, outputPath, chainlistDiffPath] = process.argv;
 
-if (!diffPath || !outputPath) {
+if (!artifactDiffPath || !outputPath) {
   console.error(
-    "Usage: build-artifact-diff-comment.js <artifact.diff> <comment.md>",
+    "Usage: build-artifact-diff-comment.js <artifact.diff> <comment.md> [chainlist.diff]",
   );
   process.exitCode = 1;
 } else {
-  const diff = fs.existsSync(diffPath) ? fs.readFileSync(diffPath, "utf8") : "";
-  fs.writeFileSync(outputPath, buildComment(diff));
+  const artifactDiff = readOptionalFile(artifactDiffPath);
+  const chainlistDiff = readOptionalFile(chainlistDiffPath);
+  fs.writeFileSync(outputPath, buildComment({ artifactDiff, chainlistDiff }));
 }
 
-function buildComment(diff) {
+function buildComment({ artifactDiff, chainlistDiff }) {
   const baseSha = shortSha(process.env.BASE_SHA);
   const headSha = shortSha(process.env.HEAD_SHA);
   const headerLines = [
     MARKER,
-    "## Projected artifact diff",
+    "## Projected generated-data diff",
     "",
-    `CI generated artifacts from this PR and compared them with base ${baseSha}.`,
+    `CI generated Chainlist snapshot data and artifacts from this PR and compared them with base ${baseSha}.`,
   ];
   if (headSha) {
     headerLines.push(`Source head: ${headSha}.`);
@@ -31,22 +32,39 @@ function buildComment(diff) {
   headerLines.push("");
   const header = headerLines.join("\n");
 
-  if (!diff.trim()) {
-    return `${header}No generated artifact changes.\n`;
+  if (!artifactDiff.trim() && !chainlistDiff.trim()) {
+    return `${header}No generated Chainlist snapshot or artifact changes.\n`;
   }
 
+  const diff = [
+    formatDiffSection("Chainlist snapshot changes", chainlistDiff),
+    formatDiffSection("Artifact changes", artifactDiff),
+  ]
+    .filter(Boolean)
+    .join("\n\n");
   const { text, truncated } = truncateAtLine(diff, MAX_DIFF_CHARS);
   const note = truncated
-    ? "\n\nDiff truncated to fit in a PR comment. Download the `projected-artifact-diff` workflow artifact for the full diff.\n"
+    ? "\n\nDiff truncated to fit in a PR comment. Download the `projected-generated-diffs` workflow artifact for the full diff.\n"
     : "\n";
 
   return `${header}<details open>
-<summary>Generated artifact changes</summary>
+<summary>Generated-data changes</summary>
 
 \`\`\`diff
 ${text}
 \`\`\`${note}</details>
 `;
+}
+
+function readOptionalFile(file) {
+  return file && fs.existsSync(file) ? fs.readFileSync(file, "utf8") : "";
+}
+
+function formatDiffSection(title, diff) {
+  if (!diff.trim()) {
+    return "";
+  }
+  return `# ${title}\n${diff.trimEnd()}`;
 }
 
 function shortSha(value) {

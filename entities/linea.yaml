@@ -1,0 +1,50 @@
+schema_version: 1
+id: linea
+name: Linea
+category: rollup
+status: active
+description: Ethereum zkEVM rollup developed by Consensys.
+website: https://linea.build
+chain_refs:
+  - caip2: eip155-59144
+    relationship: canonical_chain
+  - caip2: eip155-1
+    relationship: settlement_chain
+icon:
+  mode: chainlist
+  chain_ref: eip155-59144
+addresses:
+  - submission_chain: eip155-1
+    address: "0xa9268341831eFa4937537bc3e9EB36DbecE83C7e"
+    role: batcher
+    label: Linea blob submitter
+    status: active
+    confidence: probable
+    valid_from:
+      block: 19518063
+    valid_to: null
+    evidence:
+      - type: dashboard
+        url: https://blobscan.com/tx/0x4d03b7e1950256de257ff95b52fac047faeb11600c5975abe7e0ccbc7be7ecfb
+      - type: analysis
+        url: https://etherscan.io/address/0xa9268341831efa4937537bc3e9eb36dbece83c7e
+      - type: transaction
+        submission_chain: eip155-1
+        tx_hash: "0x4d03b7e1950256de257ff95b52fac047faeb11600c5975abe7e0ccbc7be7ecfb"
+  - submission_chain: eip155-1
+    address: "0x46d2F319fd42165D4318F099E143dEA8124E9E3e"
+    role: batcher
+    label: Linea blob submitter
+    status: active
+    confidence: probable
+    valid_from:
+      block: 25166717
+    valid_to: null
+    evidence:
+      - type: dashboard
+        url: https://blobscan.com/tx/0x588e1cb840b2cd879e6175085f39a6764a69fbc6059834fff5cfcfd01294617a
+      - type: analysis
+        url: https://etherscan.io/address/0x46d2f319fd42165d4318f099e143dea8124e9e3e
+      - type: transaction
+        submission_chain: eip155-1
+        tx_hash: "0x588e1cb840b2cd879e6175085f39a6764a69fbc6059834fff5cfcfd01294617a"

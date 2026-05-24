@@ -1,0 +1,33 @@
+schema_version: 1
+id: zora
+name: Zora
+category: rollup
+status: active
+description: "OP Stack Ethereum L2 for media and creator applications."
+website: "https://zora.energy"
+chain_refs:
+  - caip2: eip155-7777777
+    relationship: canonical_chain
+  - caip2: eip155-1
+    relationship: settlement_chain
+icon:
+  mode: chainlist
+  chain_ref: eip155-7777777
+addresses:
+  - submission_chain: eip155-1
+    address: "0x625726c858dBF78c0125436C943Bf4b4bE9d9033"
+    role: batcher
+    label: "Zora batcher"
+    status: active
+    confidence: confirmed
+    valid_from:
+      block: 19430555
+    valid_to: null
+    evidence:
+      - type: repository
+        url: "https://github.com/ethereum-optimism/superchain-registry/blob/main/superchain/configs/mainnet/zora.toml"
+      - type: dashboard
+        url: "https://blobscan.com/tx/0x4ee1123cca07ad99817a13e13ed383ee84fedef9d764d96aa5f8714b2e514e59"
+      - type: transaction
+        submission_chain: eip155-1
+        tx_hash: "0x4ee1123cca07ad99817a13e13ed383ee84fedef9d764d96aa5f8714b2e514e59"

@@ -118,6 +118,230 @@
       ],
       "shortName": "oeth"
     },
+    "eip155-130": {
+      "chain": "ETH",
+      "chainId": 130,
+      "explorers": [
+        {
+          "name": "Unichain Mainnet Explorer",
+          "standard": "EIP3091",
+          "url": "https://uniscan.xyz"
+        },
+        {
+          "name": "Unichain Mainnet Explorer",
+          "standard": "EIP3091",
+          "url": "https://unichain.blockscout.com"
+        }
+      ],
+      "faucets": [],
+      "icon": "unichain",
+      "infoURL": "https://unichain.org",
+      "name": "Unichain",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "Ether",
+        "symbol": "ETH"
+      },
+      "networkId": 130,
+      "rpc": [
+        "https://mainnet.unichain.org",
+        "https://unichain-rpc.publicnode.com",
+        "wss://unichain-rpc.publicnode.com"
+      ],
+      "shortName": "unichain"
+    },
+    "eip155-167000": {
+      "chain": "ETH",
+      "chainId": 167000,
+      "explorers": [
+        {
+          "name": "etherscan",
+          "standard": "EIP3091",
+          "url": "https://taikoscan.io"
+        }
+      ],
+      "faucets": [],
+      "icon": "taiko",
+      "infoURL": "https://taiko.xyz",
+      "name": "Taiko",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "Ether",
+        "symbol": "ETH"
+      },
+      "networkId": 167000,
+      "rpc": [
+        "https://rpc.mainnet.taiko.xyz",
+        "https://taiko-rpc.publicnode.com",
+        "wss://taiko-rpc.publicnode.com"
+      ],
+      "shortName": "tko-mainnet",
+      "status": "active"
+    },
+    "eip155-1750": {
+      "chain": "Metal L2",
+      "chainId": 1750,
+      "explorers": [
+        {
+          "icon": "blockscout",
+          "name": "blockscout",
+          "standard": "EIP3091",
+          "url": "https://explorer.metall2.com"
+        }
+      ],
+      "faucets": [],
+      "icon": "metal",
+      "infoURL": "https://metall2.com",
+      "name": "Metal L2",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "ETH",
+        "symbol": "ETH"
+      },
+      "networkId": 1750,
+      "rpc": ["https://rpc.metall2.com"],
+      "shortName": "metall2"
+    },
+    "eip155-1868": {
+      "chain": "ETH",
+      "chainId": 1868,
+      "explorers": [
+        {
+          "icon": "blockscout",
+          "name": "blockscout",
+          "standard": "EIP3091",
+          "url": "https://soneium.blockscout.com"
+        },
+        {
+          "name": "OKLink",
+          "standard": "EIP3091",
+          "url": "https://www.okx.com/web3/explorer/soneium"
+        },
+        {
+          "name": "SlamVision",
+          "standard": "none",
+          "url": "https://soneium.slam.vision"
+        }
+      ],
+      "faucets": [],
+      "infoURL": "https://soneium.org",
+      "name": "Soneium",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "Ether",
+        "symbol": "ETH"
+      },
+      "networkId": 1868,
+      "parent": {
+        "bridges": [
+          {
+            "url": "https://superbridge.app/soneium"
+          }
+        ],
+        "chain": "eip155-1",
+        "type": "L2"
+      },
+      "rpc": ["https://rpc.soneium.org"],
+      "shortName": "soneium",
+      "status": "active",
+      "title": "Soneium mainnet"
+    },
+    "eip155-2741": {
+      "chain": "Abstract",
+      "chainId": 2741,
+      "explorers": [
+        {
+          "name": "Etherscan",
+          "standard": "EIP3091",
+          "url": "https://abscan.org"
+        },
+        {
+          "name": "Abstract Explorer",
+          "standard": "EIP3091",
+          "url": "https://explorer.mainnet.abs.xyz"
+        }
+      ],
+      "faucets": [],
+      "icon": "abstract",
+      "infoURL": "https://abs.xyz",
+      "name": "Abstract",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "Ether",
+        "symbol": "ETH"
+      },
+      "networkId": 2741,
+      "parent": {
+        "bridges": [
+          {
+            "url": "https://portal.mainnet.abs.xyz/bridge"
+          }
+        ],
+        "chain": "eip155-1",
+        "type": "L2"
+      },
+      "rpc": ["https://api.mainnet.abs.xyz"],
+      "shortName": "abstract"
+    },
+    "eip155-34443": {
+      "chain": "ETH",
+      "chainId": 34443,
+      "explorers": [
+        {
+          "name": "modescout",
+          "standard": "none",
+          "url": "https://explorer.mode.network"
+        },
+        {
+          "name": "Routescan",
+          "standard": "none",
+          "url": "https://modescan.io"
+        }
+      ],
+      "faucets": [],
+      "icon": "mode",
+      "infoURL": "https://docs.mode.network/",
+      "name": "Mode",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "Ether",
+        "symbol": "ETH"
+      },
+      "networkId": 34443,
+      "rpc": [
+        "https://mainnet.mode.network",
+        "https://mode.drpc.org",
+        "wss://mode.drpc.org"
+      ],
+      "shortName": "mode"
+    },
+    "eip155-360": {
+      "chain": "ETH",
+      "chainId": 360,
+      "explorers": [
+        {
+          "name": "shapescan",
+          "standard": "EIP3091",
+          "url": "https://shapescan.xyz"
+        }
+      ],
+      "faucets": [],
+      "icon": "shape",
+      "infoURL": "https://shape.network",
+      "name": "Shape",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "Ether",
+        "symbol": "ETH"
+      },
+      "networkId": 360,
+      "rpc": [
+        "https://mainnet.shape.network",
+        "https://shape-mainnet.g.alchemy.com/public"
+      ],
+      "shortName": "shape",
+      "status": "active"
+    },
     "eip155-42161": {
       "chain": "ETH",
       "chainId": 42161,
@@ -167,91 +391,33 @@
       ],
       "shortName": "arb1"
     },
-    "eip155-534352": {
+    "eip155-43111": {
       "chain": "ETH",
-      "chainId": 534352,
+      "chainId": 43111,
       "explorers": [
         {
-          "name": "Scrollscan",
+          "icon": "blockscout",
+          "name": "blockscout",
           "standard": "EIP3091",
-          "url": "https://scrollscan.com"
+          "url": "https://explorer.hemi.xyz"
         }
       ],
       "faucets": [],
-      "infoURL": "https://scroll.io",
-      "name": "Scroll",
+      "icon": "hemi",
+      "infoURL": "https://hemi.xyz",
+      "name": "Hemi",
       "nativeCurrency": {
         "decimals": 18,
         "name": "Ether",
         "symbol": "ETH"
       },
-      "networkId": 534352,
+      "networkId": 43111,
       "parent": {
-        "bridges": [
-          {
-            "url": "https://scroll.io/bridge"
-          }
-        ],
         "chain": "eip155-1",
         "type": "L2"
       },
-      "rpc": [
-        "https://rpc.scroll.io",
-        "https://rpc.ankr.com/scroll",
-        "https://scroll-mainnet.chainstacklabs.com",
-        "https://scroll-rpc.publicnode.com",
-        "wss://scroll-rpc.publicnode.com"
-      ],
-      "shortName": "scr",
-      "status": "active"
-    },
-    "eip155-8453": {
-      "chain": "ETH",
-      "chainId": 8453,
-      "explorers": [
-        {
-          "name": "basescan",
-          "standard": "EIP3091",
-          "url": "https://basescan.org"
-        },
-        {
-          "icon": "blockscout",
-          "name": "basescout",
-          "standard": "EIP3091",
-          "url": "https://base.blockscout.com"
-        },
-        {
-          "icon": "dexguru",
-          "name": "dexguru",
-          "standard": "EIP3091",
-          "url": "https://base.dex.guru"
-        },
-        {
-          "name": "Routescan",
-          "standard": "EIP3091",
-          "url": "https://base.superscan.network"
-        }
-      ],
-      "faucets": [],
-      "icon": "base",
-      "infoURL": "https://base.org",
-      "name": "Base",
-      "nativeCurrency": {
-        "decimals": 18,
-        "name": "Ether",
-        "symbol": "ETH"
-      },
-      "networkId": 8453,
-      "rpc": [
-        "https://mainnet.base.org/",
-        "https://developer-access-mainnet.base.org/",
-        "https://base.gateway.tenderly.co",
-        "wss://base.gateway.tenderly.co",
-        "https://base-rpc.publicnode.com",
-        "wss://base-rpc.publicnode.com",
-        "https://rpcfree.com/base-rpc"
-      ],
-      "shortName": "base",
+      "rpc": ["https://rpc.hemi.network/rpc"],
+      "shortName": "hemi",
       "status": "active"
     },
     "eip155-480": {
@@ -303,77 +469,156 @@
       "shortName": "wc",
       "slip44": 1
     },
-    "eip155-167000": {
+    "eip155-534352": {
       "chain": "ETH",
-      "chainId": 167000,
+      "chainId": 534352,
       "explorers": [
         {
-          "name": "etherscan",
+          "name": "Scrollscan",
           "standard": "EIP3091",
-          "url": "https://taikoscan.io"
+          "url": "https://scrollscan.com"
         }
       ],
       "faucets": [],
-      "icon": "taiko",
-      "infoURL": "https://taiko.xyz",
-      "name": "Taiko",
+      "infoURL": "https://scroll.io",
+      "name": "Scroll",
       "nativeCurrency": {
         "decimals": 18,
         "name": "Ether",
         "symbol": "ETH"
       },
-      "networkId": 167000,
-      "rpc": [
-        "https://rpc.mainnet.taiko.xyz",
-        "https://taiko-rpc.publicnode.com",
-        "wss://taiko-rpc.publicnode.com"
-      ],
-      "shortName": "tko-mainnet",
-      "status": "active"
-    },
-    "eip155-1868": {
-      "chain": "ETH",
-      "chainId": 1868,
-      "explorers": [
-        {
-          "icon": "blockscout",
-          "name": "blockscout",
-          "standard": "EIP3091",
-          "url": "https://soneium.blockscout.com"
-        },
-        {
-          "name": "OKLink",
-          "standard": "EIP3091",
-          "url": "https://www.okx.com/web3/explorer/soneium"
-        },
-        {
-          "name": "SlamVision",
-          "standard": "none",
-          "url": "https://soneium.slam.vision"
-        }
-      ],
-      "faucets": [],
-      "infoURL": "https://soneium.org",
-      "name": "Soneium",
-      "nativeCurrency": {
-        "decimals": 18,
-        "name": "Ether",
-        "symbol": "ETH"
-      },
-      "networkId": 1868,
+      "networkId": 534352,
       "parent": {
         "bridges": [
           {
-            "url": "https://superbridge.app/soneium"
+            "url": "https://scroll.io/bridge"
           }
         ],
         "chain": "eip155-1",
         "type": "L2"
       },
-      "rpc": ["https://rpc.soneium.org"],
-      "shortName": "soneium",
+      "rpc": [
+        "https://rpc.scroll.io",
+        "https://rpc.ankr.com/scroll",
+        "https://scroll-mainnet.chainstacklabs.com",
+        "https://scroll-rpc.publicnode.com",
+        "wss://scroll-rpc.publicnode.com"
+      ],
+      "shortName": "scr",
+      "status": "active"
+    },
+    "eip155-57073": {
+      "chain": "ETH",
+      "chainId": 57073,
+      "explorers": [
+        {
+          "name": "Ink Explorer",
+          "standard": "EIP3091",
+          "url": "https://explorer.inkonchain.com"
+        }
+      ],
+      "faucets": ["https://inkonchain.com/faucet"],
+      "features": [
+        {
+          "name": "EIP155"
+        },
+        {
+          "name": "EIP1559"
+        }
+      ],
+      "infoURL": "https://inkonchain.com",
+      "name": "Ink",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "Ether",
+        "symbol": "ETH"
+      },
+      "networkId": 57073,
+      "rpc": [
+        "https://rpc-gel.inkonchain.com",
+        "https://rpc-qnd.inkonchain.com",
+        "wss://rpc-gel.inkonchain.com",
+        "wss://rpc-qnd.inkonchain.com"
+      ],
+      "shortName": "ink",
+      "status": "active"
+    },
+    "eip155-59144": {
+      "chain": "ETH",
+      "chainId": 59144,
+      "explorers": [
+        {
+          "icon": "linea",
+          "name": "Etherscan",
+          "standard": "EIP3091",
+          "url": "https://lineascan.build"
+        },
+        {
+          "icon": "linea",
+          "name": "Blockscout",
+          "standard": "EIP3091",
+          "url": "https://explorer.linea.build"
+        },
+        {
+          "icon": "linea",
+          "name": "L2scan",
+          "standard": "EIP3091",
+          "url": "https://linea.l2scan.co"
+        }
+      ],
+      "faucets": [],
+      "icon": "linea",
+      "infoURL": "https://linea.build",
+      "name": "Linea",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "Linea Ether",
+        "symbol": "ETH"
+      },
+      "networkId": 59144,
+      "parent": {
+        "bridges": [
+          {
+            "url": "https://bridge.linea.build"
+          }
+        ],
+        "chain": "eip155-1",
+        "type": "L2"
+      },
+      "rpc": [
+        "https://rpc.linea.build",
+        "wss://rpc.linea.build",
+        "https://linea-mainnet.infura.io/v3/${INFURA_API_KEY}",
+        "wss://linea-mainnet.infura.io/ws/v3/${INFURA_API_KEY}",
+        "https://linea-rpc.publicnode.com",
+        "wss://linea-rpc.publicnode.com"
+      ],
+      "shortName": "linea",
       "status": "active",
-      "title": "Soneium mainnet"
+      "title": "Linea Mainnet"
+    },
+    "eip155-7777777": {
+      "chain": "ETH",
+      "chainId": 7777777,
+      "explorers": [
+        {
+          "name": "Zora Network Explorer",
+          "standard": "EIP3091",
+          "url": "https://explorer.zora.energy"
+        }
+      ],
+      "faucets": [],
+      "icon": "zora",
+      "infoURL": "https://zora.energy",
+      "name": "Zora",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "Ether",
+        "symbol": "ETH"
+      },
+      "networkId": 7777777,
+      "rpc": ["https://rpc.zora.energy/"],
+      "shortName": "zora"
     },
     "eip155-81457": {
       "chain": "ETH",
@@ -418,122 +663,71 @@
       "shortName": "blastmainnet",
       "status": "active"
     },
-    "eip155-130": {
+    "eip155-8453": {
       "chain": "ETH",
-      "chainId": 130,
+      "chainId": 8453,
       "explorers": [
         {
-          "name": "Unichain Mainnet Explorer",
+          "name": "basescan",
           "standard": "EIP3091",
-          "url": "https://uniscan.xyz"
+          "url": "https://basescan.org"
         },
-        {
-          "name": "Unichain Mainnet Explorer",
-          "standard": "EIP3091",
-          "url": "https://unichain.blockscout.com"
-        }
-      ],
-      "faucets": [],
-      "icon": "unichain",
-      "infoURL": "https://unichain.org",
-      "name": "Unichain",
-      "nativeCurrency": {
-        "decimals": 18,
-        "name": "Ether",
-        "symbol": "ETH"
-      },
-      "networkId": 130,
-      "rpc": [
-        "https://mainnet.unichain.org",
-        "https://unichain-rpc.publicnode.com",
-        "wss://unichain-rpc.publicnode.com"
-      ],
-      "shortName": "unichain"
-    },
-    "eip155-1750": {
-      "chain": "Metal L2",
-      "chainId": 1750,
-      "explorers": [
         {
           "icon": "blockscout",
-          "name": "blockscout",
+          "name": "basescout",
           "standard": "EIP3091",
-          "url": "https://explorer.metall2.com"
+          "url": "https://base.blockscout.com"
+        },
+        {
+          "icon": "dexguru",
+          "name": "dexguru",
+          "standard": "EIP3091",
+          "url": "https://base.dex.guru"
+        },
+        {
+          "name": "Routescan",
+          "standard": "EIP3091",
+          "url": "https://base.superscan.network"
         }
       ],
       "faucets": [],
-      "icon": "metal",
-      "infoURL": "https://metall2.com",
-      "name": "Metal L2",
-      "nativeCurrency": {
-        "decimals": 18,
-        "name": "ETH",
-        "symbol": "ETH"
-      },
-      "networkId": 1750,
-      "rpc": ["https://rpc.metall2.com"],
-      "shortName": "metall2"
-    },
-    "eip155-57073": {
-      "chain": "ETH",
-      "chainId": 57073,
-      "explorers": [
-        {
-          "name": "Ink Explorer",
-          "standard": "EIP3091",
-          "url": "https://explorer.inkonchain.com"
-        }
-      ],
-      "faucets": ["https://inkonchain.com/faucet"],
-      "features": [
-        {
-          "name": "EIP155"
-        },
-        {
-          "name": "EIP1559"
-        }
-      ],
-      "infoURL": "https://inkonchain.com",
-      "name": "Ink",
+      "icon": "base",
+      "infoURL": "https://base.org",
+      "name": "Base",
       "nativeCurrency": {
         "decimals": 18,
         "name": "Ether",
         "symbol": "ETH"
       },
-      "networkId": 57073,
+      "networkId": 8453,
       "rpc": [
-        "https://rpc-gel.inkonchain.com",
-        "https://rpc-qnd.inkonchain.com",
-        "wss://rpc-gel.inkonchain.com",
-        "wss://rpc-qnd.inkonchain.com"
+        "https://mainnet.base.org/",
+        "https://developer-access-mainnet.base.org/",
+        "https://base.gateway.tenderly.co",
+        "wss://base.gateway.tenderly.co",
+        "https://base-rpc.publicnode.com",
+        "wss://base-rpc.publicnode.com",
+        "https://rpcfree.com/base-rpc"
       ],
-      "shortName": "ink",
+      "shortName": "base",
       "status": "active"
     }
   },
   "icons": {
+    "abstract": [
+      {
+        "format": "svg",
+        "height": 161,
+        "url": "ipfs://QmSRp5BGvwW9xmNNiRwZkJiTnjkyeQFU8Fy2BYwaBVJn58",
+        "width": 160
+      }
+    ],
     "base": [
       {
         "format": "png",
         "height": 1200,
         "url": "ipfs://QmaxRoHpxZd8PqccAynherrMznMufG6sdmHZLihkECXmZv",
         "width": 1200
-      }
-    ],
-    "ethereum": [
-      {
-        "format": "png",
-        "height": 1628,
-        "url": "ipfs://QmdwQDr6vmBtXmK2TmknkEuZNoaDqTasFdZdu3DRw8b2wt",
-        "width": 1000
-      }
-    ],
-    "taiko": [
-      {
-        "format": "png",
-        "height": 258,
-        "url": "ipfs://QmcHdmVr5VRUJq13jnM6tgah5Ge7hn3Dm14eY6vwivJ5ui",
-        "width": 288
       }
     ],
     "blast": [
@@ -544,12 +738,28 @@
         "width": 400
       }
     ],
-    "unichain": [
+    "ethereum": [
       {
         "format": "png",
-        "height": 512,
-        "url": "ipfs://QmWtu564n5T9KhhzKGMEcNWXXume5RzyUu7bARUX6ppHpW",
-        "width": 513
+        "height": 1628,
+        "url": "ipfs://QmdwQDr6vmBtXmK2TmknkEuZNoaDqTasFdZdu3DRw8b2wt",
+        "width": 1000
+      }
+    ],
+    "hemi": [
+      {
+        "format": "png",
+        "height": 1200,
+        "url": "ipfs://QmfP6GDn5eXFcpWuoiyWn5pjn6PYB7HQhRD8nSko1zR8KD",
+        "width": 1200
+      }
+    ],
+    "linea": [
+      {
+        "format": "svg",
+        "height": 102,
+        "url": "ipfs://QmURjritnHL7a8TwZgsFwp3f272DJmG5paaPtWDZ98QZwH",
+        "width": 97
       }
     ],
     "metal": [
@@ -559,13 +769,53 @@
         "url": "ipfs://Qmesm61n8vVVDEeZU7npz39aQYofes9vMfXYwWM4JehLFS",
         "width": 250
       }
+    ],
+    "mode": [
+      {
+        "format": "png",
+        "height": 2160,
+        "url": "ipfs://bafkreidi5y7afj5z4xrz7uz5rkg2mcsv2p2n4ui4g7q4k4ecdz65i2agou",
+        "width": 2160
+      }
+    ],
+    "shape": [
+      {
+        "format": "png",
+        "height": 512,
+        "url": "ipfs://QmUfr1ufnNJ4PcA3Jgf6jdi4ZiRFr6mPzKafwK1pSqvY9j",
+        "width": 512
+      }
+    ],
+    "taiko": [
+      {
+        "format": "png",
+        "height": 258,
+        "url": "ipfs://QmcHdmVr5VRUJq13jnM6tgah5Ge7hn3Dm14eY6vwivJ5ui",
+        "width": 288
+      }
+    ],
+    "unichain": [
+      {
+        "format": "png",
+        "height": 512,
+        "url": "ipfs://QmWtu564n5T9KhhzKGMEcNWXXume5RzyUu7bARUX6ppHpW",
+        "width": 513
+      }
+    ],
+    "zora": [
+      {
+        "format": "png",
+        "height": 2390,
+        "url": "ipfs://QmYQf9VKTzPwQiU5xQMNbJKKGasLDVoXs2S86Ay77MStp7",
+        "width": 2390
+      }
     ]
   },
   "schema_version": 1,
   "source": {
     "commit": "cdb07325333894f6fee154ce393649d47de2c09b",
-    "fetched_at": "2026-05-24T19:19:27.289Z",
-    "ref": "master",
+    "fetched_at": "2026-05-24T20:38:05.258Z",
+    "ref": "cdb07325333894f6fee154ce393649d47de2c09b",
     "repository": "ethereum-lists/chains",
     "url": "https://github.com/ethereum-lists/chains/tree/cdb07325333894f6fee154ce393649d47de2c09b"
   }

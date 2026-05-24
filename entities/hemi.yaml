@@ -1,0 +1,33 @@
+schema_version: 1
+id: hemi
+name: Hemi
+category: rollup
+status: active
+description: "Modular Ethereum L2 secured by Bitcoin-aware infrastructure."
+website: "https://hemi.xyz"
+chain_refs:
+  - caip2: eip155-43111
+    relationship: canonical_chain
+  - caip2: eip155-1
+    relationship: settlement_chain
+icon:
+  mode: chainlist
+  chain_ref: eip155-43111
+addresses:
+  - submission_chain: eip155-1
+    address: "0x65115C6D23274E0A29A63B69130eFe901Aa52e7A"
+    role: batcher
+    label: "Hemi blob submitter"
+    status: active
+    confidence: probable
+    valid_from:
+      block: 20711734
+    valid_to: null
+    evidence:
+      - type: dashboard
+        url: "https://blobscan.com/tx/0x051c0994907e7b9d331a3df1f94f76a0f6454c63e9e3da1dac8b6bdd2fa7343c"
+      - type: analysis
+        url: "https://etherscan.io/address/0x65115c6d23274e0a29a63b69130efe901aa52e7a"
+      - type: transaction
+        submission_chain: eip155-1
+        tx_hash: "0x051c0994907e7b9d331a3df1f94f76a0f6454c63e9e3da1dac8b6bdd2fa7343c"

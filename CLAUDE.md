@@ -24,7 +24,7 @@ npm run generate:check
 npm audit --audit-level=moderate
 ```
 
-Run `npm run generate` after changing `entities/`, schemas, the vendored Chainlist snapshot lockfile, or generator logic. Generated artifacts under `artifacts/` must stay fresh.
+Run `npm run fetch-chainlist` and `npm run generate` after changing `entities/`, schemas, the vendored Chainlist snapshot lockfile, or generator logic. Attribution PRs should not commit `data/chainlist/snapshot.json` or `artifacts/` changes; CI projects those diffs and updates generated data on `main`.
 
 ## Data Model Notes
 

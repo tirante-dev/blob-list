@@ -18,7 +18,7 @@ The registry is intended for blob explorers, dashboards, wallets, researchers, a
 entities/          Source YAML, one file per entity.
 schemas/           JSON Schemas for source and generated artifacts.
 tools/             Fetch, validate, and generate scripts.
-data/chainlist/    Vendored Chainlist lockfile snapshot used by CI.
+data/chainlist/    Vendored Chainlist lockfile snapshot used by CI and releases.
 artifacts/         Generated JSON artifacts for consumers.
 icons/local/       Local icons only for entities not represented by Chainlist.
 ```
@@ -60,9 +60,11 @@ npm run generate:check
 ```
 
 Pull request CI regenerates artifacts from the submitted source files and posts
-the projected artifact diff as a PR comment. Attribution PRs should include
-source YAML, schemas, docs, or icons only; CI rejects committed `artifacts/`
-changes and updates generated artifacts on `main` after merge.
+the projected Chainlist snapshot and artifact diff as a PR comment. Attribution
+PRs should include source YAML, schemas, docs, or icons only; CI rejects
+committed `data/chainlist/snapshot.json` changes in attribution PRs, rejects
+committed `artifacts/` changes, and updates generated data on `main` after
+merge.
 
 ## Releases
 
