@@ -9,7 +9,7 @@ Thanks for helping make blob attribution less hand-wavy.
 3. Add at least one evidence item for every address claim.
 4. Use `confidence: confirmed` only when the evidence is official documentation, an official announcement, a verified contract, an official repository, or similarly strong public evidence.
 5. Close historical ranges with `valid_to.block` instead of rewriting past claims.
-6. Do not include generated `artifacts/` changes in attribution PRs; CI posts the projected artifact diff on the pull request and updates generated artifacts after merge.
+6. Do not include `data/chainlist/chains.json` or generated `artifacts/` changes in attribution PRs; CI posts the projected generated-data diff on the pull request and updates generated data after merge.
 
 ## Address Rules
 
@@ -30,7 +30,7 @@ npm run validate
 npm run generate:check
 ```
 
-If you add a new chain reference, run `npm run fetch-chainlist` so `data/chainlist/chains.json` includes it.
+If you add a new chain reference, you may run `npm run fetch-chainlist` locally before validation, but do not commit the resulting `data/chainlist/chains.json` change in attribution PRs. CI projects that snapshot for review and updates it on `main` after merge.
 
 ## Evidence Guidance
 
