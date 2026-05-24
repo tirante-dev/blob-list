@@ -1,0 +1,33 @@
+schema_version: 1
+id: world-chain
+name: World Chain
+category: rollup
+status: active
+description: "OP Stack Ethereum L2 built for World."
+website: "https://world.org/world-chain"
+chain_refs:
+  - caip2: eip155-480
+    relationship: canonical_chain
+  - caip2: eip155-1
+    relationship: settlement_chain
+icon:
+  mode: chainlist
+  chain_ref: eip155-480
+addresses:
+  - submission_chain: eip155-1
+    address: "0xdBBE3D8c2d2b22A2611c5A94A9a12C2fCD49Eb29"
+    role: batcher
+    label: "World Chain batcher"
+    status: active
+    confidence: confirmed
+    valid_from:
+      block: 20178342
+    valid_to: null
+    evidence:
+      - type: repository
+        url: "https://github.com/ethereum-optimism/superchain-registry/blob/main/superchain/configs/mainnet/worldchain.toml"
+      - type: dashboard
+        url: "https://blobscan.com/tx/0x6bba82d4ab4a389af5b87ace4229565eff00f06ff9d3a61c993b1fa6ad930e4a"
+      - type: transaction
+        submission_chain: eip155-1
+        tx_hash: "0x6bba82d4ab4a389af5b87ace4229565eff00f06ff9d3a61c993b1fa6ad930e4a"
