@@ -1,0 +1,98 @@
+{
+  "chainlist": {
+    "commit": "cdb07325333894f6fee154ce393649d47de2c09b",
+    "repository": "ethereum-lists/chains"
+  },
+  "entities": [
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-42161",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Optimistic rollup developed by Offchain Labs.",
+      "icon": {
+        "chain_ref": "eip155-42161",
+        "mode": "chainlist"
+      },
+      "id": "arbitrum",
+      "name": "Arbitrum One",
+      "status": "active",
+      "website": "https://arbitrum.io"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-8453",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Ethereum L2 incubated by Coinbase.",
+      "icon": {
+        "chain_ref": "eip155-8453",
+        "mode": "chainlist"
+      },
+      "id": "base",
+      "name": "Base",
+      "status": "active",
+      "website": "https://base.org"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-10",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Optimistic rollup built on the OP Stack and governed by the Optimism Collective.",
+      "icon": {
+        "chain_ref": "eip155-10",
+        "mode": "chainlist"
+      },
+      "id": "optimism",
+      "name": "OP Mainnet",
+      "status": "active",
+      "website": "https://www.optimism.io"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-534352",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Ethereum zkEVM rollup.",
+      "icon": {
+        "chain_ref": "eip155-534352",
+        "mode": "chainlist"
+      },
+      "id": "scroll",
+      "name": "Scroll",
+      "status": "active",
+      "website": "https://scroll.io"
+    }
+  ],
+  "generated_at": "2026-05-24T18:45:18.576Z",
+  "schema_version": 1
+}

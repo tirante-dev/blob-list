@@ -1,0 +1,27 @@
+{
+  "name": "blob-list",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Chainlist-aware registry of blob-submitting EVM address attributions.",
+  "license": "MIT",
+  "scripts": {
+    "fetch-chainlist": "node tools/fetch-chainlist/index.js",
+    "generate": "node tools/generate/index.js",
+    "generate:check": "node tools/generate/index.js --check",
+    "validate": "node tools/validate/index.js",
+    "format": "prettier --write \"**/*.{js,json,yml,yaml,md}\"",
+    "format:check": "prettier --check \"**/*.{js,json,yml,yaml,md}\"",
+    "lint:md": "markdownlint-cli2 \"*.md\" \".github/**/*.md\""
+  },
+  "dependencies": {
+    "@noble/hashes": "^1.8.0",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "markdownlint-cli2": "^0.22.1",
+    "prettier": "^3.6.2"
+  }
+}

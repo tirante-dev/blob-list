@@ -1,0 +1,33 @@
+schema_version: 1
+id: arbitrum
+name: Arbitrum One
+category: rollup
+status: active
+description: "Optimistic rollup developed by Offchain Labs."
+website: "https://arbitrum.io"
+chain_refs:
+  - caip2: eip155-42161
+    relationship: canonical_chain
+  - caip2: eip155-1
+    relationship: settlement_chain
+icon:
+  mode: chainlist
+  chain_ref: eip155-42161
+addresses:
+  - submission_chain: eip155-1
+    address: "0xC1b634853Cb333D3aD8663715b08f41A3Aec47cc"
+    role: batcher
+    label: "Arbitrum batch submitter"
+    status: active
+    confidence: probable
+    valid_from:
+      block: 19433943
+    valid_to: null
+    evidence:
+      - type: dashboard
+        url: "https://blobscan.com/tx/0x5969e9d520e138e6eeb5c020a75635fd2fdc15803f707dce7909c1bf062b32d0"
+      - type: analysis
+        url: "https://etherscan.io/address/0xc1b634853cb333d3ad8663715b08f41a3aec47cc"
+      - type: transaction
+        submission_chain: eip155-1
+        tx_hash: "0x5969e9d520e138e6eeb5c020a75635fd2fdc15803f707dce7909c1bf062b32d0"

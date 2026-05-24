@@ -1,0 +1,33 @@
+schema_version: 1
+id: scroll
+name: Scroll
+category: rollup
+status: active
+description: "Ethereum zkEVM rollup."
+website: "https://scroll.io"
+chain_refs:
+  - caip2: eip155-534352
+    relationship: canonical_chain
+  - caip2: eip155-1
+    relationship: settlement_chain
+icon:
+  mode: chainlist
+  chain_ref: eip155-534352
+addresses:
+  - submission_chain: eip155-1
+    address: "0x054a47B9E2a22aF6c0CE55020238C8FEcd7d334B"
+    role: batcher
+    label: "Scroll batch committer"
+    status: active
+    confidence: probable
+    valid_from:
+      block: 21464803
+    valid_to: null
+    evidence:
+      - type: dashboard
+        url: "https://blobscan.com/tx/0x4833959a8d331c8f027583185ab9fe88971422b3dcda9cf83a800f1f02833792"
+      - type: analysis
+        url: "https://etherscan.io/address/0x054a47b9e2a22af6c0ce55020238c8fecd7d334b"
+      - type: transaction
+        submission_chain: eip155-1
+        tx_hash: "0x4833959a8d331c8f027583185ab9fe88971422b3dcda9cf83a800f1f02833792"

@@ -1,0 +1,34 @@
+name: Attribution correction
+description: Report an incorrect or disputed attribution.
+title: "Attribution correction: "
+labels:
+  - attribution
+body:
+  - type: input
+    id: entity
+    attributes:
+      label: Entity
+      description: Entity ID or display name.
+    validations:
+      required: true
+  - type: input
+    id: address
+    attributes:
+      label: Address
+      description: Checksummed EVM address.
+    validations:
+      required: true
+  - type: input
+    id: submission_chain
+    attributes:
+      label: Submission chain
+      description: CAIP-2 reference, for example eip155-1.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Public evidence and affected block range.
+    validations:
+      required: true

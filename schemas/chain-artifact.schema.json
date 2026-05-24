@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ahkc4/blob-list/schemas/chain-artifact.schema.json",
+  "title": "Blob attribution by-chain artifact",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "submission_chain", "addresses"],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "submission_chain": {
+      "type": "string",
+      "pattern": "^eip155-[0-9]+$"
+    },
+    "addresses": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "$ref": "#/$defs/claim"
+        }
+      },
+      "propertyNames": {
+        "pattern": "^0x[0-9a-fA-F]{40}$"
+      }
+    }
+  },
+  "$defs": {
+    "chain_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["caip2", "relationship"],
+      "properties": {
+        "caip2": {
+          "type": "string",
+          "pattern": "^eip155-[0-9]+$"
+        },
+        "relationship": {
+          "type": "string"
+        }
+      }
+    },
+    "icon": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["mode"]
+    },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "entity_id",
+        "name",
+        "category",
+        "role",
+        "confidence",
+        "status",
+        "valid_from_block",
+        "valid_to_block",
+        "chain_refs",
+        "icon"
+      ],
+      "properties": {
+        "entity_id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        },
+        "confidence": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "valid_from_block": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "valid_to_block": {
+          "type": ["integer", "null"],
+          "minimum": 0
+        },
+        "chain_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/chain_ref"
+          }
+        },
+        "icon": {
+          "$ref": "#/$defs/icon"
+        }
+      }
+    }
+  }
+}

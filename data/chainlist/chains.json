@@ -1,0 +1,284 @@
+{
+  "chains": {
+    "eip155-1": {
+      "chain": "ETH",
+      "chainId": 1,
+      "ens": {
+        "registry": "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e"
+      },
+      "explorers": [
+        {
+          "name": "etherscan",
+          "standard": "EIP3091",
+          "url": "https://etherscan.io"
+        },
+        {
+          "icon": "blockscout",
+          "name": "blockscout",
+          "standard": "EIP3091",
+          "url": "https://eth.blockscout.com"
+        },
+        {
+          "icon": "dexguru",
+          "name": "dexguru",
+          "standard": "EIP3091",
+          "url": "https://ethereum.dex.guru"
+        },
+        {
+          "name": "Routescan",
+          "standard": "EIP3091",
+          "url": "https://ethereum.routescan.io"
+        }
+      ],
+      "faucets": [],
+      "features": [
+        {
+          "name": "EIP155"
+        },
+        {
+          "name": "EIP1559"
+        }
+      ],
+      "icon": "ethereum",
+      "infoURL": "https://ethereum.org",
+      "name": "Ethereum Mainnet",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "Ether",
+        "symbol": "ETH"
+      },
+      "networkId": 1,
+      "rpc": [
+        "https://mainnet.infura.io/v3/${INFURA_API_KEY}",
+        "wss://mainnet.infura.io/ws/v3/${INFURA_API_KEY}",
+        "https://api.mycryptoapi.com/eth",
+        "https://cloudflare-eth.com",
+        "https://ethereum-rpc.publicnode.com",
+        "wss://ethereum-rpc.publicnode.com",
+        "https://mainnet.gateway.tenderly.co",
+        "wss://mainnet.gateway.tenderly.co",
+        "https://rpc.blocknative.com/boost",
+        "https://rpc.flashbots.net",
+        "https://rpc.flashbots.net/fast",
+        "https://rpc.mevblocker.io",
+        "https://rpc.mevblocker.io/fast",
+        "https://rpc.mevblocker.io/noreverts",
+        "https://rpc.mevblocker.io/fullprivacy",
+        "https://eth.drpc.org",
+        "wss://eth.drpc.org",
+        "https://api.securerpc.com/v1"
+      ],
+      "shortName": "eth",
+      "slip44": 60
+    },
+    "eip155-10": {
+      "chain": "ETH",
+      "chainId": 10,
+      "explorers": [
+        {
+          "name": "etherscan",
+          "standard": "EIP3091",
+          "url": "https://optimistic.etherscan.io"
+        },
+        {
+          "icon": "blockscout",
+          "name": "blockscout",
+          "standard": "EIP3091",
+          "url": "https://optimism.blockscout.com"
+        },
+        {
+          "icon": "dexguru",
+          "name": "dexguru",
+          "standard": "EIP3091",
+          "url": "https://optimism.dex.guru"
+        },
+        {
+          "name": "Routescan",
+          "standard": "EIP3091",
+          "url": "https://mainnet.superscan.network"
+        }
+      ],
+      "faucets": [],
+      "infoURL": "https://optimism.io",
+      "name": "OP Mainnet",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "Ether",
+        "symbol": "ETH"
+      },
+      "networkId": 10,
+      "rpc": [
+        "https://mainnet.optimism.io",
+        "https://optimism-rpc.publicnode.com",
+        "wss://optimism-rpc.publicnode.com",
+        "https://optimism.gateway.tenderly.co",
+        "wss://optimism.gateway.tenderly.co",
+        "https://optimism.drpc.org",
+        "wss://optimism.drpc.org"
+      ],
+      "shortName": "oeth"
+    },
+    "eip155-42161": {
+      "chain": "ETH",
+      "chainId": 42161,
+      "explorers": [
+        {
+          "name": "Arbiscan",
+          "standard": "EIP3091",
+          "url": "https://arbiscan.io"
+        },
+        {
+          "name": "Arbitrum Explorer",
+          "standard": "EIP3091",
+          "url": "https://explorer.arbitrum.io"
+        },
+        {
+          "icon": "dexguru",
+          "name": "dexguru",
+          "standard": "EIP3091",
+          "url": "https://arbitrum.dex.guru"
+        }
+      ],
+      "faucets": [],
+      "infoURL": "https://arbitrum.io",
+      "name": "Arbitrum One",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "Ether",
+        "symbol": "ETH"
+      },
+      "networkId": 42161,
+      "parent": {
+        "bridges": [
+          {
+            "url": "https://bridge.arbitrum.io"
+          }
+        ],
+        "chain": "eip155-1",
+        "type": "L2"
+      },
+      "rpc": [
+        "https://arbitrum-mainnet.infura.io/v3/${INFURA_API_KEY}",
+        "https://arb-mainnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}",
+        "https://arb1.arbitrum.io/rpc",
+        "https://arbitrum-one-rpc.publicnode.com",
+        "wss://arbitrum-one-rpc.publicnode.com",
+        "https://rpcfree.com/arbitrum-rpc"
+      ],
+      "shortName": "arb1"
+    },
+    "eip155-534352": {
+      "chain": "ETH",
+      "chainId": 534352,
+      "explorers": [
+        {
+          "name": "Scrollscan",
+          "standard": "EIP3091",
+          "url": "https://scrollscan.com"
+        }
+      ],
+      "faucets": [],
+      "infoURL": "https://scroll.io",
+      "name": "Scroll",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "Ether",
+        "symbol": "ETH"
+      },
+      "networkId": 534352,
+      "parent": {
+        "bridges": [
+          {
+            "url": "https://scroll.io/bridge"
+          }
+        ],
+        "chain": "eip155-1",
+        "type": "L2"
+      },
+      "rpc": [
+        "https://rpc.scroll.io",
+        "https://rpc.ankr.com/scroll",
+        "https://scroll-mainnet.chainstacklabs.com",
+        "https://scroll-rpc.publicnode.com",
+        "wss://scroll-rpc.publicnode.com"
+      ],
+      "shortName": "scr",
+      "status": "active"
+    },
+    "eip155-8453": {
+      "chain": "ETH",
+      "chainId": 8453,
+      "explorers": [
+        {
+          "name": "basescan",
+          "standard": "EIP3091",
+          "url": "https://basescan.org"
+        },
+        {
+          "icon": "blockscout",
+          "name": "basescout",
+          "standard": "EIP3091",
+          "url": "https://base.blockscout.com"
+        },
+        {
+          "icon": "dexguru",
+          "name": "dexguru",
+          "standard": "EIP3091",
+          "url": "https://base.dex.guru"
+        },
+        {
+          "name": "Routescan",
+          "standard": "EIP3091",
+          "url": "https://base.superscan.network"
+        }
+      ],
+      "faucets": [],
+      "icon": "base",
+      "infoURL": "https://base.org",
+      "name": "Base",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "Ether",
+        "symbol": "ETH"
+      },
+      "networkId": 8453,
+      "rpc": [
+        "https://mainnet.base.org/",
+        "https://developer-access-mainnet.base.org/",
+        "https://base.gateway.tenderly.co",
+        "wss://base.gateway.tenderly.co",
+        "https://base-rpc.publicnode.com",
+        "wss://base-rpc.publicnode.com",
+        "https://rpcfree.com/base-rpc"
+      ],
+      "shortName": "base",
+      "status": "active"
+    }
+  },
+  "icons": {
+    "base": [
+      {
+        "format": "png",
+        "height": 1200,
+        "url": "ipfs://QmaxRoHpxZd8PqccAynherrMznMufG6sdmHZLihkECXmZv",
+        "width": 1200
+      }
+    ],
+    "ethereum": [
+      {
+        "format": "png",
+        "height": 1628,
+        "url": "ipfs://QmdwQDr6vmBtXmK2TmknkEuZNoaDqTasFdZdu3DRw8b2wt",
+        "width": 1000
+      }
+    ]
+  },
+  "schema_version": 1,
+  "source": {
+    "commit": "cdb07325333894f6fee154ce393649d47de2c09b",
+    "fetched_at": "2026-05-24T18:45:18.576Z",
+    "ref": "master",
+    "repository": "ethereum-lists/chains",
+    "url": "https://github.com/ethereum-lists/chains/tree/cdb07325333894f6fee154ce393649d47de2c09b"
+  }
+}

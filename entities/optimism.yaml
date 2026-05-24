@@ -1,0 +1,31 @@
+schema_version: 1
+id: optimism
+name: OP Mainnet
+category: rollup
+status: active
+description: "Optimistic rollup built on the OP Stack and governed by the Optimism Collective."
+website: "https://www.optimism.io"
+chain_refs:
+  - caip2: eip155-10
+    relationship: canonical_chain
+  - caip2: eip155-1
+    relationship: settlement_chain
+icon:
+  mode: chainlist
+  chain_ref: eip155-10
+addresses:
+  - submission_chain: eip155-1
+    address: "0x6887246668a3b87F54DeB3b94Ba47a6f63F32985"
+    role: batcher
+    label: "OP Mainnet batcher"
+    status: active
+    confidence: confirmed
+    valid_from:
+      block: 19429617
+    valid_to: null
+    evidence:
+      - type: repository
+        url: "https://github.com/ethereum-optimism/superchain-registry/blob/main/superchain/configs/mainnet/op.toml"
+      - type: transaction
+        submission_chain: eip155-1
+        tx_hash: "0xa3e36193ab5ca4e6e98848640b1896def4c419ce203e7bd8e876dd2d5eb77e6c"

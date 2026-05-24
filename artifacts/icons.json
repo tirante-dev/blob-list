@@ -1,0 +1,45 @@
+{
+  "chainlist": {
+    "commit": "cdb07325333894f6fee154ce393649d47de2c09b",
+    "repository": "ethereum-lists/chains"
+  },
+  "generated_at": "2026-05-24T18:45:18.576Z",
+  "icons": {
+    "arbitrum": {
+      "chain_ref": "eip155-42161",
+      "chainlist_icon": null,
+      "entries": [],
+      "mode": "chainlist",
+      "source": "ethereum-lists/chains"
+    },
+    "base": {
+      "chain_ref": "eip155-8453",
+      "chainlist_icon": "base",
+      "entries": [
+        {
+          "format": "png",
+          "height": 1200,
+          "url": "ipfs://QmaxRoHpxZd8PqccAynherrMznMufG6sdmHZLihkECXmZv",
+          "width": 1200
+        }
+      ],
+      "mode": "chainlist",
+      "source": "ethereum-lists/chains"
+    },
+    "optimism": {
+      "chain_ref": "eip155-10",
+      "chainlist_icon": null,
+      "entries": [],
+      "mode": "chainlist",
+      "source": "ethereum-lists/chains"
+    },
+    "scroll": {
+      "chain_ref": "eip155-534352",
+      "chainlist_icon": null,
+      "entries": [],
+      "mode": "chainlist",
+      "source": "ethereum-lists/chains"
+    }
+  },
+  "schema_version": 1
+}
