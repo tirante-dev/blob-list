@@ -330,6 +330,50 @@
       ],
       "shortName": "tko-mainnet",
       "status": "active"
+    },
+    "eip155-1868": {
+      "chain": "ETH",
+      "chainId": 1868,
+      "explorers": [
+        {
+          "icon": "blockscout",
+          "name": "blockscout",
+          "standard": "EIP3091",
+          "url": "https://soneium.blockscout.com"
+        },
+        {
+          "name": "OKLink",
+          "standard": "EIP3091",
+          "url": "https://www.okx.com/web3/explorer/soneium"
+        },
+        {
+          "name": "SlamVision",
+          "standard": "none",
+          "url": "https://soneium.slam.vision"
+        }
+      ],
+      "faucets": [],
+      "infoURL": "https://soneium.org",
+      "name": "Soneium",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "Ether",
+        "symbol": "ETH"
+      },
+      "networkId": 1868,
+      "parent": {
+        "bridges": [
+          {
+            "url": "https://superbridge.app/soneium"
+          }
+        ],
+        "chain": "eip155-1",
+        "type": "L2"
+      },
+      "rpc": ["https://rpc.soneium.org"],
+      "shortName": "soneium",
+      "status": "active",
+      "title": "Soneium mainnet"
     }
   },
   "icons": {
