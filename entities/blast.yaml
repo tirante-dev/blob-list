@@ -1,0 +1,33 @@
+schema_version: 1
+id: blast
+name: Blast
+category: rollup
+status: active
+description: "Ethereum L2 with native yield for ETH and stablecoins."
+website: "https://blast.io"
+chain_refs:
+  - caip2: eip155-81457
+    relationship: canonical_chain
+  - caip2: eip155-1
+    relationship: settlement_chain
+icon:
+  mode: chainlist
+  chain_ref: eip155-81457
+addresses:
+  - submission_chain: eip155-1
+    address: "0x415c8893D514F9BC5211d36eEDA4183226b84AA7"
+    role: batcher
+    label: "Blast blob submitter"
+    status: active
+    confidence: probable
+    valid_from:
+      block: 19963987
+    valid_to: null
+    evidence:
+      - type: dashboard
+        url: "https://blobscan.com/tx/0x21064d9da692f05c5f4761637824a0b06dcea66623173a1fd3454073ac914ada"
+      - type: analysis
+        url: "https://etherscan.io/address/0x415c8893d514f9bc5211d36eeda4183226b84aa7"
+      - type: transaction
+        submission_chain: eip155-1
+        tx_hash: "0x21064d9da692f05c5f4761637824a0b06dcea66623173a1fd3454073ac914ada"

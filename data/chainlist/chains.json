@@ -374,6 +374,49 @@
       "shortName": "soneium",
       "status": "active",
       "title": "Soneium mainnet"
+    },
+    "eip155-81457": {
+      "chain": "ETH",
+      "chainId": 81457,
+      "explorers": [
+        {
+          "icon": "blast",
+          "name": "Blastscan",
+          "standard": "EIP3091",
+          "url": "https://blastscan.io"
+        },
+        {
+          "icon": "blast",
+          "name": "Blast Explorer",
+          "standard": "EIP3091",
+          "url": "https://blastexplorer.io"
+        }
+      ],
+      "faucets": [],
+      "icon": "blast",
+      "infoURL": "https://blast.io/",
+      "name": "Blast",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "Ether",
+        "symbol": "ETH"
+      },
+      "networkId": 81457,
+      "parent": {
+        "chain": "eip155-1",
+        "type": "L2"
+      },
+      "rpc": [
+        "https://rpc.blast.io",
+        "https://rpc.ankr.com/blast",
+        "https://blast.din.dev/rpc",
+        "https://blastl2-mainnet.public.blastapi.io",
+        "https://blast.blockpi.network/v1/rpc/public",
+        "https://blast-rpc.publicnode.com",
+        "wss://blast-rpc.publicnode.com"
+      ],
+      "shortName": "blastmainnet",
+      "status": "active"
     }
   },
   "icons": {
@@ -399,6 +442,14 @@
         "height": 258,
         "url": "ipfs://QmcHdmVr5VRUJq13jnM6tgah5Ge7hn3Dm14eY6vwivJ5ui",
         "width": 288
+      }
+    ],
+    "blast": [
+      {
+        "format": "jpg",
+        "height": 400,
+        "url": "ipfs://bafybeifc2h3x7jgy4x4nmg2m54ghbvmkfu6oweujambwefzqzew5vujhsi",
+        "width": 400
       }
     ]
   },
