@@ -46,9 +46,15 @@ Before opening a pull request, run:
 ```sh
 npm run format:check
 npm run lint:md
+npm run generate
 npm run validate
 npm run generate:check
 ```
+
+Pull request CI regenerates artifacts from the submitted source files and posts
+the projected artifact diff as a PR comment. Attribution PRs should include
+source YAML, schemas, docs, or icons only; CI rejects committed `artifacts/`
+changes and updates generated artifacts on `main` after merge.
 
 ## Releases
 
