@@ -814,8 +814,8 @@
   "schema_version": 1,
   "source": {
     "commit": "cdb07325333894f6fee154ce393649d47de2c09b",
-    "fetched_at": "2026-05-24T20:38:05.258Z",
-    "ref": "cdb07325333894f6fee154ce393649d47de2c09b",
+    "fetched_at": "2026-05-24T20:41:22.413Z",
+    "ref": "master",
     "repository": "ethereum-lists/chains",
     "url": "https://github.com/ethereum-lists/chains/tree/cdb07325333894f6fee154ce393649d47de2c09b"
   }
