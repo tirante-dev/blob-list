@@ -7,6 +7,85 @@
     {
       "addresses": [
         {
+          "address": "0x11805594be0229EF08429D775AF0c55f7c4535dE",
+          "confidence": "probable",
+          "evidence": [
+            {
+              "type": "dashboard",
+              "url": "https://blobscan.com/tx/0x1f6a908fb32e53a5cc6e1c5ee812d9371150bbf37ef51d74a062410dcf94894b"
+            },
+            {
+              "type": "analysis",
+              "url": "https://etherscan.io/address/0x11805594be0229ef08429d775af0c55f7c4535de"
+            },
+            {
+              "submission_chain": "eip155-1",
+              "tx_hash": "0x1f6a908fb32e53a5cc6e1c5ee812d9371150bbf37ef51d74a062410dcf94894b",
+              "type": "transaction"
+            }
+          ],
+          "label": "Abstract blob submitter",
+          "role": "batcher",
+          "status": "active",
+          "submission_chain": "eip155-1",
+          "valid_from": {
+            "block": 21044494
+          },
+          "valid_to": null
+        },
+        {
+          "address": "0x4b2d036D2c27192549ad5A2F2D9875E1843833De",
+          "confidence": "probable",
+          "evidence": [
+            {
+              "type": "dashboard",
+              "url": "https://blobscan.com/tx/0x2963be1d21de6183a08c5200d8e99b216dbf983527dd090a0dfaf61d72b8760a"
+            },
+            {
+              "type": "analysis",
+              "url": "https://etherscan.io/address/0x4b2d036d2c27192549ad5a2f2d9875e1843833de"
+            },
+            {
+              "submission_chain": "eip155-1",
+              "tx_hash": "0x2963be1d21de6183a08c5200d8e99b216dbf983527dd090a0dfaf61d72b8760a",
+              "type": "transaction"
+            }
+          ],
+          "label": "Abstract blob submitter",
+          "role": "batcher",
+          "status": "active",
+          "submission_chain": "eip155-1",
+          "valid_from": {
+            "block": 25167159
+          },
+          "valid_to": null
+        }
+      ],
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-2741",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Consumer-focused Ethereum L2 built with the ZK Stack.",
+      "icon": {
+        "chain_ref": "eip155-2741",
+        "mode": "chainlist"
+      },
+      "id": "abstract",
+      "name": "Abstract",
+      "schema_version": 1,
+      "status": "active",
+      "website": "https://abs.xyz"
+    },
+    {
+      "addresses": [
+        {
           "address": "0xC1b634853Cb333D3aD8663715b08f41A3Aec47cc",
           "confidence": "confirmed",
           "evidence": [
@@ -115,6 +194,345 @@
     {
       "addresses": [
         {
+          "address": "0x415c8893D514F9BC5211d36eEDA4183226b84AA7",
+          "confidence": "probable",
+          "evidence": [
+            {
+              "type": "dashboard",
+              "url": "https://blobscan.com/tx/0x21064d9da692f05c5f4761637824a0b06dcea66623173a1fd3454073ac914ada"
+            },
+            {
+              "type": "analysis",
+              "url": "https://etherscan.io/address/0x415c8893d514f9bc5211d36eeda4183226b84aa7"
+            },
+            {
+              "submission_chain": "eip155-1",
+              "tx_hash": "0x21064d9da692f05c5f4761637824a0b06dcea66623173a1fd3454073ac914ada",
+              "type": "transaction"
+            }
+          ],
+          "label": "Blast blob submitter",
+          "role": "batcher",
+          "status": "active",
+          "submission_chain": "eip155-1",
+          "valid_from": {
+            "block": 19963987
+          },
+          "valid_to": null
+        }
+      ],
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-81457",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Ethereum L2 with native yield for ETH and stablecoins.",
+      "icon": {
+        "chain_ref": "eip155-81457",
+        "mode": "chainlist"
+      },
+      "id": "blast",
+      "name": "Blast",
+      "schema_version": 1,
+      "status": "active",
+      "website": "https://blast.io"
+    },
+    {
+      "addresses": [
+        {
+          "address": "0x65115C6D23274E0A29A63B69130eFe901Aa52e7A",
+          "confidence": "probable",
+          "evidence": [
+            {
+              "type": "dashboard",
+              "url": "https://blobscan.com/tx/0x051c0994907e7b9d331a3df1f94f76a0f6454c63e9e3da1dac8b6bdd2fa7343c"
+            },
+            {
+              "type": "analysis",
+              "url": "https://etherscan.io/address/0x65115c6d23274e0a29a63b69130efe901aa52e7a"
+            },
+            {
+              "submission_chain": "eip155-1",
+              "tx_hash": "0x051c0994907e7b9d331a3df1f94f76a0f6454c63e9e3da1dac8b6bdd2fa7343c",
+              "type": "transaction"
+            }
+          ],
+          "label": "Hemi blob submitter",
+          "role": "batcher",
+          "status": "active",
+          "submission_chain": "eip155-1",
+          "valid_from": {
+            "block": 20711734
+          },
+          "valid_to": null
+        }
+      ],
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-43111",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Modular Ethereum L2 secured by Bitcoin-aware infrastructure.",
+      "icon": {
+        "chain_ref": "eip155-43111",
+        "mode": "chainlist"
+      },
+      "id": "hemi",
+      "name": "Hemi",
+      "schema_version": 1,
+      "status": "active",
+      "website": "https://hemi.xyz"
+    },
+    {
+      "addresses": [
+        {
+          "address": "0x500d7Ea63CF2E501dadaA5feeC1FC19FE2Aa72Ac",
+          "confidence": "confirmed",
+          "evidence": [
+            {
+              "type": "repository",
+              "url": "https://github.com/ethereum-optimism/superchain-registry/blob/main/superchain/configs/mainnet/ink.toml"
+            },
+            {
+              "type": "dashboard",
+              "url": "https://blobscan.com/tx/0x407752a39ad5fe0a6b125f007d92034fe428c0e4773ba9ddc8e685faa4801b74"
+            },
+            {
+              "submission_chain": "eip155-1",
+              "tx_hash": "0x407752a39ad5fe0a6b125f007d92034fe428c0e4773ba9ddc8e685faa4801b74",
+              "type": "transaction"
+            }
+          ],
+          "label": "Ink batcher",
+          "role": "batcher",
+          "status": "active",
+          "submission_chain": "eip155-1",
+          "valid_from": {
+            "block": 21345811
+          },
+          "valid_to": null
+        }
+      ],
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-57073",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "OP Stack Ethereum L2 developed by Kraken.",
+      "icon": {
+        "chain_ref": "eip155-57073",
+        "mode": "chainlist"
+      },
+      "id": "ink",
+      "name": "Ink",
+      "schema_version": 1,
+      "status": "active",
+      "website": "https://inkonchain.com"
+    },
+    {
+      "addresses": [
+        {
+          "address": "0xa9268341831eFa4937537bc3e9EB36DbecE83C7e",
+          "confidence": "probable",
+          "evidence": [
+            {
+              "type": "dashboard",
+              "url": "https://blobscan.com/tx/0x4d03b7e1950256de257ff95b52fac047faeb11600c5975abe7e0ccbc7be7ecfb"
+            },
+            {
+              "type": "analysis",
+              "url": "https://etherscan.io/address/0xa9268341831efa4937537bc3e9eb36dbece83c7e"
+            },
+            {
+              "submission_chain": "eip155-1",
+              "tx_hash": "0x4d03b7e1950256de257ff95b52fac047faeb11600c5975abe7e0ccbc7be7ecfb",
+              "type": "transaction"
+            }
+          ],
+          "label": "Linea blob submitter",
+          "role": "batcher",
+          "status": "active",
+          "submission_chain": "eip155-1",
+          "valid_from": {
+            "block": 19518063
+          },
+          "valid_to": null
+        },
+        {
+          "address": "0x46d2F319fd42165D4318F099E143dEA8124E9E3e",
+          "confidence": "probable",
+          "evidence": [
+            {
+              "type": "dashboard",
+              "url": "https://blobscan.com/tx/0x588e1cb840b2cd879e6175085f39a6764a69fbc6059834fff5cfcfd01294617a"
+            },
+            {
+              "type": "analysis",
+              "url": "https://etherscan.io/address/0x46d2f319fd42165d4318f099e143dea8124e9e3e"
+            },
+            {
+              "submission_chain": "eip155-1",
+              "tx_hash": "0x588e1cb840b2cd879e6175085f39a6764a69fbc6059834fff5cfcfd01294617a",
+              "type": "transaction"
+            }
+          ],
+          "label": "Linea blob submitter",
+          "role": "batcher",
+          "status": "active",
+          "submission_chain": "eip155-1",
+          "valid_from": {
+            "block": 25166717
+          },
+          "valid_to": null
+        }
+      ],
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-59144",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Ethereum zkEVM rollup developed by Consensys.",
+      "icon": {
+        "chain_ref": "eip155-59144",
+        "mode": "chainlist"
+      },
+      "id": "linea",
+      "name": "Linea",
+      "schema_version": 1,
+      "status": "active",
+      "website": "https://linea.build"
+    },
+    {
+      "addresses": [
+        {
+          "address": "0xC94C243f8fb37223F3EB2f7961F7072602A51B8B",
+          "confidence": "confirmed",
+          "evidence": [
+            {
+              "type": "repository",
+              "url": "https://github.com/ethereum-optimism/superchain-registry/blob/main/superchain/configs/mainnet/metal.toml"
+            },
+            {
+              "type": "dashboard",
+              "url": "https://blobscan.com/tx/0x24a3a82c9030b664159be27407ba980c663ccb9bc12b1e448b97b1741d8cefc0"
+            },
+            {
+              "submission_chain": "eip155-1",
+              "tx_hash": "0x24a3a82c9030b664159be27407ba980c663ccb9bc12b1e448b97b1741d8cefc0",
+              "type": "transaction"
+            }
+          ],
+          "label": "Metal L2 batcher",
+          "role": "batcher",
+          "status": "active",
+          "submission_chain": "eip155-1",
+          "valid_from": {
+            "block": 19527476
+          },
+          "valid_to": null
+        }
+      ],
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-1750",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "OP Stack Ethereum L2 focused on onchain banking and payments.",
+      "icon": {
+        "chain_ref": "eip155-1750",
+        "mode": "chainlist"
+      },
+      "id": "metal",
+      "name": "Metal L2",
+      "schema_version": 1,
+      "status": "active",
+      "website": "https://metall2.com"
+    },
+    {
+      "addresses": [
+        {
+          "address": "0x99199a22125034c808ff20f377d91187E8050F2E",
+          "confidence": "confirmed",
+          "evidence": [
+            {
+              "type": "repository",
+              "url": "https://github.com/ethereum-optimism/superchain-registry/blob/main/superchain/configs/mainnet/mode.toml"
+            },
+            {
+              "type": "dashboard",
+              "url": "https://blobscan.com/tx/0x384ce9fee3856d8fff06cbf1ca5ca5d91ad3422fefe92d1299675c6d138a28f8"
+            },
+            {
+              "submission_chain": "eip155-1",
+              "tx_hash": "0x384ce9fee3856d8fff06cbf1ca5ca5d91ad3422fefe92d1299675c6d138a28f8",
+              "type": "transaction"
+            }
+          ],
+          "label": "Mode batcher",
+          "role": "batcher",
+          "status": "active",
+          "submission_chain": "eip155-1",
+          "valid_from": {
+            "block": 19430540
+          },
+          "valid_to": null
+        }
+      ],
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-34443",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "OP Stack Ethereum L2 focused on DeFi applications.",
+      "icon": {
+        "chain_ref": "eip155-34443",
+        "mode": "chainlist"
+      },
+      "id": "mode",
+      "name": "Mode",
+      "schema_version": 1,
+      "status": "active",
+      "website": "https://mode.network"
+    },
+    {
+      "addresses": [
+        {
           "address": "0x6887246668a3b87F54DeB3b94Ba47a6f63F32985",
           "confidence": "confirmed",
           "evidence": [
@@ -159,6 +577,50 @@
       "schema_version": 1,
       "status": "active",
       "website": "https://www.optimism.io"
+    },
+    {
+      "addresses": [
+        {
+          "address": "0xC70ae19B5FeAA5c19f576e621d2bad9771864fe2",
+          "confidence": "probable",
+          "evidence": [
+            {
+              "type": "dashboard",
+              "url": "https://blobscan.com/tx/0x5f4aa8ad0668797d5ecf2034a050a227dde6a851f90e8acda6cdc72ef756a98f"
+            },
+            {
+              "type": "analysis",
+              "url": "https://etherscan.io/address/0xc70ae19b5feaa5c19f576e621d2bad9771864fe2"
+            },
+            {
+              "submission_chain": "eip155-1",
+              "tx_hash": "0x5f4aa8ad0668797d5ecf2034a050a227dde6a851f90e8acda6cdc72ef756a98f",
+              "type": "transaction"
+            }
+          ],
+          "label": "Paradex blob submitter",
+          "role": "operator",
+          "status": "active",
+          "submission_chain": "eip155-1",
+          "valid_from": {
+            "block": 19434013
+          },
+          "valid_to": null
+        }
+      ],
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Starknet-based derivatives application chain settling on Ethereum.",
+      "id": "paradex",
+      "name": "Paradex",
+      "schema_version": 1,
+      "status": "active",
+      "website": "https://www.paradex.trade"
     },
     {
       "addresses": [
@@ -211,8 +673,391 @@
       "schema_version": 1,
       "status": "active",
       "website": "https://scroll.io"
+    },
+    {
+      "addresses": [
+        {
+          "address": "0xF7ca543d652E38692fD12f989eb55b5327eC9A20",
+          "confidence": "confirmed",
+          "evidence": [
+            {
+              "type": "repository",
+              "url": "https://github.com/ethereum-optimism/superchain-registry/blob/main/superchain/configs/mainnet/shape.toml"
+            },
+            {
+              "type": "dashboard",
+              "url": "https://blobscan.com/tx/0xbf18b969fae6b7efba3fa76e03ce8eaf20fe0bd5029cc5b72af7dc7f48797efa"
+            },
+            {
+              "submission_chain": "eip155-1",
+              "tx_hash": "0xbf18b969fae6b7efba3fa76e03ce8eaf20fe0bd5029cc5b72af7dc7f48797efa",
+              "type": "transaction"
+            }
+          ],
+          "label": "Shape batcher",
+          "role": "batcher",
+          "status": "active",
+          "submission_chain": "eip155-1",
+          "valid_from": {
+            "block": 20370545
+          },
+          "valid_to": null
+        }
+      ],
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-360",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "OP Stack Ethereum L2 for creators and onchain culture.",
+      "icon": {
+        "chain_ref": "eip155-360",
+        "mode": "chainlist"
+      },
+      "id": "shape",
+      "name": "Shape",
+      "schema_version": 1,
+      "status": "active",
+      "website": "https://shape.network"
+    },
+    {
+      "addresses": [
+        {
+          "address": "0x6776BE80dBAda6A02B5F2095cF13734ac303B8d1",
+          "confidence": "confirmed",
+          "evidence": [
+            {
+              "type": "repository",
+              "url": "https://github.com/ethereum-optimism/superchain-registry/blob/main/superchain/configs/mainnet/soneium.toml"
+            },
+            {
+              "type": "dashboard",
+              "url": "https://blobscan.com/tx/0x0f55316b94dfbcd3e553571523208ec1c789cc4b19418113e710a4e706366bc5"
+            },
+            {
+              "submission_chain": "eip155-1",
+              "tx_hash": "0x0f55316b94dfbcd3e553571523208ec1c789cc4b19418113e710a4e706366bc5",
+              "type": "transaction"
+            }
+          ],
+          "label": "Soneium batcher",
+          "role": "batcher",
+          "status": "active",
+          "submission_chain": "eip155-1",
+          "valid_from": {
+            "block": 21315686
+          },
+          "valid_to": null
+        }
+      ],
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-1868",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "OP Stack Ethereum L2 developed by Sony Block Solutions Labs.",
+      "icon": {
+        "chain_ref": "eip155-1868",
+        "mode": "chainlist"
+      },
+      "id": "soneium",
+      "name": "Soneium",
+      "schema_version": 1,
+      "status": "active",
+      "website": "https://soneium.org"
+    },
+    {
+      "addresses": [
+        {
+          "address": "0x2C169DFe5fBbA12957Bdd0Ba47d9CEDbFE260CA7",
+          "confidence": "probable",
+          "evidence": [
+            {
+              "type": "dashboard",
+              "url": "https://blobscan.com/tx/0x94fab448d43c004abcb450afa6f268ca69ce52f03b622d2dbd4f283e6a4abfec"
+            },
+            {
+              "type": "analysis",
+              "url": "https://etherscan.io/address/0x2c169dfe5fbba12957bdd0ba47d9cedbfe260ca7"
+            },
+            {
+              "submission_chain": "eip155-1",
+              "tx_hash": "0x94fab448d43c004abcb450afa6f268ca69ce52f03b622d2dbd4f283e6a4abfec",
+              "type": "transaction"
+            }
+          ],
+          "label": "Starknet blob submitter",
+          "role": "operator",
+          "status": "active",
+          "submission_chain": "eip155-1",
+          "valid_from": {
+            "block": 19427723
+          },
+          "valid_to": null
+        }
+      ],
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Validity rollup settling on Ethereum.",
+      "id": "starknet",
+      "name": "Starknet",
+      "schema_version": 1,
+      "status": "active",
+      "website": "https://www.starknet.io"
+    },
+    {
+      "addresses": [
+        {
+          "address": "0x000000633b68f5D8D3a86593ebB815b4663BCBe0",
+          "confidence": "probable",
+          "evidence": [
+            {
+              "type": "dashboard",
+              "url": "https://blobscan.com/tx/0x74f4dd0948ca1c933fbd8372532f16b5d9f8efaa779ce91a59b36e2fea95c936"
+            },
+            {
+              "type": "analysis",
+              "url": "https://etherscan.io/address/0x000000633b68f5d8d3a86593ebb815b4663bcbe0"
+            },
+            {
+              "submission_chain": "eip155-1",
+              "tx_hash": "0x74f4dd0948ca1c933fbd8372532f16b5d9f8efaa779ce91a59b36e2fea95c936",
+              "type": "transaction"
+            }
+          ],
+          "label": "Taiko blob proposer",
+          "role": "proposer",
+          "status": "active",
+          "submission_chain": "eip155-1",
+          "valid_from": {
+            "block": 19960128
+          },
+          "valid_to": null
+        },
+        {
+          "address": "0x5F62d006C10C009ff50C878Cd6157aC861C99990",
+          "confidence": "probable",
+          "evidence": [
+            {
+              "type": "dashboard",
+              "url": "https://blobscan.com/tx/0x2236661334e6178447cd82019a955e1971187698289af4cca79ce2a2e23c6951"
+            },
+            {
+              "type": "analysis",
+              "url": "https://etherscan.io/address/0x5f62d006c10c009ff50c878cd6157ac861c99990"
+            },
+            {
+              "submission_chain": "eip155-1",
+              "tx_hash": "0x2236661334e6178447cd82019a955e1971187698289af4cca79ce2a2e23c6951",
+              "type": "transaction"
+            }
+          ],
+          "label": "Taiko blob proposer",
+          "role": "proposer",
+          "status": "active",
+          "submission_chain": "eip155-1",
+          "valid_from": {
+            "block": 25167138
+          },
+          "valid_to": null
+        }
+      ],
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-167000",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Ethereum-equivalent based rollup.",
+      "icon": {
+        "chain_ref": "eip155-167000",
+        "mode": "chainlist"
+      },
+      "id": "taiko",
+      "name": "Taiko",
+      "schema_version": 1,
+      "status": "active",
+      "website": "https://taiko.xyz"
+    },
+    {
+      "addresses": [
+        {
+          "address": "0x2F60A5184c63ca94f82a27100643DbAbe4F3f7Fd",
+          "confidence": "confirmed",
+          "evidence": [
+            {
+              "type": "repository",
+              "url": "https://github.com/ethereum-optimism/superchain-registry/blob/main/superchain/configs/mainnet/unichain.toml"
+            },
+            {
+              "type": "dashboard",
+              "url": "https://blobscan.com/tx/0xb3f3906f5b4374e50483061212f02b10c767ba667e188a412bfdc32753b6d2c6"
+            },
+            {
+              "submission_chain": "eip155-1",
+              "tx_hash": "0xb3f3906f5b4374e50483061212f02b10c767ba667e188a412bfdc32753b6d2c6",
+              "type": "transaction"
+            }
+          ],
+          "label": "Unichain batcher",
+          "role": "batcher",
+          "status": "active",
+          "submission_chain": "eip155-1",
+          "valid_from": {
+            "block": 21096458
+          },
+          "valid_to": null
+        }
+      ],
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-130",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "OP Stack Ethereum L2 developed by Uniswap Labs.",
+      "icon": {
+        "chain_ref": "eip155-130",
+        "mode": "chainlist"
+      },
+      "id": "unichain",
+      "name": "Unichain",
+      "schema_version": 1,
+      "status": "active",
+      "website": "https://unichain.org"
+    },
+    {
+      "addresses": [
+        {
+          "address": "0xdBBE3D8c2d2b22A2611c5A94A9a12C2fCD49Eb29",
+          "confidence": "confirmed",
+          "evidence": [
+            {
+              "type": "repository",
+              "url": "https://github.com/ethereum-optimism/superchain-registry/blob/main/superchain/configs/mainnet/worldchain.toml"
+            },
+            {
+              "type": "dashboard",
+              "url": "https://blobscan.com/tx/0x6bba82d4ab4a389af5b87ace4229565eff00f06ff9d3a61c993b1fa6ad930e4a"
+            },
+            {
+              "submission_chain": "eip155-1",
+              "tx_hash": "0x6bba82d4ab4a389af5b87ace4229565eff00f06ff9d3a61c993b1fa6ad930e4a",
+              "type": "transaction"
+            }
+          ],
+          "label": "World Chain batcher",
+          "role": "batcher",
+          "status": "active",
+          "submission_chain": "eip155-1",
+          "valid_from": {
+            "block": 20178342
+          },
+          "valid_to": null
+        }
+      ],
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-480",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "OP Stack Ethereum L2 built for World.",
+      "icon": {
+        "chain_ref": "eip155-480",
+        "mode": "chainlist"
+      },
+      "id": "world-chain",
+      "name": "World Chain",
+      "schema_version": 1,
+      "status": "active",
+      "website": "https://world.org/world-chain"
+    },
+    {
+      "addresses": [
+        {
+          "address": "0x625726c858dBF78c0125436C943Bf4b4bE9d9033",
+          "confidence": "confirmed",
+          "evidence": [
+            {
+              "type": "repository",
+              "url": "https://github.com/ethereum-optimism/superchain-registry/blob/main/superchain/configs/mainnet/zora.toml"
+            },
+            {
+              "type": "dashboard",
+              "url": "https://blobscan.com/tx/0x4ee1123cca07ad99817a13e13ed383ee84fedef9d764d96aa5f8714b2e514e59"
+            },
+            {
+              "submission_chain": "eip155-1",
+              "tx_hash": "0x4ee1123cca07ad99817a13e13ed383ee84fedef9d764d96aa5f8714b2e514e59",
+              "type": "transaction"
+            }
+          ],
+          "label": "Zora batcher",
+          "role": "batcher",
+          "status": "active",
+          "submission_chain": "eip155-1",
+          "valid_from": {
+            "block": 19430555
+          },
+          "valid_to": null
+        }
+      ],
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-7777777",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "OP Stack Ethereum L2 for media and creator applications.",
+      "icon": {
+        "chain_ref": "eip155-7777777",
+        "mode": "chainlist"
+      },
+      "id": "zora",
+      "name": "Zora",
+      "schema_version": 1,
+      "status": "active",
+      "website": "https://zora.energy"
     }
   ],
-  "generated_at": "2026-05-24T18:45:18.576Z",
+  "generated_at": "2026-05-24T20:41:22.413Z",
   "schema_version": 1
 }
