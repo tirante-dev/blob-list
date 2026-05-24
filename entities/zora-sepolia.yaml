@@ -1,0 +1,33 @@
+schema_version: 1
+id: zora-sepolia
+name: Zora Sepolia Testnet
+category: rollup
+status: active
+description: "Sepolia testnet for Zora."
+website: "https://zora.co"
+chain_refs:
+  - caip2: eip155-999999999
+    relationship: canonical_chain
+  - caip2: eip155-11155111
+    relationship: settlement_chain
+icon:
+  mode: chainlist
+  chain_ref: eip155-999999999
+addresses:
+  - submission_chain: eip155-11155111
+    address: "0x3Cd868E221A3be64B161D596A7482257a99D857f"
+    role: batcher
+    label: "Zora Sepolia batcher"
+    status: active
+    confidence: confirmed
+    valid_from:
+      block: 5480189
+    valid_to: null
+    evidence:
+      - type: repository
+        url: "https://github.com/ethereum-optimism/superchain-registry/blob/main/superchain/configs/sepolia/zora.toml"
+      - type: dashboard
+        url: "https://sepolia.blobscan.com/tx/0xcbd60e70feef9deb8206d9c8ea5ee590fafea1888bfd7afce113a919e4935464"
+      - type: transaction
+        submission_chain: eip155-11155111
+        tx_hash: "0xcbd60e70feef9deb8206d9c8ea5ee590fafea1888bfd7afce113a919e4935464"
