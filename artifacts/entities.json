@@ -8,6 +8,28 @@
       "category": "rollup",
       "chain_refs": [
         {
+          "caip2": "eip155-2741",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Consumer-focused Ethereum L2 built with the ZK Stack.",
+      "icon": {
+        "chain_ref": "eip155-2741",
+        "mode": "chainlist"
+      },
+      "id": "abstract",
+      "name": "Abstract",
+      "status": "active",
+      "website": "https://abs.xyz"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
           "caip2": "eip155-42161",
           "relationship": "canonical_chain"
         },
@@ -52,6 +74,138 @@
       "category": "rollup",
       "chain_refs": [
         {
+          "caip2": "eip155-81457",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Ethereum L2 with native yield for ETH and stablecoins.",
+      "icon": {
+        "chain_ref": "eip155-81457",
+        "mode": "chainlist"
+      },
+      "id": "blast",
+      "name": "Blast",
+      "status": "active",
+      "website": "https://blast.io"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-43111",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Modular Ethereum L2 secured by Bitcoin-aware infrastructure.",
+      "icon": {
+        "chain_ref": "eip155-43111",
+        "mode": "chainlist"
+      },
+      "id": "hemi",
+      "name": "Hemi",
+      "status": "active",
+      "website": "https://hemi.xyz"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-57073",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "OP Stack Ethereum L2 developed by Kraken.",
+      "icon": {
+        "chain_ref": "eip155-57073",
+        "mode": "chainlist"
+      },
+      "id": "ink",
+      "name": "Ink",
+      "status": "active",
+      "website": "https://inkonchain.com"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-59144",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Ethereum zkEVM rollup developed by Consensys.",
+      "icon": {
+        "chain_ref": "eip155-59144",
+        "mode": "chainlist"
+      },
+      "id": "linea",
+      "name": "Linea",
+      "status": "active",
+      "website": "https://linea.build"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-1750",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "OP Stack Ethereum L2 focused on onchain banking and payments.",
+      "icon": {
+        "chain_ref": "eip155-1750",
+        "mode": "chainlist"
+      },
+      "id": "metal",
+      "name": "Metal L2",
+      "status": "active",
+      "website": "https://metall2.com"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-34443",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "OP Stack Ethereum L2 focused on DeFi applications.",
+      "icon": {
+        "chain_ref": "eip155-34443",
+        "mode": "chainlist"
+      },
+      "id": "mode",
+      "name": "Mode",
+      "status": "active",
+      "website": "https://mode.network"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
           "caip2": "eip155-10",
           "relationship": "canonical_chain"
         },
@@ -74,6 +228,21 @@
       "category": "rollup",
       "chain_refs": [
         {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Starknet-based derivatives application chain settling on Ethereum.",
+      "icon": null,
+      "id": "paradex",
+      "name": "Paradex",
+      "status": "active",
+      "website": "https://www.paradex.trade"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
           "caip2": "eip155-534352",
           "relationship": "canonical_chain"
         },
@@ -91,8 +260,155 @@
       "name": "Scroll",
       "status": "active",
       "website": "https://scroll.io"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-360",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "OP Stack Ethereum L2 for creators and onchain culture.",
+      "icon": {
+        "chain_ref": "eip155-360",
+        "mode": "chainlist"
+      },
+      "id": "shape",
+      "name": "Shape",
+      "status": "active",
+      "website": "https://shape.network"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-1868",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "OP Stack Ethereum L2 developed by Sony Block Solutions Labs.",
+      "icon": {
+        "chain_ref": "eip155-1868",
+        "mode": "chainlist"
+      },
+      "id": "soneium",
+      "name": "Soneium",
+      "status": "active",
+      "website": "https://soneium.org"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Validity rollup settling on Ethereum.",
+      "icon": null,
+      "id": "starknet",
+      "name": "Starknet",
+      "status": "active",
+      "website": "https://www.starknet.io"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-167000",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Ethereum-equivalent based rollup.",
+      "icon": {
+        "chain_ref": "eip155-167000",
+        "mode": "chainlist"
+      },
+      "id": "taiko",
+      "name": "Taiko",
+      "status": "active",
+      "website": "https://taiko.xyz"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-130",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "OP Stack Ethereum L2 developed by Uniswap Labs.",
+      "icon": {
+        "chain_ref": "eip155-130",
+        "mode": "chainlist"
+      },
+      "id": "unichain",
+      "name": "Unichain",
+      "status": "active",
+      "website": "https://unichain.org"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-480",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "OP Stack Ethereum L2 built for World.",
+      "icon": {
+        "chain_ref": "eip155-480",
+        "mode": "chainlist"
+      },
+      "id": "world-chain",
+      "name": "World Chain",
+      "status": "active",
+      "website": "https://world.org/world-chain"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-7777777",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "OP Stack Ethereum L2 for media and creator applications.",
+      "icon": {
+        "chain_ref": "eip155-7777777",
+        "mode": "chainlist"
+      },
+      "id": "zora",
+      "name": "Zora",
+      "status": "active",
+      "website": "https://zora.energy"
     }
   ],
-  "generated_at": "2026-05-24T18:45:18.576Z",
+  "generated_at": "2026-05-24T20:41:22.413Z",
   "schema_version": 1
 }
