@@ -1,0 +1,28 @@
+schema_version: 1
+id: starknet-sepolia
+name: Starknet Sepolia
+category: rollup
+status: active
+description: "Sepolia testnet for Starknet."
+website: "https://www.starknet.io"
+chain_refs:
+  - caip2: eip155-11155111
+    relationship: settlement_chain
+addresses:
+  - submission_chain: eip155-11155111
+    address: "0x5b98B836969A60FEC50Fa925905Dd1D382a7db43"
+    role: batcher
+    label: "Starknet Sepolia blob submitter"
+    status: active
+    confidence: probable
+    valid_from:
+      block: 5422185
+    valid_to: null
+    evidence:
+      - type: dashboard
+        url: "https://sepolia.blobscan.com/tx/0x4e28879be472bc2a2e65c65b0abb59e85a7495478dbb0fc7798e6c5d3e214e00"
+      - type: analysis
+        url: "https://sepolia.etherscan.io/address/0x5b98b836969a60fec50fa925905dd1d382a7db43"
+      - type: transaction
+        submission_chain: eip155-11155111
+        tx_hash: "0x4e28879be472bc2a2e65c65b0abb59e85a7495478dbb0fc7798e6c5d3e214e00"
