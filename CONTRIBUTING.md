@@ -13,7 +13,7 @@ Thanks for helping make blob attribution less hand-wavy.
 
 ## Address Rules
 
-- `submission_chain` must be a known CAIP-2 ref from the pinned Chainlist snapshot.
+- `submission_chain` must be a known CAIP-2 ref from the pinned Chainlist snapshot lockfile.
 - `address` must be a checksummed EVM address.
 - `valid_to: null` means the claim is currently open-ended.
 - The same `submission_chain + address + role` cannot map to two active, non-disputed entities over overlapping block ranges.
@@ -30,7 +30,7 @@ npm run validate
 npm run generate:check
 ```
 
-If you add a new chain reference, run `npm run fetch-chainlist` so `data/chainlist/chains.json` includes it.
+If you add a new chain reference, run `npm run fetch-chainlist` so `data/chainlist/snapshot.json` includes it. Do not edit the snapshot by hand or add chain metadata to entity YAML; chain facts belong upstream in Chainlist.
 
 ## Evidence Guidance
 

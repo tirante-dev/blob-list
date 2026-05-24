@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 import {
+  canonicalJson,
+  chainlistSnapshotFile,
   collectReferencedChains,
   loadEntities,
-  rootDir,
+  readJson,
   writeJson,
 } from "../lib/registry.js";
-import path from "node:path";
 
 const DEFAULT_REPOSITORY = "ethereum-lists/chains";
 const USER_AGENT = "ahkc4/blob-list chainlist fetcher";
@@ -41,7 +42,7 @@ try {
     }
   }
 
-  await writeJson(path.join(rootDir, "data/chainlist/chains.json"), {
+  const snapshot = {
     chains,
     icons,
     schema_version: 1,
@@ -52,14 +53,54 @@ try {
       repository,
       url: `https://github.com/${repository}/tree/${commit.sha}`,
     },
-  });
+  };
 
-  console.log(
-    `Fetched ${Object.keys(chains).length} Chainlist refs from ${repository}@${commit.sha}`,
-  );
+  const previousSnapshot = await readExistingSnapshot();
+  if (isSameVendoredData(previousSnapshot, snapshot)) {
+    console.log(
+      `Chainlist snapshot unchanged; kept ${previousSnapshot.source.repository}@${previousSnapshot.source.commit}`,
+    );
+  } else {
+    await writeJson(chainlistSnapshotFile, snapshot);
+    console.log(
+      `Fetched ${Object.keys(chains).length} Chainlist refs from ${repository}@${commit.sha}`,
+    );
+  }
 } catch (error) {
   console.error(error.message);
   process.exitCode = 1;
+}
+
+async function readExistingSnapshot() {
+  try {
+    return await readJson(chainlistSnapshotFile);
+  } catch (error) {
+    if (error.code === "ENOENT") {
+      return null;
+    }
+    throw error;
+  }
+}
+
+function isSameVendoredData(previousSnapshot, nextSnapshot) {
+  if (!previousSnapshot) {
+    return false;
+  }
+  if (previousSnapshot.source?.repository !== nextSnapshot.source?.repository) {
+    return false;
+  }
+  return (
+    canonicalJson({
+      chains: previousSnapshot.chains,
+      icons: previousSnapshot.icons,
+      schema_version: previousSnapshot.schema_version,
+    }) ===
+    canonicalJson({
+      chains: nextSnapshot.chains,
+      icons: nextSnapshot.icons,
+      schema_version: nextSnapshot.schema_version,
+    })
+  );
 }
 
 async function githubJson(url) {

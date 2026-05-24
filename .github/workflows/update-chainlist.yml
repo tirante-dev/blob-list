@@ -1,0 +1,46 @@
+name: Update Chainlist Snapshot
+
+on:
+  schedule:
+    - cron: "23 7 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    name: refresh Chainlist snapshot
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 26
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch Chainlist snapshot
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run fetch-chainlist
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          add-paths: data/chainlist/snapshot.json
+          branch: at/refresh-chainlist-snapshot
+          commit-message: "chore: refresh Chainlist snapshot"
+          delete-branch: true
+          title: "chore: refresh Chainlist snapshot"
+          body: |
+            Refreshes `data/chainlist/snapshot.json` from `ethereum-lists/chains`.
+
+            This keeps the vendored Chainlist lockfile current while leaving chain metadata ownership upstream.
+            Generated artifacts are intentionally left to CI projection and the existing main-branch artifact update.

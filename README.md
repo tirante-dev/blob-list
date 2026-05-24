@@ -18,10 +18,18 @@ The registry is intended for blob explorers, dashboards, wallets, researchers, a
 entities/          Source YAML, one file per entity.
 schemas/           JSON Schemas for source and generated artifacts.
 tools/             Fetch, validate, and generate scripts.
-data/chainlist/    Pinned Chainlist snapshot used by CI.
+data/chainlist/    Vendored Chainlist lockfile snapshot used by CI.
 artifacts/         Generated JSON artifacts for consumers.
 icons/local/       Local icons only for entities not represented by Chainlist.
 ```
+
+## Chainlist Snapshot
+
+`data/chainlist/snapshot.json` is a vendored lockfile for the subset of
+Chainlist entries referenced by source YAML. It exists to keep local validation,
+CI, and release generation deterministic; it is not registry-owned chain
+metadata. If chain facts drift upstream, refresh the snapshot with
+`npm run fetch-chainlist` or let the scheduled refresh workflow open a PR.
 
 ## Consumer Lookup
 

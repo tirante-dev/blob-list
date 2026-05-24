@@ -24,11 +24,12 @@ npm run generate:check
 npm audit --audit-level=moderate
 ```
 
-Run `npm run generate` after changing `entities/`, schemas, Chainlist snapshot data, or generator logic. Generated artifacts under `artifacts/` must stay fresh.
+Run `npm run generate` after changing `entities/`, schemas, the vendored Chainlist snapshot lockfile, or generator logic. Generated artifacts under `artifacts/` must stay fresh.
 
 ## Data Model Notes
 
 - `submission_chain` and all chain references use CAIP-2 refs such as `eip155-1`.
+- `data/chainlist/snapshot.json` is a vendored Chainlist lockfile for deterministic validation and generation; it is not registry-owned chain metadata.
 - EVM addresses must be checksummed.
 - Every address claim needs at least one evidence item.
 - `valid_to: null` means the claim is open-ended.
