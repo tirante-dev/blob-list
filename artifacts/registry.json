@@ -146,6 +146,58 @@
     {
       "addresses": [
         {
+          "address": "0xb2248390842d3C4aCF1D8A893954Afc0EAc586e5",
+          "confidence": "probable",
+          "evidence": [
+            {
+              "type": "documentation",
+              "url": "https://docs.arbitrum.io/build-decentralized-apps/reference/contract-addresses"
+            },
+            {
+              "type": "dashboard",
+              "url": "https://sepolia.blobscan.com/tx/0x2fc3c771559131e931bf275ef709973a8876a60bc63035206aab3df12158bc59"
+            },
+            {
+              "type": "analysis",
+              "url": "https://sepolia.etherscan.io/address/0xb2248390842d3c4acf1d8a893954afc0eac586e5"
+            },
+            {
+              "submission_chain": "eip155-11155111",
+              "tx_hash": "0x2fc3c771559131e931bf275ef709973a8876a60bc63035206aab3df12158bc59",
+              "type": "transaction"
+            }
+          ],
+          "label": "Arbitrum Sepolia batch poster",
+          "role": "batcher",
+          "status": "active",
+          "submission_chain": "eip155-11155111",
+          "valid_from": {
+            "block": 5396950
+          },
+          "valid_to": null
+        }
+      ],
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-421614",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-11155111",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Sepolia testnet for Arbitrum.",
+      "id": "arbitrum-sepolia",
+      "name": "Arbitrum Sepolia",
+      "schema_version": 1,
+      "status": "active",
+      "website": "https://arbitrum.io"
+    },
+    {
+      "addresses": [
+        {
           "address": "0x5050F69a9786F081509234F1a7F4684b5E5b76C9",
           "confidence": "confirmed",
           "evidence": [
@@ -187,6 +239,58 @@
       },
       "id": "base",
       "name": "Base",
+      "schema_version": 1,
+      "status": "active",
+      "website": "https://base.org"
+    },
+    {
+      "addresses": [
+        {
+          "address": "0xfc56E7272EEBBBA5bC6c544e159483C4a38f8bA3",
+          "confidence": "probable",
+          "evidence": [
+            {
+              "type": "dashboard",
+              "url": "https://sepolia.blobscan.com/tx/0x8493993807a2f1ae13670bcc2219a76fa1af00fab8c3064777895ec91990ef49"
+            },
+            {
+              "type": "analysis",
+              "url": "https://sepolia.etherscan.io/address/0xfc56e7272eebbba5bc6c544e159483c4a38f8ba3"
+            },
+            {
+              "submission_chain": "eip155-11155111",
+              "tx_hash": "0x8493993807a2f1ae13670bcc2219a76fa1af00fab8c3064777895ec91990ef49",
+              "type": "transaction"
+            }
+          ],
+          "label": "Base Sepolia batch sender",
+          "role": "batcher",
+          "status": "active",
+          "submission_chain": "eip155-11155111",
+          "valid_from": {
+            "block": 10914440
+          },
+          "valid_to": null
+        }
+      ],
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-84532",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-11155111",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Sepolia testnet for Base.",
+      "icon": {
+        "chain_ref": "eip155-84532",
+        "mode": "chainlist"
+      },
+      "id": "base-sepolia",
+      "name": "Base Sepolia Testnet",
       "schema_version": 1,
       "status": "active",
       "website": "https://base.org"
@@ -429,6 +533,58 @@
     {
       "addresses": [
         {
+          "address": "0x47C63d1E391FcB3dCdC40C4d7fA58ADb172f8c38",
+          "confidence": "probable",
+          "evidence": [
+            {
+              "type": "dashboard",
+              "url": "https://sepolia.blobscan.com/tx/0x36ee9868be857b505d5d9602dd3eae4e6757913ce11ccf483f4d405d33adb1bf"
+            },
+            {
+              "type": "analysis",
+              "url": "https://sepolia.etherscan.io/address/0x47c63d1e391fcb3dcdc40c4d7fa58adb172f8c38"
+            },
+            {
+              "submission_chain": "eip155-11155111",
+              "tx_hash": "0x36ee9868be857b505d5d9602dd3eae4e6757913ce11ccf483f4d405d33adb1bf",
+              "type": "transaction"
+            }
+          ],
+          "label": "Linea Sepolia blob submitter",
+          "role": "batcher",
+          "status": "active",
+          "submission_chain": "eip155-11155111",
+          "valid_from": {
+            "block": 5523599
+          },
+          "valid_to": null
+        }
+      ],
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-59141",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-11155111",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Sepolia testnet for Linea.",
+      "icon": {
+        "chain_ref": "eip155-59141",
+        "mode": "chainlist"
+      },
+      "id": "linea-sepolia",
+      "name": "Linea Sepolia",
+      "schema_version": 1,
+      "status": "active",
+      "website": "https://linea.build"
+    },
+    {
+      "addresses": [
+        {
           "address": "0xC94C243f8fb37223F3EB2f7961F7072602A51B8B",
           "confidence": "confirmed",
           "evidence": [
@@ -529,6 +685,106 @@
       "schema_version": 1,
       "status": "active",
       "website": "https://mode.network"
+    },
+    {
+      "addresses": [
+        {
+          "address": "0x4e6BD53883107B063c502dDd49F9600Dc51b3DDc",
+          "confidence": "confirmed",
+          "evidence": [
+            {
+              "type": "repository",
+              "url": "https://github.com/ethereum-optimism/superchain-registry/blob/main/superchain/configs/sepolia/mode.toml"
+            },
+            {
+              "type": "dashboard",
+              "url": "https://sepolia.blobscan.com/tx/0x730c680f71791c9c3c68e60b22502e344b367f407c6708a2e481eb2c3c0dfda9"
+            },
+            {
+              "submission_chain": "eip155-11155111",
+              "tx_hash": "0x730c680f71791c9c3c68e60b22502e344b367f407c6708a2e481eb2c3c0dfda9",
+              "type": "transaction"
+            }
+          ],
+          "label": "Mode Testnet batcher",
+          "role": "batcher",
+          "status": "active",
+          "submission_chain": "eip155-11155111",
+          "valid_from": {
+            "block": 5480189
+          },
+          "valid_to": null
+        }
+      ],
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-919",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-11155111",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Sepolia testnet for Mode.",
+      "icon": {
+        "chain_ref": "eip155-919",
+        "mode": "chainlist"
+      },
+      "id": "mode-sepolia",
+      "name": "Mode Testnet",
+      "schema_version": 1,
+      "status": "active",
+      "website": "https://www.mode.network"
+    },
+    {
+      "addresses": [
+        {
+          "address": "0x8F23BB38F531600e5d8FDDaAEC41F13FaB46E98c",
+          "confidence": "confirmed",
+          "evidence": [
+            {
+              "type": "repository",
+              "url": "https://github.com/ethereum-optimism/superchain-registry/blob/main/superchain/configs/sepolia/op.toml"
+            },
+            {
+              "type": "dashboard",
+              "url": "https://sepolia.blobscan.com/tx/0x2049b02f580b7e4ba48a47ce0e7071cf7bbca362df876370a8c11409fe739b20"
+            },
+            {
+              "submission_chain": "eip155-11155111",
+              "tx_hash": "0x2049b02f580b7e4ba48a47ce0e7071cf7bbca362df876370a8c11409fe739b20",
+              "type": "transaction"
+            }
+          ],
+          "label": "OP Sepolia batcher",
+          "role": "batcher",
+          "status": "active",
+          "submission_chain": "eip155-11155111",
+          "valid_from": {
+            "block": 5335452
+          },
+          "valid_to": null
+        }
+      ],
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-11155420",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-11155111",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Sepolia testnet for OP Mainnet.",
+      "id": "op-sepolia",
+      "name": "OP Sepolia Testnet",
+      "schema_version": 1,
+      "status": "active",
+      "website": "https://www.optimism.io"
     },
     {
       "addresses": [
@@ -825,6 +1081,50 @@
     {
       "addresses": [
         {
+          "address": "0x5b98B836969A60FEC50Fa925905Dd1D382a7db43",
+          "confidence": "probable",
+          "evidence": [
+            {
+              "type": "dashboard",
+              "url": "https://sepolia.blobscan.com/tx/0x4e28879be472bc2a2e65c65b0abb59e85a7495478dbb0fc7798e6c5d3e214e00"
+            },
+            {
+              "type": "analysis",
+              "url": "https://sepolia.etherscan.io/address/0x5b98b836969a60fec50fa925905dd1d382a7db43"
+            },
+            {
+              "submission_chain": "eip155-11155111",
+              "tx_hash": "0x4e28879be472bc2a2e65c65b0abb59e85a7495478dbb0fc7798e6c5d3e214e00",
+              "type": "transaction"
+            }
+          ],
+          "label": "Starknet Sepolia blob submitter",
+          "role": "batcher",
+          "status": "active",
+          "submission_chain": "eip155-11155111",
+          "valid_from": {
+            "block": 5422185
+          },
+          "valid_to": null
+        }
+      ],
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-11155111",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Sepolia testnet for Starknet.",
+      "id": "starknet-sepolia",
+      "name": "Starknet Sepolia",
+      "schema_version": 1,
+      "status": "active",
+      "website": "https://www.starknet.io"
+    },
+    {
+      "addresses": [
+        {
           "address": "0x000000633b68f5D8D3a86593ebB815b4663BCBe0",
           "confidence": "probable",
           "evidence": [
@@ -1056,8 +1356,60 @@
       "schema_version": 1,
       "status": "active",
       "website": "https://zora.energy"
+    },
+    {
+      "addresses": [
+        {
+          "address": "0x3Cd868E221A3be64B161D596A7482257a99D857f",
+          "confidence": "confirmed",
+          "evidence": [
+            {
+              "type": "repository",
+              "url": "https://github.com/ethereum-optimism/superchain-registry/blob/main/superchain/configs/sepolia/zora.toml"
+            },
+            {
+              "type": "dashboard",
+              "url": "https://sepolia.blobscan.com/tx/0xcbd60e70feef9deb8206d9c8ea5ee590fafea1888bfd7afce113a919e4935464"
+            },
+            {
+              "submission_chain": "eip155-11155111",
+              "tx_hash": "0xcbd60e70feef9deb8206d9c8ea5ee590fafea1888bfd7afce113a919e4935464",
+              "type": "transaction"
+            }
+          ],
+          "label": "Zora Sepolia batcher",
+          "role": "batcher",
+          "status": "active",
+          "submission_chain": "eip155-11155111",
+          "valid_from": {
+            "block": 5480189
+          },
+          "valid_to": null
+        }
+      ],
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-999999999",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-11155111",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Sepolia testnet for Zora.",
+      "icon": {
+        "chain_ref": "eip155-999999999",
+        "mode": "chainlist"
+      },
+      "id": "zora-sepolia",
+      "name": "Zora Sepolia Testnet",
+      "schema_version": 1,
+      "status": "active",
+      "website": "https://zora.co"
     }
   ],
-  "generated_at": "2026-05-24T20:41:22.413Z",
+  "generated_at": "2026-05-25T00:59:47.119Z",
   "schema_version": 1
 }

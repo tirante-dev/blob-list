@@ -52,6 +52,25 @@
       "category": "rollup",
       "chain_refs": [
         {
+          "caip2": "eip155-421614",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-11155111",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Sepolia testnet for Arbitrum.",
+      "icon": null,
+      "id": "arbitrum-sepolia",
+      "name": "Arbitrum Sepolia",
+      "status": "active",
+      "website": "https://arbitrum.io"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
           "caip2": "eip155-8453",
           "relationship": "canonical_chain"
         },
@@ -67,6 +86,28 @@
       },
       "id": "base",
       "name": "Base",
+      "status": "active",
+      "website": "https://base.org"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-84532",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-11155111",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Sepolia testnet for Base.",
+      "icon": {
+        "chain_ref": "eip155-84532",
+        "mode": "chainlist"
+      },
+      "id": "base-sepolia",
+      "name": "Base Sepolia Testnet",
       "status": "active",
       "website": "https://base.org"
     },
@@ -162,6 +203,28 @@
       "category": "rollup",
       "chain_refs": [
         {
+          "caip2": "eip155-59141",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-11155111",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Sepolia testnet for Linea.",
+      "icon": {
+        "chain_ref": "eip155-59141",
+        "mode": "chainlist"
+      },
+      "id": "linea-sepolia",
+      "name": "Linea Sepolia",
+      "status": "active",
+      "website": "https://linea.build"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
           "caip2": "eip155-1750",
           "relationship": "canonical_chain"
         },
@@ -201,6 +264,47 @@
       "name": "Mode",
       "status": "active",
       "website": "https://mode.network"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-919",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-11155111",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Sepolia testnet for Mode.",
+      "icon": {
+        "chain_ref": "eip155-919",
+        "mode": "chainlist"
+      },
+      "id": "mode-sepolia",
+      "name": "Mode Testnet",
+      "status": "active",
+      "website": "https://www.mode.network"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-11155420",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-11155111",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Sepolia testnet for OP Mainnet.",
+      "icon": null,
+      "id": "op-sepolia",
+      "name": "OP Sepolia Testnet",
+      "status": "active",
+      "website": "https://www.optimism.io"
     },
     {
       "category": "rollup",
@@ -324,6 +428,21 @@
       "category": "rollup",
       "chain_refs": [
         {
+          "caip2": "eip155-11155111",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Sepolia testnet for Starknet.",
+      "icon": null,
+      "id": "starknet-sepolia",
+      "name": "Starknet Sepolia",
+      "status": "active",
+      "website": "https://www.starknet.io"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
           "caip2": "eip155-167000",
           "relationship": "canonical_chain"
         },
@@ -407,8 +526,30 @@
       "name": "Zora",
       "status": "active",
       "website": "https://zora.energy"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-999999999",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-11155111",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Sepolia testnet for Zora.",
+      "icon": {
+        "chain_ref": "eip155-999999999",
+        "mode": "chainlist"
+      },
+      "id": "zora-sepolia",
+      "name": "Zora Sepolia Testnet",
+      "status": "active",
+      "website": "https://zora.co"
     }
   ],
-  "generated_at": "2026-05-24T20:41:22.413Z",
+  "generated_at": "2026-05-25T00:59:47.119Z",
   "schema_version": 1
 }
