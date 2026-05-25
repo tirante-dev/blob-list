@@ -1,0 +1,175 @@
+{
+  "addresses": {
+    "0x3Cd868E221A3be64B161D596A7482257a99D857f": [
+      {
+        "category": "rollup",
+        "chain_refs": [
+          {
+            "caip2": "eip155-999999999",
+            "relationship": "canonical_chain"
+          },
+          {
+            "caip2": "eip155-11155111",
+            "relationship": "settlement_chain"
+          }
+        ],
+        "confidence": "confirmed",
+        "entity_id": "zora-sepolia",
+        "icon": {
+          "chain_ref": "eip155-999999999",
+          "mode": "chainlist"
+        },
+        "name": "Zora Sepolia Testnet",
+        "role": "batcher",
+        "status": "active",
+        "valid_from_block": 5480189,
+        "valid_to_block": null
+      }
+    ],
+    "0x47C63d1E391FcB3dCdC40C4d7fA58ADb172f8c38": [
+      {
+        "category": "rollup",
+        "chain_refs": [
+          {
+            "caip2": "eip155-59141",
+            "relationship": "canonical_chain"
+          },
+          {
+            "caip2": "eip155-11155111",
+            "relationship": "settlement_chain"
+          }
+        ],
+        "confidence": "probable",
+        "entity_id": "linea-sepolia",
+        "icon": {
+          "chain_ref": "eip155-59141",
+          "mode": "chainlist"
+        },
+        "name": "Linea Sepolia",
+        "role": "batcher",
+        "status": "active",
+        "valid_from_block": 5523599,
+        "valid_to_block": null
+      }
+    ],
+    "0x4e6BD53883107B063c502dDd49F9600Dc51b3DDc": [
+      {
+        "category": "rollup",
+        "chain_refs": [
+          {
+            "caip2": "eip155-919",
+            "relationship": "canonical_chain"
+          },
+          {
+            "caip2": "eip155-11155111",
+            "relationship": "settlement_chain"
+          }
+        ],
+        "confidence": "confirmed",
+        "entity_id": "mode-sepolia",
+        "icon": {
+          "chain_ref": "eip155-919",
+          "mode": "chainlist"
+        },
+        "name": "Mode Testnet",
+        "role": "batcher",
+        "status": "active",
+        "valid_from_block": 5480189,
+        "valid_to_block": null
+      }
+    ],
+    "0x5b98B836969A60FEC50Fa925905Dd1D382a7db43": [
+      {
+        "category": "rollup",
+        "chain_refs": [
+          {
+            "caip2": "eip155-11155111",
+            "relationship": "settlement_chain"
+          }
+        ],
+        "confidence": "probable",
+        "entity_id": "starknet-sepolia",
+        "icon": null,
+        "name": "Starknet Sepolia",
+        "role": "batcher",
+        "status": "active",
+        "valid_from_block": 5422185,
+        "valid_to_block": null
+      }
+    ],
+    "0x8F23BB38F531600e5d8FDDaAEC41F13FaB46E98c": [
+      {
+        "category": "rollup",
+        "chain_refs": [
+          {
+            "caip2": "eip155-11155420",
+            "relationship": "canonical_chain"
+          },
+          {
+            "caip2": "eip155-11155111",
+            "relationship": "settlement_chain"
+          }
+        ],
+        "confidence": "confirmed",
+        "entity_id": "op-sepolia",
+        "icon": null,
+        "name": "OP Sepolia Testnet",
+        "role": "batcher",
+        "status": "active",
+        "valid_from_block": 5335452,
+        "valid_to_block": null
+      }
+    ],
+    "0xb2248390842d3C4aCF1D8A893954Afc0EAc586e5": [
+      {
+        "category": "rollup",
+        "chain_refs": [
+          {
+            "caip2": "eip155-421614",
+            "relationship": "canonical_chain"
+          },
+          {
+            "caip2": "eip155-11155111",
+            "relationship": "settlement_chain"
+          }
+        ],
+        "confidence": "probable",
+        "entity_id": "arbitrum-sepolia",
+        "icon": null,
+        "name": "Arbitrum Sepolia",
+        "role": "batcher",
+        "status": "active",
+        "valid_from_block": 5396950,
+        "valid_to_block": null
+      }
+    ],
+    "0xfc56E7272EEBBBA5bC6c544e159483C4a38f8bA3": [
+      {
+        "category": "rollup",
+        "chain_refs": [
+          {
+            "caip2": "eip155-84532",
+            "relationship": "canonical_chain"
+          },
+          {
+            "caip2": "eip155-11155111",
+            "relationship": "settlement_chain"
+          }
+        ],
+        "confidence": "probable",
+        "entity_id": "base-sepolia",
+        "icon": {
+          "chain_ref": "eip155-84532",
+          "mode": "chainlist"
+        },
+        "name": "Base Sepolia Testnet",
+        "role": "batcher",
+        "status": "active",
+        "valid_from_block": 10914440,
+        "valid_to_block": null
+      }
+    ]
+  },
+  "schema_version": 1,
+  "submission_chain": "eip155-11155111"
+}

@@ -52,6 +52,32 @@
         "valid_to_block": null
       }
     ],
+    "0x0D3250c3D5FAcb74Ac15834096397a3Ef790ec99": [
+      {
+        "category": "rollup",
+        "chain_refs": [
+          {
+            "caip2": "eip155-324",
+            "relationship": "canonical_chain"
+          },
+          {
+            "caip2": "eip155-1",
+            "relationship": "settlement_chain"
+          }
+        ],
+        "confidence": "probable",
+        "entity_id": "zksync-era",
+        "icon": {
+          "chain_ref": "eip155-324",
+          "mode": "chainlist"
+        },
+        "name": "zkSync Era",
+        "role": "batcher",
+        "status": "inactive",
+        "valid_from_block": 19426911,
+        "valid_to_block": 22468007
+      }
+    ],
     "0x11805594be0229EF08429D775AF0c55f7c4535dE": [
       {
         "category": "rollup",
@@ -530,6 +556,32 @@
         "status": "active",
         "valid_from_block": 19518063,
         "valid_to_block": null
+      }
+    ],
+    "0xcF2898225ED05Be911D3709d9417e86E0b4Cfc8f": [
+      {
+        "category": "rollup",
+        "chain_refs": [
+          {
+            "caip2": "eip155-534352",
+            "relationship": "canonical_chain"
+          },
+          {
+            "caip2": "eip155-1",
+            "relationship": "settlement_chain"
+          }
+        ],
+        "confidence": "probable",
+        "entity_id": "scroll",
+        "icon": {
+          "chain_ref": "eip155-534352",
+          "mode": "chainlist"
+        },
+        "name": "Scroll",
+        "role": "batcher",
+        "status": "active",
+        "valid_from_block": 19758051,
+        "valid_to_block": 21464707
       }
     ],
     "0xdBBE3D8c2d2b22A2611c5A94A9a12C2fCD49Eb29": [
