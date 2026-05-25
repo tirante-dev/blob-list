@@ -42,7 +42,7 @@ jobs:
         run: npm run lint:md
 
       - name: Reject committed generated-data changes
-        if: github.event_name == 'pull_request' && github.head_ref != 'at/generated-data'
+        if: github.event_name == 'pull_request'
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: |
@@ -53,7 +53,7 @@ jobs:
           fi
 
           if ! git diff --quiet "$BASE_SHA" -- entities && ! git diff --quiet "$BASE_SHA" -- data/chainlist/snapshot.json; then
-            echo "::error::Do not commit data/chainlist/snapshot.json changes in attribution PRs. CI projects snapshot diffs for review and publishes an at/generated-data branch after merge."
+            echo "::error::Do not commit data/chainlist/snapshot.json changes in attribution PRs. CI projects snapshot diffs for review and commits generated data to main after merge."
             git diff --name-only "$BASE_SHA" -- data/chainlist/snapshot.json
             exit 1
           fi
@@ -73,28 +73,28 @@ jobs:
         run: npm run generate:check
 
       - name: Capture projected artifact diff
-        if: github.event_name == 'pull_request' && github.head_ref != 'at/generated-data'
+        if: github.event_name == 'pull_request'
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: |
           git diff --no-ext-diff --unified=3 "$BASE_SHA" -- artifacts > artifact.diff
 
       - name: Capture projected Chainlist snapshot diff
-        if: github.event_name == 'pull_request' && github.head_ref != 'at/generated-data'
+        if: github.event_name == 'pull_request'
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: |
           git diff --no-ext-diff --unified=3 "$BASE_SHA" -- data/chainlist/snapshot.json > chainlist.diff
 
       - name: Build generated-data diff comment
-        if: github.event_name == 'pull_request' && github.head_ref != 'at/generated-data'
+        if: github.event_name == 'pull_request'
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: node .github/scripts/build-artifact-diff-comment.js artifact.diff generated-data-comment.md chainlist.diff
 
       - name: Upload projected generated-data diffs
-        if: github.event_name == 'pull_request' && github.head_ref != 'at/generated-data'
+        if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4
         with:
           name: projected-generated-diffs
@@ -103,7 +103,7 @@ jobs:
             chainlist.diff
 
       - name: Comment projected generated-data diff
-        if: github.event_name == 'pull_request' && github.head_ref != 'at/generated-data'
+        if: github.event_name == 'pull_request'
         uses: actions/github-script@v7
         continue-on-error: true
         with:
@@ -142,7 +142,6 @@ jobs:
     needs: validate
     runs-on: ubuntu-latest
     permissions:
-      actions: write
       contents: write
     concurrency:
       group: generated-data-main
@@ -163,13 +162,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Publish generated-data branch
+      - name: Commit generated data to main
         env:
-          GH_TOKEN: ${{ github.token }}
           GITHUB_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          branch="at/generated-data"
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -181,24 +178,19 @@ jobs:
           npm run generate
           npm run validate
           npx prettier --write data/chainlist/snapshot.json
+          npm run generate:check
 
           if git diff --quiet -- artifacts data/chainlist/snapshot.json; then
             echo "Generated data already matches source."
             exit 0
           fi
 
-          git switch -c "$branch"
           git add artifacts data/chainlist/snapshot.json
-          git commit -m "chore: update generated data"
-          git fetch origin "$branch":"refs/remotes/origin/$branch" || true
-          git push --force-with-lease origin HEAD:"$branch"
-
-          gh workflow run ci.yml --repo "$GITHUB_REPOSITORY" --ref "$branch"
+          git commit -m "chore: update generated data [skip ci]"
+          git push origin HEAD:main
 
           {
-            echo "### Generated data update ready"
+            echo "### Generated data committed"
             echo
-            echo "Published \`$branch\` with generated artifacts and the pinned Chainlist snapshot."
-            echo
-            echo "[Open the generated-data PR](https://github.com/$GITHUB_REPOSITORY/compare/main...$branch?expand=1)"
+            echo "Committed generated artifacts and the pinned Chainlist snapshot to \`main\`."
           } >> "$GITHUB_STEP_SUMMARY"

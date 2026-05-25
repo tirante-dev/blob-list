@@ -63,8 +63,8 @@ Pull request CI regenerates artifacts from the submitted source files and posts
 the projected Chainlist snapshot and artifact diff as a PR comment. Attribution
 PRs should include source YAML, schemas, docs, or icons only; CI rejects
 committed `data/chainlist/snapshot.json` changes in attribution PRs, rejects
-committed `artifacts/` changes, and publishes an `at/generated-data` branch for
-a generated-data PR after merge.
+committed `artifacts/` changes, and commits generated data to `main` after
+merge.
 
 ## Releases
 
