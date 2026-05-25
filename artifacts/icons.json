@@ -1,9 +1,9 @@
 {
   "chainlist": {
-    "commit": "cdb07325333894f6fee154ce393649d47de2c09b",
+    "commit": "99b65ec86d707bdbccc4506848edad6687fb3532",
     "repository": "ethereum-lists/chains"
   },
-  "generated_at": "2026-05-24T20:41:22.413Z",
+  "generated_at": "2026-05-25T21:26:39.849Z",
   "icons": {
     "abstract": {
       "chain_ref": "eip155-2741",
@@ -26,9 +26,24 @@
       "mode": "chainlist",
       "source": "ethereum-lists/chains"
     },
+    "arbitrum-sepolia": null,
     "base": {
       "chain_ref": "eip155-8453",
       "chainlist_icon": "base",
+      "entries": [
+        {
+          "format": "png",
+          "height": 1200,
+          "url": "ipfs://QmaxRoHpxZd8PqccAynherrMznMufG6sdmHZLihkECXmZv",
+          "width": 1200
+        }
+      ],
+      "mode": "chainlist",
+      "source": "ethereum-lists/chains"
+    },
+    "base-sepolia": {
+      "chain_ref": "eip155-84532",
+      "chainlist_icon": "baseTestnet",
       "entries": [
         {
           "format": "png",
@@ -89,6 +104,20 @@
       "mode": "chainlist",
       "source": "ethereum-lists/chains"
     },
+    "linea-sepolia": {
+      "chain_ref": "eip155-59141",
+      "chainlist_icon": "linea",
+      "entries": [
+        {
+          "format": "svg",
+          "height": 102,
+          "url": "ipfs://QmURjritnHL7a8TwZgsFwp3f272DJmG5paaPtWDZ98QZwH",
+          "width": 97
+        }
+      ],
+      "mode": "chainlist",
+      "source": "ethereum-lists/chains"
+    },
     "metal": {
       "chain_ref": "eip155-1750",
       "chainlist_icon": "metal",
@@ -117,6 +146,21 @@
       "mode": "chainlist",
       "source": "ethereum-lists/chains"
     },
+    "mode-sepolia": {
+      "chain_ref": "eip155-919",
+      "chainlist_icon": "modeTestnet",
+      "entries": [
+        {
+          "format": "png",
+          "height": 2160,
+          "url": "ipfs://bafkreidi5y7afj5z4xrz7uz5rkg2mcsv2p2n4ui4g7q4k4ecdz65i2agou",
+          "width": 2160
+        }
+      ],
+      "mode": "chainlist",
+      "source": "ethereum-lists/chains"
+    },
+    "op-sepolia": null,
     "optimism": {
       "chain_ref": "eip155-10",
       "chainlist_icon": null,
@@ -154,6 +198,7 @@
       "source": "ethereum-lists/chains"
     },
     "starknet": null,
+    "starknet-sepolia": null,
     "taiko": {
       "chain_ref": "eip155-167000",
       "chainlist_icon": "taiko",
@@ -189,6 +234,20 @@
       "mode": "chainlist",
       "source": "ethereum-lists/chains"
     },
+    "zksync-era": {
+      "chain_ref": "eip155-324",
+      "chainlist_icon": "zksync-era",
+      "entries": [
+        {
+          "format": "svg",
+          "height": 512,
+          "url": "ipfs://QmRkhUD6J3B9WhT4hEWLrcFVTrBhx3CQgNC783aJsrwxSN",
+          "width": 512
+        }
+      ],
+      "mode": "chainlist",
+      "source": "ethereum-lists/chains"
+    },
     "zora": {
       "chain_ref": "eip155-7777777",
       "chainlist_icon": "zora",
@@ -198,6 +257,20 @@
           "height": 2390,
           "url": "ipfs://QmYQf9VKTzPwQiU5xQMNbJKKGasLDVoXs2S86Ay77MStp7",
           "width": 2390
+        }
+      ],
+      "mode": "chainlist",
+      "source": "ethereum-lists/chains"
+    },
+    "zora-sepolia": {
+      "chain_ref": "eip155-999999999",
+      "chainlist_icon": "zoraSepoliaTestnet",
+      "entries": [
+        {
+          "format": "png",
+          "height": 250,
+          "url": "ipfs://bafkreifvrly5tgd34xqeo67s4etmiu52bkroml7uy7eosizf57htf5nrzq",
+          "width": 250
         }
       ],
       "mode": "chainlist",

@@ -118,6 +118,88 @@
       ],
       "shortName": "oeth"
     },
+    "eip155-11155111": {
+      "chain": "ETH",
+      "chainId": 11155111,
+      "explorers": [
+        {
+          "name": "etherscan-sepolia",
+          "standard": "EIP3091",
+          "url": "https://sepolia.etherscan.io"
+        },
+        {
+          "name": "otterscan-sepolia",
+          "standard": "EIP3091",
+          "url": "https://sepolia.otterscan.io"
+        },
+        {
+          "name": "Routescan",
+          "standard": "EIP3091",
+          "url": "https://11155111.testnet.routescan.io"
+        }
+      ],
+      "faucets": [
+        "http://fauceth.komputing.org?chain=11155111&address=${ADDRESS}"
+      ],
+      "infoURL": "https://sepolia.otterscan.io",
+      "name": "Ethereum Sepolia",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "Sepolia Ether",
+        "symbol": "ETH"
+      },
+      "networkId": 11155111,
+      "rpc": [
+        "https://rpc.sepolia.org",
+        "https://rpc2.sepolia.org",
+        "https://rpc.sepolia.ethpandaops.io",
+        "https://sepolia.infura.io/v3/${INFURA_API_KEY}",
+        "wss://sepolia.infura.io/v3/${INFURA_API_KEY}",
+        "https://sepolia.gateway.tenderly.co",
+        "wss://sepolia.gateway.tenderly.co",
+        "https://ethereum-sepolia-rpc.publicnode.com",
+        "wss://ethereum-sepolia-rpc.publicnode.com",
+        "https://sepolia.drpc.org",
+        "wss://sepolia.drpc.org",
+        "https://eth-sepolia.g.alchemy.com/v2/WddzdzI2o9S3COdT73d5w6AIogbKq4X-"
+      ],
+      "shortName": "sep",
+      "slip44": 1,
+      "title": "Ethereum Testnet Sepolia"
+    },
+    "eip155-11155420": {
+      "chain": "ETH",
+      "chainId": 11155420,
+      "explorers": [
+        {
+          "name": "etherscan-sepolia-optimism",
+          "standard": "EIP3091",
+          "url": "https://sepolia-optimism.etherscan.io"
+        },
+        {
+          "icon": "blockscout",
+          "name": "opscout",
+          "standard": "EIP3091",
+          "url": "https://optimism-sepolia.blockscout.com"
+        }
+      ],
+      "faucets": ["https://app.optimism.io/faucet"],
+      "infoURL": "https://optimism.io",
+      "name": "OP Sepolia Testnet",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "Sepolia Ether",
+        "symbol": "ETH"
+      },
+      "networkId": 11155420,
+      "rpc": [
+        "https://sepolia.optimism.io",
+        "https://optimism-sepolia.drpc.org",
+        "wss://optimism-sepolia.drpc.org"
+      ],
+      "shortName": "opsep",
+      "slip44": 1
+    },
     "eip155-130": {
       "chain": "ETH",
       "chainId": 130,
@@ -283,6 +365,43 @@
       "rpc": ["https://api.mainnet.abs.xyz"],
       "shortName": "abstract"
     },
+    "eip155-324": {
+      "chain": "ETH",
+      "chainId": 324,
+      "explorers": [
+        {
+          "icon": "zksync-era",
+          "name": "zkSync Era Block Explorer",
+          "standard": "EIP3091",
+          "url": "https://explorer.zksync.io"
+        }
+      ],
+      "faucets": [],
+      "icon": "zksync-era",
+      "infoURL": "https://zksync.io/",
+      "name": "zkSync Mainnet",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "Ether",
+        "symbol": "ETH"
+      },
+      "networkId": 324,
+      "parent": {
+        "bridges": [
+          {
+            "url": "https://bridge.zksync.io/"
+          }
+        ],
+        "chain": "eip155-1",
+        "type": "L2"
+      },
+      "rpc": [
+        "https://mainnet.era.zksync.io",
+        "https://zksync.drpc.org",
+        "wss://zksync.drpc.org"
+      ],
+      "shortName": "zksync"
+    },
     "eip155-34443": {
       "chain": "ETH",
       "chainId": 34443,
@@ -390,6 +509,49 @@
         "https://rpcfree.com/arbitrum-rpc"
       ],
       "shortName": "arb1"
+    },
+    "eip155-421614": {
+      "chain": "ETH",
+      "chainId": 421614,
+      "explorers": [
+        {
+          "name": "arbiscan-sepolia",
+          "standard": "EIP3091",
+          "url": "https://sepolia.arbiscan.io"
+        },
+        {
+          "name": "Arbitrum Sepolia Rollup Testnet Explorer",
+          "standard": "EIP3091",
+          "url": "https://sepolia-explorer.arbitrum.io"
+        }
+      ],
+      "faucets": [],
+      "infoURL": "https://arbitrum.io",
+      "name": "Arbitrum Sepolia",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "Sepolia Ether",
+        "symbol": "ETH"
+      },
+      "networkId": 421614,
+      "parent": {
+        "bridges": [
+          {
+            "url": "https://bridge.arbitrum.io"
+          }
+        ],
+        "chain": "eip155-11155111",
+        "type": "L2"
+      },
+      "rpc": [
+        "https://sepolia-rollup.arbitrum.io/rpc",
+        "https://arbitrum-sepolia.infura.io/v3/${INFURA_API_KEY}",
+        "https://arbitrum-sepolia-rpc.publicnode.com",
+        "wss://arbitrum-sepolia-rpc.publicnode.com"
+      ],
+      "shortName": "arb-sep",
+      "slip44": 1,
+      "title": "Arbitrum Sepolia Rollup Testnet"
     },
     "eip155-43111": {
       "chain": "ETH",
@@ -542,6 +704,55 @@
       ],
       "shortName": "ink",
       "status": "active"
+    },
+    "eip155-59141": {
+      "chain": "ETH",
+      "chainId": 59141,
+      "explorers": [
+        {
+          "icon": "linea",
+          "name": "Etherscan",
+          "standard": "EIP3091",
+          "url": "https://sepolia.lineascan.build"
+        },
+        {
+          "icon": "linea",
+          "name": "Blockscout",
+          "standard": "EIP3091",
+          "url": "https://explorer.sepolia.linea.build"
+        }
+      ],
+      "faucets": [],
+      "icon": "linea",
+      "infoURL": "https://linea.build",
+      "name": "Linea Sepolia",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "Linea Ether",
+        "symbol": "ETH"
+      },
+      "networkId": 59141,
+      "parent": {
+        "bridges": [
+          {
+            "url": "https://bridge.linea.build/"
+          }
+        ],
+        "chain": "eip155-11155111",
+        "type": "L2"
+      },
+      "rpc": [
+        "https://rpc.sepolia.linea.build",
+        "wss://rpc.sepolia.linea.build",
+        "https://linea-sepolia.infura.io/v3/${INFURA_API_KEY}",
+        "wss://linea-sepolia.infura.io/ws/v3/${INFURA_API_KEY}",
+        "https://linea-sepolia-rpc.publicnode.com",
+        "wss://linea-sepolia-rpc.publicnode.com"
+      ],
+      "shortName": "linea-sepolia",
+      "slip44": 1,
+      "status": "active",
+      "title": "Linea Sepolia Testnet"
     },
     "eip155-59144": {
       "chain": "ETH",
@@ -711,6 +922,102 @@
       ],
       "shortName": "base",
       "status": "active"
+    },
+    "eip155-84532": {
+      "chain": "ETH",
+      "chainId": 84532,
+      "explorers": [
+        {
+          "name": "basescan-sepolia",
+          "standard": "EIP3091",
+          "url": "https://sepolia.basescan.org"
+        },
+        {
+          "icon": "blockscout",
+          "name": "basescout",
+          "standard": "EIP3091",
+          "url": "https://base-sepolia.blockscout.com"
+        }
+      ],
+      "faucets": [],
+      "icon": "baseTestnet",
+      "infoURL": "https://base.org",
+      "name": "Base Sepolia Testnet",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "Sepolia Ether",
+        "symbol": "ETH"
+      },
+      "networkId": 84532,
+      "rpc": [
+        "https://sepolia.base.org",
+        "https://base-sepolia-rpc.publicnode.com",
+        "wss://base-sepolia-rpc.publicnode.com"
+      ],
+      "shortName": "basesep",
+      "slip44": 1
+    },
+    "eip155-919": {
+      "chain": "ETH",
+      "chainId": 919,
+      "explorers": [
+        {
+          "name": "modescout",
+          "standard": "none",
+          "url": "https://sepolia.explorer.mode.network"
+        },
+        {
+          "name": "Routesan",
+          "standard": "none",
+          "url": "https://testnet.modescan.io"
+        }
+      ],
+      "faucets": ["https://sepoliafaucet.com/"],
+      "icon": "modeTestnet",
+      "infoURL": "https://docs.mode.network/",
+      "name": "Mode Testnet",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "Sepolia Ether",
+        "symbol": "ETH"
+      },
+      "networkId": 919,
+      "parent": {
+        "bridges": [
+          {
+            "url": "https://bridge.mode.network/"
+          }
+        ],
+        "chain": "eip155-11155111",
+        "type": "L2"
+      },
+      "rpc": ["https://sepolia.mode.network"],
+      "shortName": "modesep",
+      "slip44": 1
+    },
+    "eip155-999999999": {
+      "chain": "ETH",
+      "chainId": 999999999,
+      "explorers": [
+        {
+          "name": "Zora Sepolia Testnet Network Explorer",
+          "standard": "EIP3091",
+          "url": "https://sepolia.explorer.zora.energy"
+        }
+      ],
+      "faucets": [],
+      "icon": "zoraSepoliaTestnet",
+      "infoURL": "https://zora.energy",
+      "name": "Zora Sepolia Testnet",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "Sepolia Ether",
+        "symbol": "ETH"
+      },
+      "networkId": 999999999,
+      "rpc": ["https://sepolia.rpc.zora.energy"],
+      "shortName": "zsep",
+      "slip44": 1
     }
   },
   "icons": {
@@ -723,6 +1030,14 @@
       }
     ],
     "base": [
+      {
+        "format": "png",
+        "height": 1200,
+        "url": "ipfs://QmaxRoHpxZd8PqccAynherrMznMufG6sdmHZLihkECXmZv",
+        "width": 1200
+      }
+    ],
+    "baseTestnet": [
       {
         "format": "png",
         "height": 1200,
@@ -778,6 +1093,14 @@
         "width": 2160
       }
     ],
+    "modeTestnet": [
+      {
+        "format": "png",
+        "height": 2160,
+        "url": "ipfs://bafkreidi5y7afj5z4xrz7uz5rkg2mcsv2p2n4ui4g7q4k4ecdz65i2agou",
+        "width": 2160
+      }
+    ],
     "shape": [
       {
         "format": "png",
@@ -802,6 +1125,14 @@
         "width": 513
       }
     ],
+    "zksync-era": [
+      {
+        "format": "svg",
+        "height": 512,
+        "url": "ipfs://QmRkhUD6J3B9WhT4hEWLrcFVTrBhx3CQgNC783aJsrwxSN",
+        "width": 512
+      }
+    ],
     "zora": [
       {
         "format": "png",
@@ -809,14 +1140,22 @@
         "url": "ipfs://QmYQf9VKTzPwQiU5xQMNbJKKGasLDVoXs2S86Ay77MStp7",
         "width": 2390
       }
+    ],
+    "zoraSepoliaTestnet": [
+      {
+        "format": "png",
+        "height": 250,
+        "url": "ipfs://bafkreifvrly5tgd34xqeo67s4etmiu52bkroml7uy7eosizf57htf5nrzq",
+        "width": 250
+      }
     ]
   },
   "schema_version": 1,
   "source": {
-    "commit": "cdb07325333894f6fee154ce393649d47de2c09b",
-    "fetched_at": "2026-05-24T20:41:22.413Z",
+    "commit": "99b65ec86d707bdbccc4506848edad6687fb3532",
+    "fetched_at": "2026-05-25T21:26:39.849Z",
     "ref": "master",
     "repository": "ethereum-lists/chains",
-    "url": "https://github.com/ethereum-lists/chains/tree/cdb07325333894f6fee154ce393649d47de2c09b"
+    "url": "https://github.com/ethereum-lists/chains/tree/99b65ec86d707bdbccc4506848edad6687fb3532"
   }
 }
