@@ -15,6 +15,29 @@ icon:
   chain_ref: eip155-534352
 addresses:
   - submission_chain: eip155-1
+    address: "0xcF2898225ED05Be911D3709d9417e86E0b4Cfc8f"
+    role: batcher
+    label: "Scroll old batch committer"
+    status: active
+    confidence: probable
+    valid_from:
+      block: 19758051
+    valid_to:
+      block: 21464707
+    evidence:
+      - type: dashboard
+        url: "https://blobscan.com/tx/0x94046e71b8537c60bf712b1d4346848be39c7ae1083c79b9efc3cf682e022078"
+      - type: dashboard
+        url: "https://blobscan.com/tx/0x49ea61e43503e4fe8e9166c4878fcd3c5a4238db3e6865a80348e26a982640c4"
+      - type: analysis
+        url: "https://etherscan.io/address/0xcf2898225ed05be911d3709d9417e86e0b4cfc8f"
+      - type: transaction
+        submission_chain: eip155-1
+        tx_hash: "0x94046e71b8537c60bf712b1d4346848be39c7ae1083c79b9efc3cf682e022078"
+      - type: transaction
+        submission_chain: eip155-1
+        tx_hash: "0x49ea61e43503e4fe8e9166c4878fcd3c5a4238db3e6865a80348e26a982640c4"
+  - submission_chain: eip155-1
     address: "0x054a47B9E2a22aF6c0CE55020238C8FEcd7d334B"
     role: batcher
     label: "Scroll batch committer"
