@@ -43,4 +43,4 @@ jobs:
             Refreshes `data/chainlist/snapshot.json` from `ethereum-lists/chains`.
 
             This keeps the vendored Chainlist lockfile current while leaving chain metadata ownership upstream.
-            Generated artifacts are intentionally left to CI projection and the existing main-branch artifact update.
+            Generated artifacts are intentionally left to CI projection and the generated-data PR flow.
