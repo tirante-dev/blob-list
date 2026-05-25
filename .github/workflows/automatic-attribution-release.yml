@@ -51,6 +51,12 @@ jobs:
 
           node tools/release/detect-new-attributions.js "$BASE_SHA" "$HEAD_SHA"
 
+      - name: Fetch projected Chainlist snapshot
+        if: ${{ steps.attributions.outputs.has_new_attributions == 'true' }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: npm run fetch-chainlist
+
       - name: Generate artifacts
         if: ${{ steps.attributions.outputs.has_new_attributions == 'true' }}
         run: npm run generate
