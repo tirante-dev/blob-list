@@ -1,0 +1,37 @@
+schema_version: 1
+id: zksync-era
+name: zkSync Era
+category: rollup
+status: active
+description: "Ethereum zkEVM rollup."
+website: "https://zksync.io"
+chain_refs:
+  - caip2: eip155-324
+    relationship: canonical_chain
+  - caip2: eip155-1
+    relationship: settlement_chain
+icon:
+  mode: chainlist
+  chain_ref: eip155-324
+addresses:
+  - submission_chain: eip155-1
+    address: "0x0D3250c3D5FAcb74Ac15834096397a3Ef790ec99"
+    role: batcher
+    label: "zkSync Era batcher"
+    status: inactive
+    confidence: probable
+    valid_from:
+      block: 19426911
+    valid_to:
+      block: 22468007
+    evidence:
+      - type: dashboard
+        url: "https://blobscan.com/address/0x0d3250c3d5facb74ac15834096397a3ef790ec99"
+      - type: analysis
+        url: "https://etherscan.io/address/0x0D3250c3D5FAcb74Ac15834096397a3Ef790ec99"
+      - type: transaction
+        submission_chain: eip155-1
+        tx_hash: "0x4b9406b05e31ff219d3cfae8eac2779a563248152f3512d5511360b84d3e2805"
+      - type: transaction
+        submission_chain: eip155-1
+        tx_hash: "0x0b56063f0dccda137ba5897b0933c93f67a1c27b52aa92091c34b695fe07c0a9"
