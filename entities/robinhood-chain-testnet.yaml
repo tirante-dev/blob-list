@@ -1,0 +1,30 @@
+schema_version: 1
+id: robinhood-chain-testnet
+name: Robinhood Chain Testnet
+category: rollup
+status: active
+description: "Sepolia testnet for Robinhood Chain."
+website: "https://robinhood.com/chain"
+chain_refs:
+  - caip2: eip155-11155111
+    relationship: settlement_chain
+addresses:
+  - submission_chain: eip155-11155111
+    address: "0x6D77b3f2CFfFa24E474aFab0d09c1646e87A0A7b"
+    role: batcher
+    label: "Robinhood Chain Testnet batch poster"
+    status: active
+    confidence: probable
+    valid_from:
+      block: 10205309
+    valid_to: null
+    evidence:
+      - type: documentation
+        url: "https://docs.robinhood.com/chain/protocol-contracts/"
+      - type: dashboard
+        url: "https://sepolia.blobscan.com/tx/0x71f521e75e380b1e5ff826527dc0e18b9d142cc1155f1813631e3ab851281687"
+      - type: analysis
+        url: "https://sepolia.etherscan.io/address/0x6d77b3f2cfffa24e474afab0d09c1646e87a0a7b"
+      - type: transaction
+        submission_chain: eip155-11155111
+        tx_hash: "0x71f521e75e380b1e5ff826527dc0e18b9d142cc1155f1813631e3ab851281687"
