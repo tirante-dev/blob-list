@@ -918,7 +918,8 @@
         "wss://base.gateway.tenderly.co",
         "https://base-rpc.publicnode.com",
         "wss://base-rpc.publicnode.com",
-        "https://rpcfree.com/base-rpc"
+        "https://rpcfree.com/base-rpc",
+        "https://rpc.baseazul.dev"
       ],
       "shortName": "base",
       "status": "active"
@@ -1152,10 +1153,10 @@
   },
   "schema_version": 1,
   "source": {
-    "commit": "99b65ec86d707bdbccc4506848edad6687fb3532",
-    "fetched_at": "2026-05-25T21:26:39.849Z",
+    "commit": "78102bab13678cf446fe21b7983df83ee35bd4c9",
+    "fetched_at": "2026-06-29T12:12:23.911Z",
     "ref": "master",
     "repository": "ethereum-lists/chains",
-    "url": "https://github.com/ethereum-lists/chains/tree/99b65ec86d707bdbccc4506848edad6687fb3532"
+    "url": "https://github.com/ethereum-lists/chains/tree/78102bab13678cf446fe21b7983df83ee35bd4c9"
   }
 }
