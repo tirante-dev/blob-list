@@ -183,9 +183,7 @@
           "url": "https://optimism-sepolia.blockscout.com"
         }
       ],
-      "faucets": [
-        "https://app.optimism.io/faucet"
-      ],
+      "faucets": ["https://app.optimism.io/faucet"],
       "infoURL": "https://optimism.io",
       "name": "OP Sepolia Testnet",
       "nativeCurrency": {
@@ -283,9 +281,7 @@
         "symbol": "ETH"
       },
       "networkId": 1750,
-      "rpc": [
-        "https://rpc.metall2.com"
-      ],
+      "rpc": ["https://rpc.metall2.com"],
       "shortName": "metall2"
     },
     "eip155-1868": {
@@ -327,9 +323,7 @@
         "chain": "eip155-1",
         "type": "L2"
       },
-      "rpc": [
-        "https://rpc.soneium.org"
-      ],
+      "rpc": ["https://rpc.soneium.org"],
       "shortName": "soneium",
       "status": "active",
       "title": "Soneium mainnet"
@@ -368,9 +362,7 @@
         "chain": "eip155-1",
         "type": "L2"
       },
-      "rpc": [
-        "https://api.mainnet.abs.xyz"
-      ],
+      "rpc": ["https://api.mainnet.abs.xyz"],
       "shortName": "abstract"
     },
     "eip155-324": {
@@ -586,9 +578,7 @@
         "chain": "eip155-1",
         "type": "L2"
       },
-      "rpc": [
-        "https://rpc.hemi.network/rpc"
-      ],
+      "rpc": ["https://rpc.hemi.network/rpc"],
       "shortName": "hemi",
       "status": "active"
     },
@@ -689,9 +679,7 @@
           "url": "https://explorer.inkonchain.com"
         }
       ],
-      "faucets": [
-        "https://inkonchain.com/faucet"
-      ],
+      "faucets": ["https://inkonchain.com/faucet"],
       "features": [
         {
           "name": "EIP155"
@@ -840,9 +828,7 @@
         "symbol": "ETH"
       },
       "networkId": 7777777,
-      "rpc": [
-        "https://rpc.zora.energy/"
-      ],
+      "rpc": ["https://rpc.zora.energy/"],
       "shortName": "zora"
     },
     "eip155-81457": {
@@ -987,9 +973,7 @@
           "url": "https://testnet.modescan.io"
         }
       ],
-      "faucets": [
-        "https://sepoliafaucet.com/"
-      ],
+      "faucets": ["https://sepoliafaucet.com/"],
       "icon": "modeTestnet",
       "infoURL": "https://docs.mode.network/",
       "name": "Mode Testnet",
@@ -1008,9 +992,7 @@
         "chain": "eip155-11155111",
         "type": "L2"
       },
-      "rpc": [
-        "https://sepolia.mode.network"
-      ],
+      "rpc": ["https://sepolia.mode.network"],
       "shortName": "modesep",
       "slip44": 1
     },
@@ -1034,9 +1016,7 @@
         "symbol": "ETH"
       },
       "networkId": 999999999,
-      "rpc": [
-        "https://sepolia.rpc.zora.energy"
-      ],
+      "rpc": ["https://sepolia.rpc.zora.energy"],
       "shortName": "zsep",
       "slip44": 1
     }
