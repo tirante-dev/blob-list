@@ -18,22 +18,30 @@ The registry is intended for blob explorers, dashboards, wallets, researchers, a
 entities/          Source YAML, one file per entity.
 schemas/           JSON Schemas for source and generated artifacts.
 tools/             Fetch, validate, and generate scripts.
-data/chainlist/    Vendored Chainlist lockfile snapshot used by CI and releases.
-artifacts/         Generated JSON artifacts for consumers.
 icons/local/       Local icons only for entities not represented by Chainlist.
+```
+
+Generated outputs are not committed to `main`. CI publishes them to the
+machine-owned `generated-data` branch:
+
+```text
+artifacts/                     Generated JSON artifacts for consumers.
+data/chainlist/snapshot.json   Pinned Chainlist snapshot the artifacts were generated from.
 ```
 
 ## Chainlist Snapshot
 
-`data/chainlist/snapshot.json` is a vendored lockfile for the subset of
-Chainlist entries referenced by source YAML. It exists to keep local validation,
-CI, and release generation deterministic; it is not registry-owned chain
-metadata. If chain facts drift upstream, refresh the snapshot with
-`npm run fetch-chainlist` or let the scheduled refresh workflow open a PR.
+`data/chainlist/snapshot.json` is a generated lockfile for the subset of
+Chainlist entries referenced by source YAML. It pins exactly which Chainlist
+data each publish and release was generated from; it is not registry-owned
+chain metadata. Create it locally with `npm run fetch-chainlist`; CI refreshes
+the published copy on every merge to `main` and on a weekly schedule.
 
 ## Consumer Lookup
 
-1. Load `artifacts/by-chain/{submission_chain}.json`.
+1. Load `artifacts/by-chain/{submission_chain}.json` from a stable URL:
+   - Always current: `https://raw.githubusercontent.com/tirante-dev/blob-list/generated-data/artifacts/by-chain/{submission_chain}.json`
+   - Latest release: `https://github.com/tirante-dev/blob-list/releases/latest/download/{submission_chain}.json`
 2. Normalize the transaction sender to a checksummed EVM address.
 3. Find address claims for that sender.
 4. Filter claims by block number.
@@ -60,11 +68,13 @@ npm run generate:check
 ```
 
 Pull request CI regenerates artifacts from the submitted source files and posts
-the projected Chainlist snapshot and artifact diff as a PR comment. Attribution
-PRs should include source YAML, schemas, docs, or icons only; CI rejects
-committed `data/chainlist/snapshot.json` changes in attribution PRs, rejects
-committed `artifacts/` changes, and publishes `at/generated-data` for a
-generated-data PR after merge.
+the projected Chainlist snapshot and artifact diff as a PR comment, compared
+against the published `generated-data` branch. Attribution PRs should include
+source YAML, schemas, docs, or icons only; `artifacts/` and
+`data/chainlist/snapshot.json` are gitignored, and CI rejects any PR that
+commits them. After a merge to `main`, CI regenerates the dataset and publishes
+it directly to the `generated-data` branch — no bot pull requests are involved,
+so every PR to `main` gets a human review.
 
 ## Releases
 

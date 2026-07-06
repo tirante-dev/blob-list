@@ -24,12 +24,12 @@ npm run generate:check
 npm audit --audit-level=moderate
 ```
 
-Run `npm run fetch-chainlist` and `npm run generate` after changing `entities/`, schemas, the vendored Chainlist snapshot lockfile, or generator logic. Attribution PRs should not commit `data/chainlist/snapshot.json` or `artifacts/` changes; CI projects those diffs and publishes `at/generated-data` for a generated-data PR after merge.
+Run `npm run fetch-chainlist` and `npm run generate` after changing `entities/`, schemas, or generator logic. Generated outputs (`artifacts/`, `data/chainlist/snapshot.json`) are gitignored and never committed to `main`; CI posts the projected generated-data diff on each PR and publishes the dataset to the machine-owned `generated-data` branch after merge.
 
 ## Data Model Notes
 
 - `submission_chain` and all chain references use CAIP-2 refs such as `eip155-1`.
-- `data/chainlist/snapshot.json` is a vendored Chainlist lockfile for deterministic validation and generation; it is not registry-owned chain metadata.
+- `data/chainlist/snapshot.json` is a generated Chainlist lockfile pinning what artifacts were generated from; it lives on the `generated-data` branch, not `main`, and is not registry-owned chain metadata.
 - EVM addresses must be checksummed.
 - Every address claim needs at least one evidence item.
 - `valid_to: null` means the claim is open-ended.
@@ -39,6 +39,6 @@ Run `npm run fetch-chainlist` and `npm run generate` after changing `entities/`,
 
 - Keep `AGENTS.md` as a symlink to this file.
 - Prefer small PRs with focused attribution or tooling changes.
-- The protected `main` branch requires a PR and the `validate` CI check; approving reviews are not platform-enforced.
-- Automation PRs (`at/generated-data`, `at/refresh-chainlist-snapshot`) auto-merge once `validate` passes; attribution and tooling PRs still get human review before merge.
+- The protected `main` branch requires a PR, one approving review, and the `validate` CI check.
+- Automation never opens PRs against `main`; generated data is published directly to the unprotected `generated-data` branch by CI.
 - Do not bypass branch protection for ordinary changes.

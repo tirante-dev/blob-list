@@ -5,3 +5,7 @@ node_modules/
 *.log
 dist/
 coverage/
+
+# Generated data lives on the machine-published generated-data branch, not main.
+artifacts/
+data/chainlist/snapshot.json

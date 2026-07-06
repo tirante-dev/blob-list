@@ -18,13 +18,13 @@ if (!artifactDiffPath || !outputPath) {
 }
 
 function buildComment({ artifactDiff, chainlistDiff }) {
-  const baseSha = shortSha(process.env.BASE_SHA);
+  const publishedSha = shortSha(process.env.PUBLISHED_SHA);
   const headSha = shortSha(process.env.HEAD_SHA);
   const headerLines = [
     MARKER,
     "## Projected generated-data diff",
     "",
-    `CI generated Chainlist snapshot data and artifacts from this PR and compared them with base ${baseSha}.`,
+    `CI generated Chainlist snapshot data and artifacts from this PR and compared them with the published \`generated-data\` branch at ${publishedSha}.`,
   ];
   if (headSha) {
     headerLines.push(`Source head: ${headSha}.`);
