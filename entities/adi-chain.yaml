@@ -1,0 +1,38 @@
+schema_version: 1
+id: adi-chain
+name: ADI Chain
+category: rollup
+status: active
+description: "ZK Stack (Elastic Network) rollup by the ADI Foundation settling on Ethereum."
+website: "https://adi.foundation"
+chain_refs:
+  - caip2: eip155-36900
+    relationship: canonical_chain
+  - caip2: eip155-1
+    relationship: settlement_chain
+icon:
+  mode: chainlist
+  chain_ref: eip155-36900
+addresses:
+  - submission_chain: eip155-1
+    address: "0xF8fF3e62E94807a5C687f418Fe36942dD3a24524"
+    role: batcher
+    label: "ADI Chain batch committer"
+    status: active
+    confidence: probable
+    valid_from:
+      block: 23878298
+    valid_to: null
+    evidence:
+      - type: analysis
+        url: "https://etherscan.io/address/0xF8fF3e62E94807a5C687f418Fe36942dD3a24524"
+      - type: dashboard
+        url: "https://blobscan.com/tx/0x69945e8ca3cc89d3d2a069976ac47b18dd1eb2b9b81af8c519c19e32acc9cdf2"
+      - type: repository
+        url: "https://github.com/l2beat/l2beat/blob/main/packages/config/src/projects/adi/adi.ts"
+      - type: transaction
+        submission_chain: eip155-1
+        tx_hash: "0x6b3e55776f03bcab2b2ea77ff3fc8ab29a0ebac55510e12e57e0bd3ff4fcf76e"
+      - type: transaction
+        submission_chain: eip155-1
+        tx_hash: "0x69945e8ca3cc89d3d2a069976ac47b18dd1eb2b9b81af8c519c19e32acc9cdf2"

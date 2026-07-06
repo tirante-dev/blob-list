@@ -1,0 +1,37 @@
+schema_version: 1
+id: xlayer
+name: X Layer
+category: rollup
+status: active
+description: "OKX Layer 2 rollup on the OP Stack settling on Ethereum."
+website: "https://web3.okx.com/xlayer"
+chain_refs:
+  - caip2: eip155-196
+    relationship: canonical_chain
+  - caip2: eip155-1
+    relationship: settlement_chain
+icon:
+  mode: chainlist
+  chain_ref: eip155-196
+addresses:
+  - submission_chain: eip155-1
+    address: "0x98245d0ADF4595C66F0a9Db8E13c44CBFF6be459"
+    role: batcher
+    label: "X Layer batch submitter"
+    status: active
+    confidence: probable
+    valid_from:
+      block: 24081337
+    valid_to: null
+    evidence:
+      - type: analysis
+        url: "https://etherscan.io/address/0x98245d0ADF4595C66F0a9Db8E13c44CBFF6be459"
+      - type: dashboard
+        url: "https://blobscan.com/tx/0x87c1af21392d529a5f64d964a95ba62f2ae7c8ca31df2cfbb8a4829763ee2cbf"
+      - type: repository
+        url: "https://github.com/l2beat/l2beat/blob/main/packages/config/src/projects/xlayer/discovered.json"
+      - type: repository
+        url: "https://github.com/growthepie/gtp-dna/blob/main/economics_da/economics_mapping.yml"
+      - type: transaction
+        submission_chain: eip155-1
+        tx_hash: "0x87c1af21392d529a5f64d964a95ba62f2ae7c8ca31df2cfbb8a4829763ee2cbf"
