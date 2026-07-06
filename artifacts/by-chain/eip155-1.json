@@ -506,6 +506,25 @@
         "valid_to_block": null
       }
     ],
+    "0xDaa526086787d9DEbE1D7F3FFdb1fE50cf8687F4": [
+      {
+        "category": "rollup",
+        "chain_refs": [
+          {
+            "caip2": "eip155-1",
+            "relationship": "settlement_chain"
+          }
+        ],
+        "confidence": "probable",
+        "entity_id": "robinhood-chain",
+        "icon": null,
+        "name": "Robinhood Chain",
+        "role": "batcher",
+        "status": "active",
+        "valid_from_block": 24994843,
+        "valid_to_block": null
+      }
+    ],
     "0xF7ca543d652E38692fD12f989eb55b5327eC9A20": [
       {
         "category": "rollup",

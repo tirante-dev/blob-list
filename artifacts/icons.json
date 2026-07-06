@@ -1,9 +1,9 @@
 {
   "chainlist": {
-    "commit": "99b65ec86d707bdbccc4506848edad6687fb3532",
+    "commit": "78102bab13678cf446fe21b7983df83ee35bd4c9",
     "repository": "ethereum-lists/chains"
   },
-  "generated_at": "2026-05-25T21:26:39.849Z",
+  "generated_at": "2026-06-29T12:12:23.911Z",
   "icons": {
     "abstract": {
       "chain_ref": "eip155-2741",
@@ -169,6 +169,8 @@
       "source": "ethereum-lists/chains"
     },
     "paradex": null,
+    "robinhood-chain": null,
+    "robinhood-chain-testnet": null,
     "scroll": {
       "chain_ref": "eip155-534352",
       "chainlist_icon": null,

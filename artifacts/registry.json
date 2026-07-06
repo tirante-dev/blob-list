@@ -1,6 +1,6 @@
 {
   "chainlist": {
-    "commit": "99b65ec86d707bdbccc4506848edad6687fb3532",
+    "commit": "78102bab13678cf446fe21b7983df83ee35bd4c9",
     "repository": "ethereum-lists/chains"
   },
   "entities": [
@@ -881,6 +881,102 @@
     {
       "addresses": [
         {
+          "address": "0xDaa526086787d9DEbE1D7F3FFdb1fE50cf8687F4",
+          "confidence": "probable",
+          "evidence": [
+            {
+              "type": "documentation",
+              "url": "https://docs.robinhood.com/chain/protocol-contracts/"
+            },
+            {
+              "type": "dashboard",
+              "url": "https://blobscan.com/tx/0x337564619d2ff04c028939953099397b41e1f430e2a2f8300275bb62f40ffa95"
+            },
+            {
+              "type": "analysis",
+              "url": "https://etherscan.io/address/0xdaa526086787d9debe1d7f3ffdb1fe50cf8687f4"
+            },
+            {
+              "submission_chain": "eip155-1",
+              "tx_hash": "0x337564619d2ff04c028939953099397b41e1f430e2a2f8300275bb62f40ffa95",
+              "type": "transaction"
+            }
+          ],
+          "label": "Robinhood Chain batch poster",
+          "role": "batcher",
+          "status": "active",
+          "submission_chain": "eip155-1",
+          "valid_from": {
+            "block": 24994843
+          },
+          "valid_to": null
+        }
+      ],
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Arbitrum-based rollup developed by Robinhood for onchain finance.",
+      "id": "robinhood-chain",
+      "name": "Robinhood Chain",
+      "schema_version": 1,
+      "status": "active",
+      "website": "https://robinhood.com/chain"
+    },
+    {
+      "addresses": [
+        {
+          "address": "0x6D77b3f2CFfFa24E474aFab0d09c1646e87A0A7b",
+          "confidence": "probable",
+          "evidence": [
+            {
+              "type": "documentation",
+              "url": "https://docs.robinhood.com/chain/protocol-contracts/"
+            },
+            {
+              "type": "dashboard",
+              "url": "https://sepolia.blobscan.com/tx/0x71f521e75e380b1e5ff826527dc0e18b9d142cc1155f1813631e3ab851281687"
+            },
+            {
+              "type": "analysis",
+              "url": "https://sepolia.etherscan.io/address/0x6d77b3f2cfffa24e474afab0d09c1646e87a0a7b"
+            },
+            {
+              "submission_chain": "eip155-11155111",
+              "tx_hash": "0x71f521e75e380b1e5ff826527dc0e18b9d142cc1155f1813631e3ab851281687",
+              "type": "transaction"
+            }
+          ],
+          "label": "Robinhood Chain Testnet batch poster",
+          "role": "batcher",
+          "status": "active",
+          "submission_chain": "eip155-11155111",
+          "valid_from": {
+            "block": 10205309
+          },
+          "valid_to": null
+        }
+      ],
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-11155111",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Sepolia testnet for Robinhood Chain.",
+      "id": "robinhood-chain-testnet",
+      "name": "Robinhood Chain Testnet",
+      "schema_version": 1,
+      "status": "active",
+      "website": "https://robinhood.com/chain"
+    },
+    {
+      "addresses": [
+        {
           "address": "0xcF2898225ED05Be911D3709d9417e86E0b4Cfc8f",
           "confidence": "probable",
           "evidence": [
@@ -1507,6 +1603,6 @@
       "website": "https://zora.co"
     }
   ],
-  "generated_at": "2026-05-25T21:26:39.849Z",
+  "generated_at": "2026-06-29T12:12:23.911Z",
   "schema_version": 1
 }

@@ -1,6 +1,6 @@
 {
   "chainlist": {
-    "commit": "99b65ec86d707bdbccc4506848edad6687fb3532",
+    "commit": "78102bab13678cf446fe21b7983df83ee35bd4c9",
     "repository": "ethereum-lists/chains"
   },
   "entities": [
@@ -347,6 +347,36 @@
       "category": "rollup",
       "chain_refs": [
         {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Arbitrum-based rollup developed by Robinhood for onchain finance.",
+      "icon": null,
+      "id": "robinhood-chain",
+      "name": "Robinhood Chain",
+      "status": "active",
+      "website": "https://robinhood.com/chain"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-11155111",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "Sepolia testnet for Robinhood Chain.",
+      "icon": null,
+      "id": "robinhood-chain-testnet",
+      "name": "Robinhood Chain Testnet",
+      "status": "active",
+      "website": "https://robinhood.com/chain"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
           "caip2": "eip155-534352",
           "relationship": "canonical_chain"
         },
@@ -572,6 +602,6 @@
       "website": "https://zora.co"
     }
   ],
-  "generated_at": "2026-05-25T21:26:39.849Z",
+  "generated_at": "2026-06-29T12:12:23.911Z",
   "schema_version": 1
 }
