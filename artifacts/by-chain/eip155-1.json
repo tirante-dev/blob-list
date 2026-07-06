@@ -104,6 +104,25 @@
         "valid_to_block": null
       }
     ],
+    "0x191fF0EC830F83916A427d169a234c33e48aA79f": [
+      {
+        "category": "rollup",
+        "chain_refs": [
+          {
+            "caip2": "eip155-1",
+            "relationship": "settlement_chain"
+          }
+        ],
+        "confidence": "probable",
+        "entity_id": "lighter",
+        "icon": null,
+        "name": "Lighter",
+        "role": "batcher",
+        "status": "active",
+        "valid_from_block": 24040917,
+        "valid_to_block": null
+      }
+    ],
     "0x2C169DFe5fBbA12957Bdd0Ba47d9CEDbFE260CA7": [
       {
         "category": "rollup",
@@ -409,6 +428,32 @@
         "valid_to_block": null
       }
     ],
+    "0x98245d0ADF4595C66F0a9Db8E13c44CBFF6be459": [
+      {
+        "category": "rollup",
+        "chain_refs": [
+          {
+            "caip2": "eip155-196",
+            "relationship": "canonical_chain"
+          },
+          {
+            "caip2": "eip155-1",
+            "relationship": "settlement_chain"
+          }
+        ],
+        "confidence": "probable",
+        "entity_id": "xlayer",
+        "icon": {
+          "chain_ref": "eip155-196",
+          "mode": "chainlist"
+        },
+        "name": "X Layer",
+        "role": "batcher",
+        "status": "active",
+        "valid_from_block": 24081337,
+        "valid_to_block": null
+      }
+    ],
     "0x99199a22125034c808ff20f377d91187E8050F2E": [
       {
         "category": "rollup",
@@ -548,6 +593,32 @@
         "role": "batcher",
         "status": "active",
         "valid_from_block": 20370545,
+        "valid_to_block": null
+      }
+    ],
+    "0xF8fF3e62E94807a5C687f418Fe36942dD3a24524": [
+      {
+        "category": "rollup",
+        "chain_refs": [
+          {
+            "caip2": "eip155-36900",
+            "relationship": "canonical_chain"
+          },
+          {
+            "caip2": "eip155-1",
+            "relationship": "settlement_chain"
+          }
+        ],
+        "confidence": "probable",
+        "entity_id": "adi-chain",
+        "icon": {
+          "chain_ref": "eip155-36900",
+          "mode": "chainlist"
+        },
+        "name": "ADI Chain",
+        "role": "batcher",
+        "status": "active",
+        "valid_from_block": 23878298,
         "valid_to_block": null
       }
     ],

@@ -328,6 +328,31 @@
       "status": "active",
       "title": "Soneium mainnet"
     },
+    "eip155-196": {
+      "chain": "X Layer",
+      "chainId": 196,
+      "explorers": [
+        {
+          "name": "OKLink",
+          "standard": "EIP3091",
+          "url": "https://www.oklink.com/xlayer"
+        }
+      ],
+      "faucets": [],
+      "features": [],
+      "icon": "xlayer",
+      "infoURL": "https://www.okx.com/xlayer",
+      "name": "X Layer Mainnet",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "X Layer Global Utility Token",
+        "symbol": "OKB"
+      },
+      "networkId": 196,
+      "rpc": ["https://rpc.xlayer.tech", "https://xlayerrpc.okx.com"],
+      "shortName": "okb",
+      "status": "active"
+    },
     "eip155-2741": {
       "chain": "Abstract",
       "chainId": 2741,
@@ -460,6 +485,29 @@
       ],
       "shortName": "shape",
       "status": "active"
+    },
+    "eip155-36900": {
+      "chain": "ADI",
+      "chainId": 36900,
+      "explorers": [
+        {
+          "name": "ADI Explorer",
+          "standard": "EIP3091",
+          "url": "https://explorer.adifoundation.ai"
+        }
+      ],
+      "faucets": [],
+      "icon": "adi",
+      "infoURL": "https://adifoundation.ai",
+      "name": "ADI Chain",
+      "nativeCurrency": {
+        "decimals": 18,
+        "name": "ADI",
+        "symbol": "ADI"
+      },
+      "networkId": 36900,
+      "rpc": ["https://rpc.adifoundation.ai"],
+      "shortName": "adi"
     },
     "eip155-42161": {
       "chain": "ETH",
@@ -1030,6 +1078,14 @@
         "width": 160
       }
     ],
+    "adi": [
+      {
+        "format": "svg",
+        "height": 70,
+        "url": "ipfs://bafkreice4fkfrfggny5m3btlquzrimfg7jiyebvslmsknnqhivznh4u2la",
+        "width": 343
+      }
+    ],
     "base": [
       {
         "format": "png",
@@ -1126,6 +1182,14 @@
         "width": 513
       }
     ],
+    "xlayer": [
+      {
+        "format": "png",
+        "height": 1000,
+        "url": "ipfs://QmSLkiAAr6VtJ6jEqEzz3QdZtVEHzR6Az7E4XD8qXwjuio",
+        "width": 1000
+      }
+    ],
     "zksync-era": [
       {
         "format": "svg",
@@ -1153,10 +1217,10 @@
   },
   "schema_version": 1,
   "source": {
-    "commit": "78102bab13678cf446fe21b7983df83ee35bd4c9",
-    "fetched_at": "2026-06-29T12:12:23.911Z",
+    "commit": "97748ac2f897837ab47ca8663a72677a9daf1e27",
+    "fetched_at": "2026-07-06T07:15:56.599Z",
     "ref": "master",
     "repository": "ethereum-lists/chains",
-    "url": "https://github.com/ethereum-lists/chains/tree/78102bab13678cf446fe21b7983df83ee35bd4c9"
+    "url": "https://github.com/ethereum-lists/chains/tree/97748ac2f897837ab47ca8663a72677a9daf1e27"
   }
 }

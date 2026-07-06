@@ -1,9 +1,9 @@
 {
   "chainlist": {
-    "commit": "78102bab13678cf446fe21b7983df83ee35bd4c9",
+    "commit": "97748ac2f897837ab47ca8663a72677a9daf1e27",
     "repository": "ethereum-lists/chains"
   },
-  "generated_at": "2026-06-29T12:12:23.911Z",
+  "generated_at": "2026-07-06T07:15:56.599Z",
   "icons": {
     "abstract": {
       "chain_ref": "eip155-2741",
@@ -14,6 +14,20 @@
           "height": 161,
           "url": "ipfs://QmSRp5BGvwW9xmNNiRwZkJiTnjkyeQFU8Fy2BYwaBVJn58",
           "width": 160
+        }
+      ],
+      "mode": "chainlist",
+      "source": "ethereum-lists/chains"
+    },
+    "adi-chain": {
+      "chain_ref": "eip155-36900",
+      "chainlist_icon": "adi",
+      "entries": [
+        {
+          "format": "svg",
+          "height": 70,
+          "url": "ipfs://bafkreice4fkfrfggny5m3btlquzrimfg7jiyebvslmsknnqhivznh4u2la",
+          "width": 343
         }
       ],
       "mode": "chainlist",
@@ -90,6 +104,7 @@
       "mode": "chainlist",
       "source": "ethereum-lists/chains"
     },
+    "lighter": null,
     "linea": {
       "chain_ref": "eip155-59144",
       "chainlist_icon": "linea",
@@ -233,6 +248,20 @@
       "chain_ref": "eip155-480",
       "chainlist_icon": null,
       "entries": [],
+      "mode": "chainlist",
+      "source": "ethereum-lists/chains"
+    },
+    "xlayer": {
+      "chain_ref": "eip155-196",
+      "chainlist_icon": "xlayer",
+      "entries": [
+        {
+          "format": "png",
+          "height": 1000,
+          "url": "ipfs://QmSLkiAAr6VtJ6jEqEzz3QdZtVEHzR6Az7E4XD8qXwjuio",
+          "width": 1000
+        }
+      ],
       "mode": "chainlist",
       "source": "ethereum-lists/chains"
     },
