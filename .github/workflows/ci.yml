@@ -200,13 +200,16 @@ jobs:
           git fetch origin "$branch":"refs/remotes/origin/$branch" || true
           git push --force-with-lease origin HEAD:"$branch"
 
-          pr_url=""
+          # gh pr view/edit resolve a branch to its most recent PR even after it
+          # merges, so match open PRs explicitly or no new PR is ever created.
+          pr_url="$(gh pr list --repo "$GITHUB_REPOSITORY" --head "$branch" --base main --state open --json url --jq '.[0].url // empty' || true)"
           pr_error="$(mktemp)"
-          if pr_url="$(gh pr view "$branch" --repo "$GITHUB_REPOSITORY" --json url --jq .url 2>/dev/null)"; then
-            gh pr edit "$branch" --repo "$GITHUB_REPOSITORY" --title "$title" --body "$body"
+          if [ -n "$pr_url" ]; then
+            gh pr edit "$pr_url" --repo "$GITHUB_REPOSITORY" --title "$title" --body "$body"
           elif pr_url="$(gh pr create --repo "$GITHUB_REPOSITORY" --base main --head "$branch" --title "$title" --body "$body" 2>"$pr_error")"; then
             :
           else
+            pr_url=""
             echo "::warning::Published $branch, but GitHub Actions could not create the pull request."
             cat "$pr_error"
           fi
