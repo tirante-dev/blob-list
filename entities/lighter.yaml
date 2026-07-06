@@ -1,0 +1,32 @@
+schema_version: 1
+id: lighter
+name: Lighter
+category: rollup
+status: active
+description: "zkLighter, a ZK rollup for the Lighter perpetuals exchange settling on Ethereum."
+website: "https://lighter.xyz"
+chain_refs:
+  - caip2: eip155-1
+    relationship: settlement_chain
+addresses:
+  - submission_chain: eip155-1
+    address: "0x191fF0EC830F83916A427d169a234c33e48aA79f"
+    role: batcher
+    label: "zkLighter batch committer"
+    status: active
+    confidence: probable
+    valid_from:
+      block: 24040917
+    valid_to: null
+    evidence:
+      - type: analysis
+        url: "https://etherscan.io/address/0x191fF0EC830F83916A427d169a234c33e48aA79f"
+      - type: verified_contract
+        url: "https://etherscan.io/address/0x3B4D794a66304F130a4Db8F2551B0070dfCf5ca7"
+      - type: dashboard
+        url: "https://blobscan.com/tx/0x61f50fb26d996bc13b8f528e2d29e723b29e80f5ae11358ac7bded4f735611d3"
+      - type: repository
+        url: "https://github.com/growthepie/gtp-dna/blob/main/economics_da/economics_mapping.yml"
+      - type: transaction
+        submission_chain: eip155-1
+        tx_hash: "0x61f50fb26d996bc13b8f528e2d29e723b29e80f5ae11358ac7bded4f735611d3"
