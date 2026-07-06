@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
+  actions: write
   contents: write
   pull-requests: write
 
@@ -13,9 +14,10 @@ jobs:
   refresh:
     name: refresh Chainlist snapshot
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
@@ -32,6 +34,7 @@ jobs:
         run: npm run fetch-chainlist
 
       - name: Create pull request
+        id: chainlist-pr
         uses: peter-evans/create-pull-request@v8
         with:
           add-paths: data/chainlist/snapshot.json
@@ -44,3 +47,34 @@ jobs:
 
             This keeps the vendored Chainlist lockfile current while leaving chain metadata ownership upstream.
             Generated artifacts are intentionally left to CI projection and the generated-data PR flow.
+
+      - name: Auto-merge pull request
+        if: steps.chainlist-pr.outputs.pull-request-operation == 'created' || steps.chainlist-pr.outputs.pull-request-operation == 'updated'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_URL: ${{ steps.chainlist-pr.outputs.pull-request-url }}
+          BRANCH: at/refresh-chainlist-snapshot
+        run: |
+          set -euo pipefail
+
+          # PRs opened with GITHUB_TOKEN get no pull_request CI run, so
+          # dispatch one on the branch to produce the required validate check.
+          gh workflow run ci.yml --repo "$GITHUB_REPOSITORY" --ref "$BRANCH" || \
+            echo "::warning::Could not dispatch CI for $BRANCH."
+
+          merged=false
+          # The dispatched checks take a moment to appear on the PR, and
+          # `gh pr checks --watch` errors while none are reported yet.
+          for attempt in 1 2 3 4 5; do
+            if gh pr checks "$PR_URL" --repo "$GITHUB_REPOSITORY" --required --watch; then
+              if gh pr merge "$PR_URL" --repo "$GITHUB_REPOSITORY" --squash; then
+                merged=true
+              fi
+              break
+            fi
+            sleep 30
+          done
+
+          if [ "$merged" != true ]; then
+            echo "::warning::Could not auto-merge $PR_URL; leaving it open for manual review."
+          fi
