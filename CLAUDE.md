@@ -39,5 +39,6 @@ Run `npm run fetch-chainlist` and `npm run generate` after changing `entities/`,
 
 - Keep `AGENTS.md` as a symlink to this file.
 - Prefer small PRs with focused attribution or tooling changes.
-- The protected `main` branch requires PR review and the `validate` CI check.
+- The protected `main` branch requires a PR and the `validate` CI check; approving reviews are not platform-enforced.
+- Automation PRs (`at/generated-data`, `at/refresh-chainlist-snapshot`) auto-merge once `validate` passes; attribution and tooling PRs still get human review before merge.
 - Do not bypass branch protection for ordinary changes.

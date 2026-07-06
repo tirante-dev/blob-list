@@ -97,6 +97,25 @@
         "valid_to_block": null
       }
     ],
+    "0x6D77b3f2CFfFa24E474aFab0d09c1646e87A0A7b": [
+      {
+        "category": "rollup",
+        "chain_refs": [
+          {
+            "caip2": "eip155-11155111",
+            "relationship": "settlement_chain"
+          }
+        ],
+        "confidence": "probable",
+        "entity_id": "robinhood-chain-testnet",
+        "icon": null,
+        "name": "Robinhood Chain Testnet",
+        "role": "batcher",
+        "status": "active",
+        "valid_from_block": 10205309,
+        "valid_to_block": null
+      }
+    ],
     "0x8F23BB38F531600e5d8FDDaAEC41F13FaB46E98c": [
       {
         "category": "rollup",
