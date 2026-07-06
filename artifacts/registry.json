@@ -1,6 +1,6 @@
 {
   "chainlist": {
-    "commit": "78102bab13678cf446fe21b7983df83ee35bd4c9",
+    "commit": "97748ac2f897837ab47ca8663a72677a9daf1e27",
     "repository": "ethereum-lists/chains"
   },
   "entities": [
@@ -82,6 +82,67 @@
       "schema_version": 1,
       "status": "active",
       "website": "https://abs.xyz"
+    },
+    {
+      "addresses": [
+        {
+          "address": "0xF8fF3e62E94807a5C687f418Fe36942dD3a24524",
+          "confidence": "probable",
+          "evidence": [
+            {
+              "type": "analysis",
+              "url": "https://etherscan.io/address/0xF8fF3e62E94807a5C687f418Fe36942dD3a24524"
+            },
+            {
+              "type": "dashboard",
+              "url": "https://blobscan.com/tx/0x69945e8ca3cc89d3d2a069976ac47b18dd1eb2b9b81af8c519c19e32acc9cdf2"
+            },
+            {
+              "type": "repository",
+              "url": "https://github.com/l2beat/l2beat/blob/main/packages/config/src/projects/adi/adi.ts"
+            },
+            {
+              "submission_chain": "eip155-1",
+              "tx_hash": "0x6b3e55776f03bcab2b2ea77ff3fc8ab29a0ebac55510e12e57e0bd3ff4fcf76e",
+              "type": "transaction"
+            },
+            {
+              "submission_chain": "eip155-1",
+              "tx_hash": "0x69945e8ca3cc89d3d2a069976ac47b18dd1eb2b9b81af8c519c19e32acc9cdf2",
+              "type": "transaction"
+            }
+          ],
+          "label": "ADI Chain batch committer",
+          "role": "batcher",
+          "status": "active",
+          "submission_chain": "eip155-1",
+          "valid_from": {
+            "block": 23878298
+          },
+          "valid_to": null
+        }
+      ],
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-36900",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "ZK Stack (Elastic Network) rollup by the ADI Foundation settling on Ethereum.",
+      "icon": {
+        "chain_ref": "eip155-36900",
+        "mode": "chainlist"
+      },
+      "id": "adi-chain",
+      "name": "ADI Chain",
+      "schema_version": 1,
+      "status": "active",
+      "website": "https://adi.foundation"
     },
     {
       "addresses": [
@@ -450,6 +511,58 @@
       "schema_version": 1,
       "status": "active",
       "website": "https://inkonchain.com"
+    },
+    {
+      "addresses": [
+        {
+          "address": "0x191fF0EC830F83916A427d169a234c33e48aA79f",
+          "confidence": "probable",
+          "evidence": [
+            {
+              "type": "analysis",
+              "url": "https://etherscan.io/address/0x191fF0EC830F83916A427d169a234c33e48aA79f"
+            },
+            {
+              "type": "verified_contract",
+              "url": "https://etherscan.io/address/0x3B4D794a66304F130a4Db8F2551B0070dfCf5ca7"
+            },
+            {
+              "type": "dashboard",
+              "url": "https://blobscan.com/tx/0x61f50fb26d996bc13b8f528e2d29e723b29e80f5ae11358ac7bded4f735611d3"
+            },
+            {
+              "type": "repository",
+              "url": "https://github.com/growthepie/gtp-dna/blob/main/economics_da/economics_mapping.yml"
+            },
+            {
+              "submission_chain": "eip155-1",
+              "tx_hash": "0x61f50fb26d996bc13b8f528e2d29e723b29e80f5ae11358ac7bded4f735611d3",
+              "type": "transaction"
+            }
+          ],
+          "label": "zkLighter batch committer",
+          "role": "batcher",
+          "status": "active",
+          "submission_chain": "eip155-1",
+          "valid_from": {
+            "block": 24040917
+          },
+          "valid_to": null
+        }
+      ],
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "zkLighter, a ZK rollup for the Lighter perpetuals exchange settling on Ethereum.",
+      "id": "lighter",
+      "name": "Lighter",
+      "schema_version": 1,
+      "status": "active",
+      "website": "https://lighter.xyz"
     },
     {
       "addresses": [
@@ -1442,6 +1555,66 @@
     {
       "addresses": [
         {
+          "address": "0x98245d0ADF4595C66F0a9Db8E13c44CBFF6be459",
+          "confidence": "probable",
+          "evidence": [
+            {
+              "type": "analysis",
+              "url": "https://etherscan.io/address/0x98245d0ADF4595C66F0a9Db8E13c44CBFF6be459"
+            },
+            {
+              "type": "dashboard",
+              "url": "https://blobscan.com/tx/0x87c1af21392d529a5f64d964a95ba62f2ae7c8ca31df2cfbb8a4829763ee2cbf"
+            },
+            {
+              "type": "repository",
+              "url": "https://github.com/l2beat/l2beat/blob/main/packages/config/src/projects/xlayer/discovered.json"
+            },
+            {
+              "type": "repository",
+              "url": "https://github.com/growthepie/gtp-dna/blob/main/economics_da/economics_mapping.yml"
+            },
+            {
+              "submission_chain": "eip155-1",
+              "tx_hash": "0x87c1af21392d529a5f64d964a95ba62f2ae7c8ca31df2cfbb8a4829763ee2cbf",
+              "type": "transaction"
+            }
+          ],
+          "label": "X Layer batch submitter",
+          "role": "batcher",
+          "status": "active",
+          "submission_chain": "eip155-1",
+          "valid_from": {
+            "block": 24081337
+          },
+          "valid_to": null
+        }
+      ],
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-196",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "OKX Layer 2 rollup on the OP Stack settling on Ethereum.",
+      "icon": {
+        "chain_ref": "eip155-196",
+        "mode": "chainlist"
+      },
+      "id": "xlayer",
+      "name": "X Layer",
+      "schema_version": 1,
+      "status": "active",
+      "website": "https://web3.okx.com/xlayer"
+    },
+    {
+      "addresses": [
+        {
           "address": "0x0D3250c3D5FAcb74Ac15834096397a3Ef790ec99",
           "confidence": "probable",
           "evidence": [
@@ -1603,6 +1776,6 @@
       "website": "https://zora.co"
     }
   ],
-  "generated_at": "2026-06-29T12:12:23.911Z",
+  "generated_at": "2026-07-06T07:15:56.599Z",
   "schema_version": 1
 }

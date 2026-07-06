@@ -1,6 +1,6 @@
 {
   "chainlist": {
-    "commit": "78102bab13678cf446fe21b7983df83ee35bd4c9",
+    "commit": "97748ac2f897837ab47ca8663a72677a9daf1e27",
     "repository": "ethereum-lists/chains"
   },
   "entities": [
@@ -25,6 +25,28 @@
       "name": "Abstract",
       "status": "active",
       "website": "https://abs.xyz"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-36900",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "ZK Stack (Elastic Network) rollup by the ADI Foundation settling on Ethereum.",
+      "icon": {
+        "chain_ref": "eip155-36900",
+        "mode": "chainlist"
+      },
+      "id": "adi-chain",
+      "name": "ADI Chain",
+      "status": "active",
+      "website": "https://adi.foundation"
     },
     {
       "category": "rollup",
@@ -176,6 +198,21 @@
       "name": "Ink",
       "status": "active",
       "website": "https://inkonchain.com"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "zkLighter, a ZK rollup for the Lighter perpetuals exchange settling on Ethereum.",
+      "icon": null,
+      "id": "lighter",
+      "name": "Lighter",
+      "status": "active",
+      "website": "https://lighter.xyz"
     },
     {
       "category": "rollup",
@@ -539,6 +576,28 @@
       "category": "rollup",
       "chain_refs": [
         {
+          "caip2": "eip155-196",
+          "relationship": "canonical_chain"
+        },
+        {
+          "caip2": "eip155-1",
+          "relationship": "settlement_chain"
+        }
+      ],
+      "description": "OKX Layer 2 rollup on the OP Stack settling on Ethereum.",
+      "icon": {
+        "chain_ref": "eip155-196",
+        "mode": "chainlist"
+      },
+      "id": "xlayer",
+      "name": "X Layer",
+      "status": "active",
+      "website": "https://web3.okx.com/xlayer"
+    },
+    {
+      "category": "rollup",
+      "chain_refs": [
+        {
           "caip2": "eip155-324",
           "relationship": "canonical_chain"
         },
@@ -602,6 +661,6 @@
       "website": "https://zora.co"
     }
   ],
-  "generated_at": "2026-06-29T12:12:23.911Z",
+  "generated_at": "2026-07-06T07:15:56.599Z",
   "schema_version": 1
 }
