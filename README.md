@@ -19,7 +19,7 @@ entities/          Source YAML, one file per entity.
 schemas/           JSON Schemas for source and generated artifacts.
 tools/             Fetch, validate, and generate scripts.
 data/chainlist/    Vendored Chainlist lockfile snapshot used by CI and releases.
-artifacts/         Generated JSON artifacts for consumers.
+artifacts/         Generated JSON artifacts (published on GitHub Releases; not committed).
 icons/local/       Local icons only for entities not represented by Chainlist.
 ```
 
@@ -31,9 +31,40 @@ CI, and release generation deterministic; it is not registry-owned chain
 metadata. If chain facts drift upstream, refresh the snapshot with
 `npm run fetch-chainlist` or let the scheduled refresh workflow open a PR.
 
+## Using The Generated Data
+
+Generated artifacts are **not committed to this repository**. They are published
+as assets on each GitHub Release, so consumers should fetch them from the latest
+release URL. GitHub serves the newest published release at a stable
+`releases/latest/download/` path:
+
+```sh
+# Full registry
+curl -L -o registry.json \
+  https://github.com/tirante-dev/blob-list/releases/latest/download/registry.json
+
+# Minified registry
+curl -L -o registry.min.json \
+  https://github.com/tirante-dev/blob-list/releases/latest/download/registry.min.json
+
+# Entities and icon metadata
+curl -L https://github.com/tirante-dev/blob-list/releases/latest/download/entities.json
+curl -L https://github.com/tirante-dev/blob-list/releases/latest/download/icons.json
+
+# Per-chain slice (asset name is the CAIP-2 ref, e.g. eip155-1)
+curl -L https://github.com/tirante-dev/blob-list/releases/latest/download/eip155-1.json
+
+# Checksums for the release assets
+curl -L https://github.com/tirante-dev/blob-list/releases/latest/download/SHA256SUMS
+```
+
+To pin to a specific dataset version, swap `latest/download` for
+`download/<tag>` (for example `download/v1.4.0`). Browse published releases at
+<https://github.com/tirante-dev/blob-list/releases>.
+
 ## Consumer Lookup
 
-1. Load `artifacts/by-chain/{submission_chain}.json`.
+1. Fetch `eip155-1.json` (the `{submission_chain}` slice) from the latest release.
 2. Normalize the transaction sender to a checksummed EVM address.
 3. Find address claims for that sender.
 4. Filter claims by block number.
@@ -59,12 +90,12 @@ npm run validate
 npm run generate:check
 ```
 
-Pull request CI regenerates artifacts from the submitted source files and posts
-the projected Chainlist snapshot and artifact diff as a PR comment. Attribution
-PRs should include source YAML, schemas, docs, or icons only; CI rejects
-committed `data/chainlist/snapshot.json` changes in attribution PRs, rejects
-committed `artifacts/` changes, and publishes `at/generated-data` for a
-generated-data PR after merge.
+Pull request CI regenerates artifacts from the submitted source files and
+validates them. Attribution PRs should include source YAML, schemas, docs, or
+icons only; CI rejects committed `data/chainlist/snapshot.json` changes in
+attribution PRs and rejects committed `artifacts/` changes. Generated artifacts
+are not stored in the repository — they are published on GitHub Releases (see
+[Using The Generated Data](#using-the-generated-data)).
 
 ## Releases
 
