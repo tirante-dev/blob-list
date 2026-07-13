@@ -1,0 +1,33 @@
+schema_version: 1
+id: katana
+name: Katana
+category: rollup
+status: active
+description: "DeFi-focused Ethereum L2 incubated by Polygon Labs and GSR."
+website: "https://katana.network"
+chain_refs:
+  - caip2: eip155-747474
+    relationship: canonical_chain
+  - caip2: eip155-1
+    relationship: settlement_chain
+icon:
+  mode: chainlist
+  chain_ref: eip155-747474
+addresses:
+  - submission_chain: eip155-1
+    address: "0x1FFDA89C755f6D4Af069897D77CcAbb580Fd412a"
+    role: batcher
+    label: "Katana batcher"
+    status: active
+    confidence: confirmed
+    valid_from:
+      block: 22441925
+    valid_to: null
+    evidence:
+      - type: repository
+        url: "https://github.com/l2beat/l2beat/blob/main/packages/config/src/projects/katana/katana.ts"
+      - type: analysis
+        url: "https://l2beat.com/scaling/projects/katana"
+      - type: transaction
+        submission_chain: eip155-1
+        tx_hash: "0xc8b2e299fe10d57ba353d8a2b29bba1f5d4ff911304eb8e277086f2b251580e4"
