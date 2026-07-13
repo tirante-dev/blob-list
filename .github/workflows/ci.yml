@@ -43,9 +43,12 @@ jobs:
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: |
-          if ! git diff --quiet "$BASE_SHA" -- artifacts; then
+          # --diff-filter=d ignores deletions so removing previously committed
+          # artifacts is allowed; only added or modified artifacts are rejected.
+          committed_artifacts="$(git diff --name-only --diff-filter=d "$BASE_SHA" -- artifacts)"
+          if [ -n "$committed_artifacts" ]; then
             echo "::error::Generated artifacts are produced by CI and published on GitHub Releases. Remove committed artifacts/ changes from this PR."
-            git diff --name-only "$BASE_SHA" -- artifacts
+            echo "$committed_artifacts"
             exit 1
           fi
 
