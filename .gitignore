@@ -5,3 +5,6 @@ node_modules/
 *.log
 dist/
 coverage/
+
+# Generated artifacts are published on GitHub Releases, not committed.
+artifacts/

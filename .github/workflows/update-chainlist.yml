@@ -46,7 +46,7 @@ jobs:
             Refreshes `data/chainlist/snapshot.json` from `ethereum-lists/chains`.
 
             This keeps the vendored Chainlist lockfile current while leaving chain metadata ownership upstream.
-            Generated artifacts are intentionally left to CI projection and the generated-data PR flow.
+            Generated artifacts are not committed; they are published on GitHub Releases.
 
       - name: Auto-merge pull request
         if: steps.chainlist-pr.outputs.pull-request-operation == 'created' || steps.chainlist-pr.outputs.pull-request-operation == 'updated'

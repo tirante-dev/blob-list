@@ -24,7 +24,7 @@ npm run generate:check
 npm audit --audit-level=moderate
 ```
 
-Run `npm run fetch-chainlist` and `npm run generate` after changing `entities/`, schemas, the vendored Chainlist snapshot lockfile, or generator logic. Attribution PRs should not commit `data/chainlist/snapshot.json` or `artifacts/` changes; CI projects those diffs and publishes `at/generated-data` for a generated-data PR after merge.
+Run `npm run fetch-chainlist` and `npm run generate` after changing `entities/`, schemas, the vendored Chainlist snapshot lockfile, or generator logic. Attribution PRs should not commit `data/chainlist/snapshot.json` or `artifacts/` changes; CI regenerates and validates them. Generated artifacts are not committed — they are published on GitHub Releases and consumed from the latest release URL.
 
 ## Data Model Notes
 
@@ -40,5 +40,5 @@ Run `npm run fetch-chainlist` and `npm run generate` after changing `entities/`,
 - Keep `AGENTS.md` as a symlink to this file.
 - Prefer small PRs with focused attribution or tooling changes.
 - The protected `main` branch requires a PR and the `validate` CI check; approving reviews are not platform-enforced.
-- Automation PRs (`at/generated-data`, `at/refresh-chainlist-snapshot`) auto-merge once `validate` passes; attribution and tooling PRs still get human review before merge.
+- The `at/refresh-chainlist-snapshot` automation PR auto-merges once `validate` passes; attribution and tooling PRs still get human review before merge.
 - Do not bypass branch protection for ordinary changes.

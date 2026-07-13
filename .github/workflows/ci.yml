@@ -9,9 +9,6 @@ on:
 
 permissions:
   contents: read
-  actions: read
-  issues: write
-  pull-requests: write
 
 jobs:
   validate:
@@ -41,19 +38,19 @@ jobs:
       - name: Lint Markdown
         run: npm run lint:md
 
-      - name: Reject committed generated-data changes
-        if: github.event_name == 'pull_request' && github.head_ref != 'at/generated-data'
+      - name: Reject committed generated artifacts
+        if: github.event_name == 'pull_request'
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: |
           if ! git diff --quiet "$BASE_SHA" -- artifacts; then
-            echo "::error::Generated artifacts are produced by CI. Remove committed artifacts/ changes from this PR and use the projected generated-data diff comment for review."
+            echo "::error::Generated artifacts are produced by CI and published on GitHub Releases. Remove committed artifacts/ changes from this PR."
             git diff --name-only "$BASE_SHA" -- artifacts
             exit 1
           fi
 
           if ! git diff --quiet "$BASE_SHA" -- entities && ! git diff --quiet "$BASE_SHA" -- data/chainlist/snapshot.json; then
-            echo "::error::Do not commit data/chainlist/snapshot.json changes in attribution PRs. CI projects snapshot diffs for review and publishes an at/generated-data PR after merge."
+            echo "::error::Do not commit data/chainlist/snapshot.json changes in attribution PRs. CI regenerates the snapshot for validation, and the scheduled Chainlist refresh keeps the vendored lockfile current."
             git diff --name-only "$BASE_SHA" -- data/chainlist/snapshot.json
             exit 1
           fi
@@ -63,7 +60,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         run: npm run fetch-chainlist
 
-      - name: Generate projected artifacts
+      - name: Generate artifacts
         run: npm run generate
 
       - name: Validate registry
@@ -71,181 +68,3 @@ jobs:
 
       - name: Check generated artifacts
         run: npm run generate:check
-
-      - name: Capture projected artifact diff
-        if: github.event_name == 'pull_request' && github.head_ref != 'at/generated-data'
-        env:
-          BASE_SHA: ${{ github.event.pull_request.base.sha }}
-        run: |
-          git diff --no-ext-diff --unified=3 "$BASE_SHA" -- artifacts > artifact.diff
-
-      - name: Capture projected Chainlist snapshot diff
-        if: github.event_name == 'pull_request' && github.head_ref != 'at/generated-data'
-        env:
-          BASE_SHA: ${{ github.event.pull_request.base.sha }}
-        run: |
-          git diff --no-ext-diff --unified=3 "$BASE_SHA" -- data/chainlist/snapshot.json > chainlist.diff
-
-      - name: Build generated-data diff comment
-        if: github.event_name == 'pull_request' && github.head_ref != 'at/generated-data'
-        env:
-          BASE_SHA: ${{ github.event.pull_request.base.sha }}
-          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
-        run: node .github/scripts/build-artifact-diff-comment.js artifact.diff generated-data-comment.md chainlist.diff
-
-      - name: Upload projected generated-data diffs
-        if: github.event_name == 'pull_request' && github.head_ref != 'at/generated-data'
-        uses: actions/upload-artifact@v7
-        with:
-          name: projected-generated-diffs
-          path: |
-            artifact.diff
-            chainlist.diff
-
-      - name: Comment projected generated-data diff
-        if: github.event_name == 'pull_request' && github.head_ref != 'at/generated-data'
-        uses: actions/github-script@v9
-        continue-on-error: true
-        with:
-          script: |
-            const fs = require("node:fs");
-            const marker = "<!-- blob-list-artifact-diff -->";
-            const body = fs.readFileSync("generated-data-comment.md", "utf8");
-            const { owner, repo } = context.repo;
-            const issue_number = context.issue.number;
-            const comments = await github.paginate(
-              github.rest.issues.listComments,
-              { owner, repo, issue_number, per_page: 100 },
-            );
-            const previous = comments.find((comment) =>
-              comment.user?.type === "Bot" && comment.body?.includes(marker),
-            );
-            if (previous) {
-              await github.rest.issues.updateComment({
-                owner,
-                repo,
-                comment_id: previous.id,
-                body,
-              });
-            } else {
-              await github.rest.issues.createComment({
-                owner,
-                repo,
-                issue_number,
-                body,
-              });
-            }
-
-  update-generated-data:
-    name: update generated data
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, '[skip ci]')
-    needs: validate
-    runs-on: ubuntu-latest
-    timeout-minutes: 30
-    permissions:
-      actions: write
-      contents: write
-      pull-requests: write
-    concurrency:
-      group: generated-data-main
-      cancel-in-progress: true
-    steps:
-      - name: Checkout latest main
-        uses: actions/checkout@v7
-        with:
-          ref: main
-          fetch-depth: 0
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version: 26
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Publish generated-data pull request
-        env:
-          GH_TOKEN: ${{ github.token }}
-          GITHUB_TOKEN: ${{ github.token }}
-        run: |
-          set -euo pipefail
-          branch="at/generated-data"
-          title="chore: update generated data"
-          body="$(cat <<'BODY'
-          Updates generated artifacts and the pinned Chainlist snapshot from the latest source data on main.
-          BODY
-          )"
-
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git fetch origin main
-          git switch --detach origin/main
-
-          npm run fetch-chainlist
-          npm run generate
-          npm run validate
-          npx prettier --write data/chainlist/snapshot.json
-          npm run generate:check
-
-          if git diff --quiet -- artifacts data/chainlist/snapshot.json; then
-            echo "Generated data already matches source."
-            exit 0
-          fi
-
-          git switch -c "$branch"
-          git add artifacts data/chainlist/snapshot.json
-          git commit -m "$title"
-          git fetch origin "$branch":"refs/remotes/origin/$branch" || true
-          git push --force-with-lease origin HEAD:"$branch"
-
-          # gh pr view/edit resolve a branch to its most recent PR even after it
-          # merges, so match open PRs explicitly or no new PR is ever created.
-          pr_url="$(gh pr list --repo "$GITHUB_REPOSITORY" --head "$branch" --base main --state open --json url --jq '.[0].url // empty' || true)"
-          pr_error="$(mktemp)"
-          if [ -n "$pr_url" ]; then
-            gh pr edit "$pr_url" --repo "$GITHUB_REPOSITORY" --title "$title" --body "$body"
-          elif pr_url="$(gh pr create --repo "$GITHUB_REPOSITORY" --base main --head "$branch" --title "$title" --body "$body" 2>"$pr_error")"; then
-            :
-          else
-            pr_url=""
-            echo "::warning::Published $branch, but GitHub Actions could not create the pull request."
-            cat "$pr_error"
-          fi
-
-          gh workflow run ci.yml --repo "$GITHUB_REPOSITORY" --ref "$branch" || \
-            echo "::warning::Could not dispatch CI for $branch."
-
-          merged=false
-          if [ -n "$pr_url" ]; then
-            # The dispatched checks take a moment to appear on the PR, and
-            # `gh pr checks --watch` errors while none are reported yet.
-            for attempt in 1 2 3 4 5; do
-              if gh pr checks "$pr_url" --repo "$GITHUB_REPOSITORY" --required --watch; then
-                if gh pr merge "$pr_url" --repo "$GITHUB_REPOSITORY" --squash; then
-                  merged=true
-                fi
-                break
-              fi
-              sleep 30
-            done
-            if [ "$merged" != true ]; then
-              echo "::warning::Could not auto-merge $pr_url; leaving it open for manual review."
-            fi
-          fi
-
-          {
-            echo "### Generated data update ready"
-            echo
-            echo "Published \`$branch\` with generated artifacts and the pinned Chainlist snapshot."
-            echo
-            if [ "$merged" = true ]; then
-              echo "Auto-merged: $pr_url"
-            elif [ -n "$pr_url" ]; then
-              echo "Pull request (auto-merge did not complete): $pr_url"
-            else
-              echo "Create the pull request from https://github.com/$GITHUB_REPOSITORY/compare/main...$branch?expand=1."
-            fi
-          } >> "$GITHUB_STEP_SUMMARY"
