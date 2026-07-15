@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/ahkc4/blob-list/schemas/entity.schema.json",
+  "$id": "https://github.com/tirante-dev/blob-list/schemas/entity.schema.json",
   "title": "Blob attribution entity",
   "type": "object",
   "additionalProperties": false,

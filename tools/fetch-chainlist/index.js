@@ -9,7 +9,7 @@ import {
 } from "../lib/registry.js";
 
 const DEFAULT_REPOSITORY = "ethereum-lists/chains";
-const USER_AGENT = "ahkc4/blob-list chainlist fetcher";
+const USER_AGENT = "tirante-dev/blob-list chainlist fetcher";
 
 try {
   const repository = process.env.CHAINLIST_REPO ?? DEFAULT_REPOSITORY;
