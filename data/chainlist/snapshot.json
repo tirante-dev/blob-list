@@ -19,12 +19,6 @@
           "url": "https://eth.blockscout.com"
         },
         {
-          "icon": "dexguru",
-          "name": "dexguru",
-          "standard": "EIP3091",
-          "url": "https://ethereum.dex.guru"
-        },
-        {
           "name": "Routescan",
           "standard": "EIP3091",
           "url": "https://ethereum.routescan.io"
@@ -66,7 +60,8 @@
         "https://rpc.mevblocker.io/fullprivacy",
         "https://eth.drpc.org",
         "wss://eth.drpc.org",
-        "https://api.securerpc.com/v1"
+        "https://api.securerpc.com/v1",
+        "https://xrpc.cl/eth"
       ],
       "shortName": "eth",
       "slip44": 60
@@ -85,17 +80,6 @@
           "name": "blockscout",
           "standard": "EIP3091",
           "url": "https://optimism.blockscout.com"
-        },
-        {
-          "icon": "dexguru",
-          "name": "dexguru",
-          "standard": "EIP3091",
-          "url": "https://optimism.dex.guru"
-        },
-        {
-          "name": "Routescan",
-          "standard": "EIP3091",
-          "url": "https://mainnet.superscan.network"
         }
       ],
       "faucets": [],
@@ -114,7 +98,8 @@
         "https://optimism.gateway.tenderly.co",
         "wss://optimism.gateway.tenderly.co",
         "https://optimism.drpc.org",
-        "wss://optimism.drpc.org"
+        "wss://optimism.drpc.org",
+        "https://xrpc.cl/optimism"
       ],
       "shortName": "oeth"
     },
@@ -161,7 +146,8 @@
         "wss://ethereum-sepolia-rpc.publicnode.com",
         "https://sepolia.drpc.org",
         "wss://sepolia.drpc.org",
-        "https://eth-sepolia.g.alchemy.com/v2/WddzdzI2o9S3COdT73d5w6AIogbKq4X-"
+        "https://eth-sepolia.g.alchemy.com/v2/WddzdzI2o9S3COdT73d5w6AIogbKq4X-",
+        "https://xrpc.cl/sepolia"
       ],
       "shortName": "sep",
       "slip44": 1,
@@ -555,7 +541,8 @@
         "https://arbitrum-one-rpc.publicnode.com",
         "wss://arbitrum-one-rpc.publicnode.com",
         "https://rpcfree.com/arbitrum-rpc",
-        "https://rpc.satelink.network/rpc/arbitrum"
+        "https://rpc.satelink.network/rpc/arbitrum",
+        "https://xrpc.cl/arbitrum"
       ],
       "shortName": "arb1"
     },
@@ -646,6 +633,16 @@
           "name": "blockscout",
           "standard": "EIP3091",
           "url": "https://robinhoodchain.blockscout.com"
+        },
+        {
+          "name": "hoodscan",
+          "standard": "EIP3091",
+          "url": "https://hoodscan.co"
+        },
+        {
+          "name": "stonkscan",
+          "standard": "EIP3091",
+          "url": "https://stonkscan.io"
         }
       ],
       "faucets": [],
@@ -670,7 +667,8 @@
         "https://rpc.mainnet.chain.robinhood.com",
         "https://robinhood-rpc.publicnode.com",
         "wss://robinhood-rpc.publicnode.com",
-        "https://rpc.arrowrpc.com"
+        "https://rpc.arrowrpc.com",
+        "https://rpc.ordofi.network"
       ],
       "shortName": "robinhoodchain",
       "status": "active"
@@ -810,7 +808,7 @@
           "url": "https://explorer.inkonchain.com"
         }
       ],
-      "faucets": ["https://inkonchain.com/faucet"],
+      "faucets": [],
       "features": [
         {
           "name": "EIP155"
@@ -1103,7 +1101,8 @@
         "wss://base-rpc.publicnode.com",
         "https://rpcfree.com/base-rpc",
         "https://rpc.baseazul.dev",
-        "https://rpc.satelink.network/rpc/base"
+        "https://rpc.satelink.network/rpc/base",
+        "https://xrpc.cl/base"
       ],
       "shortName": "base",
       "status": "active"
@@ -1361,10 +1360,10 @@
   },
   "schema_version": 1,
   "source": {
-    "commit": "d4be57cdbe6f2503b61f8a01777a3d80862f2bd2",
-    "fetched_at": "2026-08-31T15:11:07.844Z",
+    "commit": "923469b8f0d4c72b25985010291c58c4b0d91d04",
+    "fetched_at": "2026-09-14T14:13:57.118Z",
     "ref": "master",
     "repository": "ethereum-lists/chains",
-    "url": "https://github.com/ethereum-lists/chains/tree/d4be57cdbe6f2503b61f8a01777a3d80862f2bd2"
+    "url": "https://github.com/ethereum-lists/chains/tree/923469b8f0d4c72b25985010291c58c4b0d91d04"
   }
 }
