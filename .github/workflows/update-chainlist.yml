@@ -15,6 +15,8 @@ jobs:
     runs-on: homelab-2cpu-8ram
     timeout-minutes: 30
     steps:
+      - name: Install libatomic for Node
+        run: sudo apt-get -qq update && sudo apt-get -qq install -y --no-install-recommends libatomic1
       - name: Install gh
         env:
           GH_VERSION: 2.101.0

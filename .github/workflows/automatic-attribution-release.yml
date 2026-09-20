@@ -23,6 +23,8 @@ jobs:
     if: ${{ !contains(github.event.head_commit.message, '[skip release]') }}
     runs-on: homelab-2cpu-8ram
     steps:
+      - name: Install libatomic for Node
+        run: sudo apt-get -qq update && sudo apt-get -qq install -y --no-install-recommends libatomic1
       - name: Checkout
         uses: actions/checkout@v7
         with:
