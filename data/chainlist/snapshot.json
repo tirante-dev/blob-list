@@ -61,7 +61,9 @@
         "https://eth.drpc.org",
         "wss://eth.drpc.org",
         "https://api.securerpc.com/v1",
-        "https://xrpc.cl/eth"
+        "https://xrpc.cl/eth",
+        "https://ethereum-rpc.blockreq.com/v1/rpc/public",
+        "https://rpc.swiftnodes.io/rpc/eth?key=${SWIFTNODES_API_KEY}"
       ],
       "shortName": "eth",
       "slip44": 60
@@ -99,7 +101,9 @@
         "wss://optimism.gateway.tenderly.co",
         "https://optimism.drpc.org",
         "wss://optimism.drpc.org",
-        "https://xrpc.cl/optimism"
+        "https://xrpc.cl/optimism",
+        "https://optimism-rpc.blockreq.com/v1/rpc/public",
+        "https://rpc.swiftnodes.io/rpc/optimism?key=${SWIFTNODES_API_KEY}"
       ],
       "shortName": "oeth"
     },
@@ -184,7 +188,8 @@
         "https://sepolia.drpc.org",
         "wss://sepolia.drpc.org",
         "https://eth-sepolia.g.alchemy.com/v2/WddzdzI2o9S3COdT73d5w6AIogbKq4X-",
-        "https://xrpc.cl/sepolia"
+        "https://xrpc.cl/sepolia",
+        "https://ethereum-sepolia-rpc.blockreq.com/v1/rpc/public"
       ],
       "shortName": "sep",
       "slip44": 1,
@@ -218,7 +223,8 @@
       "rpc": [
         "https://sepolia.optimism.io",
         "https://optimism-sepolia.drpc.org",
-        "wss://optimism-sepolia.drpc.org"
+        "wss://optimism-sepolia.drpc.org",
+        "https://optimism-sepolia-rpc.blockreq.com/v1/rpc/public"
       ],
       "shortName": "opsep",
       "slip44": 1
@@ -276,7 +282,8 @@
       "rpc": [
         "https://mainnet.unichain.org",
         "https://unichain-rpc.publicnode.com",
-        "wss://unichain-rpc.publicnode.com"
+        "wss://unichain-rpc.publicnode.com",
+        "https://unichain-rpc.blockreq.com/v1/rpc/public"
       ],
       "shortName": "unichain"
     },
@@ -680,7 +687,9 @@
         "wss://arbitrum-one-rpc.publicnode.com",
         "https://rpcfree.com/arbitrum-rpc",
         "https://rpc.satelink.network/rpc/arbitrum",
-        "https://xrpc.cl/arbitrum"
+        "https://xrpc.cl/arbitrum",
+        "https://arbitrum-one-rpc.blockreq.com/v1/rpc/public",
+        "https://rpc.swiftnodes.io/rpc/arbitrum?key=${SWIFTNODES_API_KEY}"
       ],
       "shortName": "arb1"
     },
@@ -721,7 +730,8 @@
         "https://sepolia-rollup.arbitrum.io/rpc",
         "https://arbitrum-sepolia.infura.io/v3/${INFURA_API_KEY}",
         "https://arbitrum-sepolia-rpc.publicnode.com",
-        "wss://arbitrum-sepolia-rpc.publicnode.com"
+        "wss://arbitrum-sepolia-rpc.publicnode.com",
+        "https://arbitrum-sepolia-rpc.blockreq.com/v1/rpc/public"
       ],
       "shortName": "arb-sep",
       "slip44": 1,
@@ -760,12 +770,6 @@
       "chain": "ETH",
       "chainId": 4663,
       "explorers": [
-        {
-          "icon": "robinscan",
-          "name": "robinscan",
-          "standard": "EIP3091",
-          "url": "https://robinscan.io"
-        },
         {
           "icon": "blockscout",
           "name": "blockscout",
@@ -809,7 +813,11 @@
         "https://rpc.ordofi.network",
         "wss://rpc.ordofi.network",
         "https://robinhood.drpc.org",
-        "wss://robinhood.drpc.org"
+        "wss://robinhood.drpc.org",
+        "https://robinhood-mainnet-rpc.blockreq.com/v1/rpc/public",
+        "https://api.blockvectra.com/v1/robinhood_mainnet/public",
+        "https://robinhood.daybreak-rpc.network",
+        "https://rpc.swiftnodes.io/rpc/robinhood?key=${SWIFTNODES_API_KEY}"
       ],
       "shortName": "robinhoodchain",
       "status": "active"
@@ -848,7 +856,8 @@
         "https://robinhood-sepolia-rpc.publicnode.com",
         "wss://robinhood-sepolia-rpc.publicnode.com",
         "https://robinhood-testnet.drpc.org",
-        "wss://robinhood-testnet.drpc.org"
+        "wss://robinhood-testnet.drpc.org",
+        "https://api.blockvectra.com/v1/robinhood_testnet/public"
       ],
       "shortName": "rh-testnet",
       "slip44": 1,
@@ -1034,7 +1043,8 @@
         "https://rpc.ankr.com/scroll",
         "https://scroll-mainnet.chainstacklabs.com",
         "https://scroll-rpc.publicnode.com",
-        "wss://scroll-rpc.publicnode.com"
+        "wss://scroll-rpc.publicnode.com",
+        "https://scroll-rpc.blockreq.com/v1/rpc/public"
       ],
       "shortName": "scr",
       "status": "active"
@@ -1178,12 +1188,6 @@
           "name": "Blockscout",
           "standard": "EIP3091",
           "url": "https://explorer.linea.build"
-        },
-        {
-          "icon": "linea",
-          "name": "L2scan",
-          "standard": "EIP3091",
-          "url": "https://linea.l2scan.co"
         }
       ],
       "faucets": [],
@@ -1211,7 +1215,8 @@
         "https://linea-mainnet.infura.io/v3/${INFURA_API_KEY}",
         "wss://linea-mainnet.infura.io/ws/v3/${INFURA_API_KEY}",
         "https://linea-rpc.publicnode.com",
-        "wss://linea-rpc.publicnode.com"
+        "wss://linea-rpc.publicnode.com",
+        "https://linea-rpc.blockreq.com/v1/rpc/public"
       ],
       "shortName": "linea",
       "status": "active",
@@ -1482,7 +1487,10 @@
         "https://rpcfree.com/base-rpc",
         "https://rpc.baseazul.dev",
         "https://rpc.satelink.network/rpc/base",
-        "https://xrpc.cl/base"
+        "https://xrpc.cl/base",
+        "https://base-rpc.blockreq.com/v1/rpc/public",
+        "https://base.daybreak-rpc.network",
+        "https://rpc.swiftnodes.io/rpc/base?key=${SWIFTNODES_API_KEY}"
       ],
       "shortName": "base",
       "status": "active"
@@ -1516,7 +1524,8 @@
       "rpc": [
         "https://sepolia.base.org",
         "https://base-sepolia-rpc.publicnode.com",
-        "wss://base-sepolia-rpc.publicnode.com"
+        "wss://base-sepolia-rpc.publicnode.com",
+        "https://base-sepolia-rpc.blockreq.com/v1/rpc/public"
       ],
       "shortName": "basesep",
       "slip44": 1
@@ -1529,11 +1538,6 @@
           "name": "modescout",
           "standard": "none",
           "url": "https://sepolia.explorer.mode.network"
-        },
-        {
-          "name": "Routesan",
-          "standard": "none",
-          "url": "https://testnet.modescan.io"
         }
       ],
       "faucets": ["https://sepoliafaucet.com/"],
@@ -1820,10 +1824,10 @@
   },
   "schema_version": 1,
   "source": {
-    "commit": "7a559aeefbc3b11367cbee1a93bfc13432d65be7",
-    "fetched_at": "2026-09-21T14:19:56.299Z",
+    "commit": "ae1829febf1d032214f2cc15169e173e962909e7",
+    "fetched_at": "2026-10-19T14:45:54.854Z",
     "ref": "master",
     "repository": "ethereum-lists/chains",
-    "url": "https://github.com/ethereum-lists/chains/tree/7a559aeefbc3b11367cbee1a93bfc13432d65be7"
+    "url": "https://github.com/ethereum-lists/chains/tree/ae1829febf1d032214f2cc15169e173e962909e7"
   }
 }
