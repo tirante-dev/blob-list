@@ -21,7 +21,7 @@ jobs:
   release:
     name: release new attributions
     if: ${{ !contains(github.event.head_commit.message, '[skip release]') }}
-    runs-on: homelab-2cpu-8ram
+    runs-on: homelab-2cpu-3ram
     steps:
       - name: Install libatomic for Node
         run: sudo apt-get -qq update && sudo apt-get -qq install -y --no-install-recommends libatomic1
